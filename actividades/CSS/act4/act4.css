@@ -1,0 +1,60 @@
+body{
+    background-color: rgb(255, 247, 128);
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 5px;
+}
+
+div.big_box{
+    border: 5px solid orange;
+    width: 480px;
+    background-color: rgb(255, 238, 89);
+    margin: 10px;
+    height: fit-content;
+}
+
+div.big_box h2{
+    background-color: orange;
+    margin-top: 0;
+    margin-left: -1px;
+    width: 100.5%;
+    height: 33px;
+    margin-bottom: -1px;
+}
+
+div.small_box{
+    border: 5px solid rgb(255, 102, 0);
+    width: 200px;
+    margin: 10px;
+    background-color: rgb(255, 202, 58);
+    padding: 5px;
+    height: fit-content;
+}
+
+div.small_box h2{
+    background-color: rgb(255, 102, 0);
+    color: white;
+    margin-top: -5px;
+    margin-bottom: 0px;
+    margin-left: -5px;
+    width: 105%;
+}
+
+p{
+    font-size: 12px;
+}
+
+.boxleft{
+    float: left;
+    clear: left;
+}
+
+.boxright{
+    float: right;
+    clear: right;
+}

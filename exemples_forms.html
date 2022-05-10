@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exemplos de Formularios Jose</title>
+
+        <meta name="description">---Pagina web Forms Jose---</meta>
+
+        <link href="CSS/form.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <br/><br/><a href="index.html">Tornar a la pagina principal.</a><br/><br/><a href="exemples_css.html">Anar a exemples de CSS.</a><br/><br/>
+        <hr/>
+        <form action="ejemplo.php" method="get">
+            <p>Nombre: <input type="text" name="nombre" size="40"/></p>
+            <p>Año de nacimiento: <input type="number" name="nacido" min="1900"></p>
+            <p>Sexo: <input type="radio" name="hm" value="h">Hombre <input type="radio" name="hm" value="m">Mujer</p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </p>
+        </form>
+
+        <hr/>
+    
+        <p>Nom: <input type="text" name="nom" required="requiered"></p>
+        <p>Sexe: 
+            <input type="radio" name="hm" value="h" required="requiered">Home
+            <input type="radio" name="hm" value="m" required="requiered">Dona
+        </p>
+
+        <hr/>
+
+        <p>Cognoms: <input type="text" name="cognoms" size="40" placeholder="Escrigui els seus dos cognoms"></p>
+
+        <hr/>
+
+        <p>Nom: <input type="text" name="nom"></p>
+        <p>Cognoms: <input type="text" name="cognoms" size="40"></p>
+
+        <hr/>
+
+        <p>Usuari: <input type="text" name="nom"></p>
+        <p>Cognoms: <input type="text" name="cognoms" maxlength="40"></p>
+
+        <hr/>
+
+        <input type="submit" value="enviar" disabled="disabled">
+        enviar
+        <input type="text" name="text" disabled="disabled">
+
+        <hr/>
+
+        <input type="text" name="text" value="a que no em canvies!" readonly="readonly">
+        
+        <hr/>
+
+        <input type="text" name="texto1" value="Texto 1">
+        <input type="text" name="texto2" value="Texto 2">
+        <input type="text" name="texto3" value="Texto 3">
+        <input type="text" name="texto4" value="Texto 4">
+        
+        <hr/>
+
+        <input type="text" name="texto1" value="Texto 1" tabindex="5">
+        <input type="text" name="texto2" value="Texto 2" tabindex="7">
+        <input type="text" name="texto3" value="Texto 3" tabindex="6">
+        <input type="text" name="texto4" value="Texto 4" tabindex="8">
+        
+        <hr/>
+
+        <input type="submit" value="submit">
+        <input type="submit" value="enviar">
+        
+        <hr/>
+
+        <input type="reset" value="reset">
+        <input type="reset" value="esborrar tot">
+        
+        <hr/>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Esborrar tot</button>
+        <button type="button">Botó</button>
+        
+        <hr/>
+
+        <button>
+            <img src="img/vb.jpg" alt="foto boto" width="80" height="80">
+            botó amb foto
+        </button>
+        
+        <hr/>
+
+        <button>Botó</button>
+        
+        <hr/>
+
+        <input type="text" name="texto">
+        
+        <hr/>
+
+        <input type="text" name="texto" value="escribe algo">
+        <input type="text" name="texto" placeholder="escribe algo">
+        
+        <hr/>
+
+        <input type="password" name="contrasena" value="pass">
+        
+        <hr/>
+
+        Escriu un número:
+        <input type="number" name="nombre" min="20">
+        
+        <hr/>
+
+        Escriu un nombre més gran o igual a 20:
+        <input type="number" name="nombre" min="20">
+        
+        <hr/>
+
+        Escriu un número menor o igual que 100:
+        <input type="number" name="num" max="100">
+        
+        <hr/>
+
+        Escriu un múltiple de 10:
+        <input type="number" name="nombre" step="10">
+        
+        <hr/>
+
+        Escriu un número qualsevol:
+        <input type="number" name="num" step="any">
+        
+        <hr/>
+
+        <input type="search" name="texto">
+        
+        <hr/>
+
+        <p>Correo: <input type="email" name="correo" size="40"></p>
+        
+        <hr/>
+
+        <input type="checkbox" name="casilla"> casilla 1
+        
+        <hr/>
+
+        <input type="checkbox" name="casilla" checked="checked"> casilla 1
+        
+        <hr/>
+
+        <input type="checkbox" name="casilla" value="hola"> casilla 1
+        
+        <hr/>
+
+        <form action="ejemplo.php">
+            <input type="radio" name="ràdio" value="1"> Opcio 1
+        </form>
+        
+        <hr/>
+
+        <form action="ejemplo.php">
+            <input type="radio" name="ràdio" value="1"> Opcio 1 <br>
+            <input type="radio" name="ràdio" value="2"> Opcio 2
+        </form>
+        
+        <hr/>
+
+        <form action="ejemplo.php">
+            <input type="radio" name="ràdio" value="1"> Opcio 1 <br>
+            <input type="radio" name="ràdio" value="2"> Opcio 2
+        </form>
+        
+        <hr/>
+
+        <form action="ejemplo.php">
+            <input type="radio" name="ràdio" value="1"> Opcio 1 <br>
+            <input type="radio" name="ràdio" value="2" checked> Opcio 2
+        </form>
+        
+        <hr/>
+
+        <form action="ejemplo.php">
+            <input type="radio" name="ràdio" value="home"> Home
+            <input type="radio" name="ràdio" value="dona"> Dona
+        </form>
+        
+        <hr/>
+
+        <input type="color" name="color">
+        
+        <hr/>
+
+        <input type="color" name="color" value="#ff0000">
+        
+        <hr/>
+
+        Indica el teu nivell
+        <input type="range" name="rango">
+        
+        <hr/>
+
+        Indica el teu nivell(d'1 a 10, de 3 en 3)
+        <input type="range" name="rang" min="1" max="10" step="3">
+        
+        <hr/>
+
+        Indica el teu nivell(Dolent,Regular,Bé):
+        <input type="range" name="rang" min="1" max="3" list="llista-rang">
+        <Datalist id="llista-rang">
+            <option value="1" label="Dolent"></option>
+            <option value="2" label="Regular"></option>
+            <option value="3" label="Bé"></option>
+        </Datalist>
+        
+        <hr/>
+
+        <input type="file" name="archivo">
+        
+        <hr/>
+
+        <textarea name="text" cols="30" rows="3"></textarea>
+        
+        <hr/>
+
+        <textarea name="text" cols="30" rows="3">Escriu algo</textarea>
+        
+        <hr/>
+
+        <select name="menu">
+            <option>un</option>
+            <option>dos</option>
+            <option>tres</option>
+        </select>
+        
+        <hr/>
+
+        <select name="menu">
+            <option value="1">un</option>
+            <option>dos</option>
+            <option value="3">tres</option>
+        </select>
+        
+        <hr/>
+
+        <select name="menu">
+            <option value="1">un</option>
+            <option value="2">dos</option>
+            <option value="3" selected>tres</option>
+        </select>
+        
+        <hr/>
+
+        <select name="menu">
+            <option value="0">...</option>
+            <option value="1">un</option>
+            <option value="2">dos</option>
+            <option value="3">tres</option>
+        </select>
+        
+        <hr/>
+
+        <select name="menu" size="3">
+            <option value="1">un</option>
+            <option value="2">dos</option>
+            <option value="3">tres</option>
+            <option value="4">quatre</option>
+            <option value="5">cinc</option>
+        </select>
+        
+        <hr/>
+
+        <select name="menu" size="5" multiple>
+            <option value="1">un</option>
+            <option value="2">dos</option>
+            <option value="3">tres</option>
+            <option value="4">quatre</option>
+            <option value="5">cinc</option>
+        </select>
+        
+        <hr/>
+
+        <select name="menu">
+            <option selected>...</option>
+            <optiongroup label="grup1">
+                <option value="1">un</option>
+                <option value="2">dos</option>
+                <option value="3">tres</option>
+            </optiongroup>
+            <optiongroup label="grup2">
+                <option value="4">quatre</option>
+                <option value="5">cinc</option>
+                <option value="6">sis</option>
+            </optiongroup>
+        </select>
+        
+        <hr/>
+
+        <fieldset>
+            <legend>Dades personals</legend>
+            <p>Nom <input type="text" name="nom" size="30"></p>
+            <p>Edat: <input type="numer" name="edat"></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cultura general</legend>
+            <p>Capital de noruega:
+                <input type="radio" name="p1" value="1">Copenhaguen
+                <input type="radio" name="p1" value="2">Hèlsinki
+                <input type="radio" name="p1" value="3">Oslo
+            </p>
+            <p>Data de la revolució francesa:
+                <input type="radio" name="p2" value="1">1492
+                <input type="radio" name="p2" value="2">1789
+                <input type="radio" name="p2" value="3">1917
+            </p>
+        </fieldset>
+        
+        <hr/>
+
+        <input type="date">
+        <input type="time">
+        <input type="datetime-local">
+        <input type="month">
+        <input type="week">
+        
+        <hr/>
+
+        <form class="ex49">
+            <div>
+                <label for="nombre">Nom:</label>
+                <input type="text" id="nombre">
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email">
+            </div>
+            <div>
+                <label for="msg">Missatge:</label>
+                <textarea id="msg"></textarea>
+            </div>
+        </form>
+        
+        <hr/>
+
+        <form class="ex50">
+            <div>
+                <label for="nombre">Nom:</label>
+                <input type="checkbox" id="nombre">
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="checkbox" id="email">
+            </div>
+            <div>
+                <label for="msg">Missatge:</label>
+                <textarea id="msg"></textarea>
+            </div>
+        </form>
+        
+        <hr/>
+
+        <form class="ex51">
+            <div>
+                <label for="nombre">Nom:</label>
+                <input type="text" id="nombre">
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" disabled>
+            </div>
+            <div>
+                <label for="msg">Missatge:</label>
+                <textarea id="msg"></textarea>
+            </div>
+        </form>
+        
+        <hr/>
+
+        <form class="ex52">
+            <div>
+                <label for="nombre">Nom:</label>
+                <input type="text" id="nombre">
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="checkbox" id="email">
+            </div>
+            <div>
+                <label for="msg">Missatge:</label>
+                <textarea id="msg"></textarea>
+            </div>
+        </form>
+        
+        <hr/>
+
+        <form class="ex53">
+            <div>
+                <label for="nombre">Nom:</label>
+                <input type="text" id="nombre">
+            </div>
+            <div>
+                <input type="checkbox" id="permiso">
+                <label for="permiso">Permiso de conducior:</label>
+            </div>
+            <div>
+                <label for="msg">Missatge:</label>
+                <textarea id="msg"></textarea>
+            </div>
+        </form>
+        
+        <hr/>
+
+        <p class="ex54">Exemple de paragraf amb text inserit darrere.</p>
+        
+        <hr/>
+
+        <p class="ex55">Exemple de paragraf amb text inserit davant.</p>
+        
+        <hr/>
+
+        <div class="ex56">
+            <h4>:requiered</h4>
+            <p>Name: <input type="text" value="" required></p>
+            
+            <h4>:valid</h4>
+            <p>Email: <input type="email" value="correo@dominio.com"></p>
+
+            <h4>:invalid + :requiered</h4>
+            <p>Telefono: <input type="number" value="texto" required></p>
+        </div>
+
+        <hr/>
+
+        <input class="ex57" type="number" min="5" max="10">
+        
+        <hr/>
+
+        <input class="ex58" type="number" min="5" max="10">
+        
+        <hr/>
+
+        <p class="emoji_apple">Verde</p>
+        <p class="emoji_apple">Amarillo</p>
+        <p class="emoji_apple">Rojo</p>
+        <p class="emoji_apple">Morado</p>
+        <p class="emoji_apple">Naranja</p>
+        <p class="emoji_apple">Blanco</p>
+        
+        <hr/>
+
+        <p class="emoji_ball">Verde</p>
+        <p class="emoji_ball">Amarillo</p>
+        <p class="emoji_ball">Rojo</p>
+        <p class="emoji_ball">Morado</p>
+        <p class="emoji_ball">Naranja</p>
+        <p class="emoji_ball">Blanco</p>
+        
+        <hr/>
+
+        <label for="pass">Contrasenya</label>
+        <inputv type="password" name="pass" pattern="[A-Za-z0-9!?-]{8,12}" requiered>
+        
+        <hr/>
+
+        <form name="formulario" method="post" action="send.php">
+            Telef fijo<input class="inpInv" type="text" name="movil" placeholder="movil" required pattern="^9[0-9]{8}$">
+        </form>
+        
+        <hr/>
+
+        <form name="formulario" method="post" action="send.php">
+            Telef mobil<input class="inpInv" type="text" name="movil" placeholder="movil" required pattern="^6[0-9]{8}$">
+        </form>
+        
+        <hr/>
+
+        <form name="formulario" method="post" action="send.php">
+            DNI<input class="inpInv" type="text" name="dni" placeholder="dni del usuario" required pattern="^[0-9]{8}[A-Z]$">
+        </form>
+        
+        <hr/>
+
+        <form name="formulario" method="post" action="send.php">
+            <input class="inpInv" type="text" name="nombre" placeholder="Nombre usuario" minlength="5" maxlength="10" required pattern="[A-Za-z0-9]+">
+        </form>
+        
+        <hr/>
+
+
+        
+        <hr/>
+
+
+        
+        <hr/>
+
+
+        
+        <hr/>
+
+
+        
+        <hr/>
+
+
+        
+        <hr/>
+
+
+        
+        <hr/>
+
+
+        
+        <hr/>
+    </body>
+</html>

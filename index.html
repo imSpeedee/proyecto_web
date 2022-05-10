@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ex2. La meva primera pàgina web</title>
+        <link rel="shortcut icon" href="img/favicon.png">
+
+        <meta name="description">---Pagina web Jose---</meta>
+
+        <link href="CSS/perso.css" rel="stylesheet" type="text/css">
+
+        <style type="text/css">
+            h6{color:rgb(0, 134, 90)}
+            h5{color:rgb(118, 0, 134)}
+            p.exemple_estil{color: rgb(0, 128, 145);}
+            h1.estil_67{color: rgb(145, 143, 0);}
+            h2.estil_67{color: rgb(145, 0, 0);}
+            .exemple_68{color: rgb(0, 145, 12);}
+        </style>
+        
+    </head>
+    <body bgcolor="lightgrey">
+
+        <!--Exemple 1. Això és uncomentari escrit en un document HTML però no es visualitzarà. --> 
+
+        <br/><br/>
+        <a href="exemples_css.html">Anar als exemples de CSS</a><br/><br/><a href="exemples_forms.html">Anar a exemples de formularis.</a>
+
+        <p>Esto es un parrafo.</p>
+        <p>Segundo parrafo.</p>
+
+        <br/>
+        <p><strong>--->Exemple 3 etiqueta p paragrafs</strong></p>
+        <p>Aquest primer paràgraf no conté salts de línia ni un altre tipus d'espaiat.</p>
+        <p>Aquest segon paràgraf sí queconté salts
+            de
+            línia
+            i  un  altre  tipus  d'espaiat.
+        </p>
+
+        <br/>
+        <p><strong>--->Exemple 4 etiqueta br salts de linea i espais en blanc</strong></p>
+        <p> Aquest primer paràgraf no conté salts de línia ni un altre tipus d'espaiat. </p>
+        <p>Aquest segon paràgraf sí que conté salts <br/>de <br/>línia <br/>i&nbsp;&nbsp; un&nbsp; tipus&nbsp; de &nbsp; espaiat.</p>
+
+        <br/>
+        <p><strong>--->Exemple 5 nomes salts de linea amb br</strong></p>
+        <p> Aquest primer paràgraf no conté salts de línia ni cap altre tipus d'espaiat. </p>
+        <p>Aquest segon paràgraf sí queconté salts<br/>de <br/>línia<br/>i un altre tipus d'espaiat.</p>
+        
+        <br/>
+        <p><strong>--->Exemple 6 definicio de diferents paragrafs amb p</strong></p>
+        <p>Qui té un amic té un tresor.</p>
+        <p>Amic en l'adversitat, és amic de debò.</p>
+        <p>Quan març marea, maig marceja.</p>
+        <p>La primavera la sang altera.</p> 
+        
+        <br/>
+        <p><strong>--->Exemple 7 etiqueta hr linea horitzontal</strong></p>
+        <p>Qui té un amic té un tresor.</p>
+        <p>Amic en l'adversitat, és amic de debò.</p>
+        <hr/>
+        <hr color="lime" size="5"/>
+        <p>Quan març marea, maig marceja.</p>
+        <p>La primavera la sang altera.</p> 
+        
+        <br/>
+        <p><strong>--->Exemple 8 etiqueta pre conserva espais en blanc i salts de linea</strong></p>
+        <pre>País    Continent Població (2013) Espanya    Europa        47 milions Índia      Àsia       1250 milions</pre>
+        <p>País    Continent Població (2013) Espanya    Europa        47 milions Índia      Àsia       1250 milions</p> 
+        
+        <br/>
+        <p><strong>--->Exemple 9 cita etiqueta blockquote per identificar cites llargues</strong></p>
+        <p>Pla d'Instrucció Pública de J. Pidal, any 1845. Exposició  de motius</p>
+        <blockquote>
+            <p>Antigament eren les universitats independents entre si, i fins a de el Govern mateix: cadascú tenia el seu règim, els seus estudis, els seus mètodes i àdhuc les seves pretensions diferents: no només disposaven arbitràriament dels seus fons, sinó que fins a era també arbitrària en elles l'ensenyament.</p>
+            <p>L'ensenyament de la joventut no és una mercaderia que pot deixar-se  lliurada a la cobdícia dels especuladors, ni ha d'equiparar-se a les altres  indústries en què domina només l'interès privat. </p>
+        </blockquote> 
+        
+        <br/>
+        <p><strong>--->Exemple 10 etiqueta dd espais en blanc al començament de les lineies</strong></p>
+        <p>Títol: Fenomenologia de l'esperit</p>
+        <p>Subtítol: Contingut de l'obra </p>
+        <dd>La Idea en la seva ser en i per a si mateixa, en tornar del gran cercle en què, a partir del seu ser en si, va recórrer els successius moments de la seva alteritat, constitueix l'objecte de la filosofia de l'esperit.</dd> 
+        
+        <br/>
+        <p><strong>--->Exemple 11 etiqueta strong per a destacar paraules</strong></p>
+        <p>Acorda't d'apagar les llums i <strong>tancar  la porta amb clau</strong> en sortir de casa.</p> 
+        
+        <br/>
+        <p><strong>--->Exemple 12 etiqueta small per posar paraules amb tamany mes petit a la resta</strong></p>
+        <p>PVP: 999€ <small>(IVA no inclòs)</small>.</p> 
+
+        <br/>
+        <p><strong>--->Exemple 13 etiqueta s linia per sobre del text</strong></p>
+        <s>L'etiqueta &lt;s&gt; estava desaconsellada  en HTML 4.</s>
+        L'etiqueta &lt;s&gt;  s'usa per marcar informació obsoleta. 
+
+        <br/>
+        <br/>
+        <p><strong>--->Exemple 14 caracters especials </strong></p>
+        <pre>&#59; &lt; &gt; &amp; &#39; &quot; &#92; &#47; &copy; &nbsp; &euro;</pre>
+        
+        <br/>
+        <p><strong>--->Exemple 15 etiqueta text entre cometes i cursiva </strong></p>
+        <p>Com vaescriure Robert Browning, <q>The best is yet to be</q>.</p> 
+        <p>Un<dfn>byte</dfn> són vuit bits.</p> 
+
+        <br/>
+        <p><strong>--->Exemple 16 etiqueta abbr per abrebiar paraules </strong></p>
+        <p>Situa el cursor del ratolí sobre l'abreviatura per veure el seu significat.</p>
+        <p>La <abbr title = "Organización Mundial de la Salud"> OMS </abbr> fue fundada en 1948. </p>
+
+        <br/>
+        <p><strong>--->Exemple 17 etiqueta time per a indicar una data amb un format en concret </strong></p>
+        <p>La recomanació HTML 5 es va aprovar <time datetime="2014-10-28">28 d'octubre de 2014</time>.</p> 
+
+        <br/>
+        <p><strong>--->Exemple 18 etiqueta per a identificar subindex </strong></p>
+        <p>2 H<sub>2</sub> + O<sub>2</sub> &rarr; 2 H<sub>2</sub>O</p> 
+
+        <br/>
+        <p><strong>--->Exemple 19 etiqueta per a identificar superindex </strong></p>
+        <p>L'últim teorema de Fermat diu que l'equació  x<sup>n</sup> + i<sup>n</sup> = z<sup>n</sup> no té  solucions senceres per <var>x</var>, <var>i</var> i  <var>z</var> quan <var>n</var> &gt; 2.</p>
+
+        <br/>
+        <p><strong>--->Exemple 20 etiqueta per a donar enfasi a una paraula </strong></p>
+        <p> La primera frase de la recomanació HTML 5 és <q> El llenguatge de marques del World Wide Web <mark> sempre </mark> ha estat HTML </q>.</p>
+
+        <br/>
+        <p><strong>--->Exemple 21 etiqueta em per posar cursiva </strong></p>
+        <p>És <em>l’última</em> vegada que t'ho dic.</p> 
+
+        <br/>
+        <p><strong>--->Exemple 22 utilitzar dues etiquetes a la vegada com per exemple negreta i cursiva </strong></p>
+        <p>El bloc següent és molt</p><strong><em>important</em></strong> 
+
+        <br/>
+        <br/>
+        <p><strong>--->Exemple 23 etiquetes per diferents nivells de titols de mes gran a mes petit </strong></p>
+        <h1>Text molt gran</h1>
+        <h2>Text gran</h2>
+        <h3>Text una mica més gran delnormal</h3>
+        <h4>Text normal</h4>
+        <h5>Text petit</h5>
+        <h6>Text molt petit</h6> 
+
+        <br/>
+        <p><strong>--->Exemple 24 etiqueta img per a imatges </strong></p>
+        <img src="img/rojo.jpg" alt="imatge">
+
+        <br/>
+        <p><strong>--->Exemple 25 etiqueta img amb url d'internet </strong></p>
+        <img src="https://cdn.pixabay.com/photo/2018/07/22/21/12/panda-3555554_960_720.jpg" alt="imatge amb url d'internet">
+
+        <br/>
+        <p><strong>--->Exemple 26 etiqueta img si no troba la imatge </strong></p>
+        <img src="imatge.png" alt="imatge no trobada">
+
+        <br/>
+        <p><strong>--->Exemple 27 etiqueta img amb text amb el cursor sobre la imatge </strong></p>
+        <img src="img/vb.jpg" alt="imatge personatge Volibear videojoc League of legends" title="Icono Volibear">
+
+        <br/>
+        <p><strong>--->Exemple 28 etiqueta img cambiant el tamany de la imatge amb pixels </strong></p>
+        <img src="img/logo.png" alt="personatge Jose"  width="140" height="165">
+        <img src="img/logo.png" alt="personatge Jose"  width="100" height="115">
+
+        <br/>
+        <p id="exemple_29"><strong>--->Exemple 29 etiqueta img amb un hypervincle a una pagina web</strong></p>
+        <a href="https://www.google.com"><img src="img/google.png" alt="Google" width="125"></a>
+
+        <br/>
+        <p><strong>--->Exemple 30 etiqueta img amb un cambi de tamany amb percentatge </strong></p>
+        <img src="img/pardo.jpg" alt="internet" width="30%">
+
+        <br/>
+        <p><strong>--->Exemple 31 etiqueta img amb alineacio</strong></p>
+        <img src="img/negro_americano.jpg" alt="internet" width="40%" align="right">
+        <img src="img/negro_americano.jpg" alt="internet" width="40%">
+
+        <br/>
+        <p><strong>--->Exemple 32 etiqueta img amb border </strong></p>
+        <img src="img/polar.jpg" alt="internet" border="5" width="40%">
+
+        <br/>
+        <p><strong>--->Exemple 33 etiqueta a amb text etiqueta a amb img dins </strong></p>
+        <p>Enllaç a la <a href="http://www.google.com/">Pàgina de Google</a>.</p>
+        <p>Logotip de Google: <a href="http://www.google.com/"><img src="img/google.png" alt="Logo Google" width="10%"></a></p>
+
+        <br/>
+        <p><strong>--->Exemple 34 etiqueta a que envia a l'usuari al principi de la pagina </strong></p>
+        <p>Aquest ès un <a href="#">enllaç al principi d'aquesta pàgina.</a></p>
+
+        <br/>
+        <p><strong>--->Exemple 35 etiqueta a amb direccio a un arxiu </strong></p>
+        <p>Enllaç a un arxiu: <a href="audio/ReGenesis.mp3">ReGenesis, TBOI Afterbirth</a></p>
+
+        <br/>
+        <p><strong>--->Exemple 36 etiqueta a amb direccio a una pagina web principal </strong></p>
+        <p>Enllaç a la <a href="http://www.lavanguardia.com">pàgina prìncipal del diaria la vanguardia.</a></p>
+
+        <br/>
+        <p><strong>--->Exemple 37 etiqueta a amb direccio a una pagina web secundaria </strong></p>
+        <p>Enllaç a la <a href="http://www.lavanguardia.com/esports">secció d'esports del diari La Vanguardia.</a></p>
+
+        <br/>
+        <p><strong>--->Exemple 38 etiqueta a amb direccio a alguna part de la mateixa pagina web </strong></p>
+        <p>Enllaç al <a href="#exemple_29">exemple 29.</a></p>
+
+        <br/>
+        <p><strong>--->Exemple 39 etiqueta a amb obertura de l'hypervincle en la mateixa o diferent finestra </strong></p>
+        <a href="http://www.google.com/" target="_blank">Obrir enllaç en una finestra a banda.</a>
+        <br/>
+        <a href="http://www.google.com/" target="_self">Obrir enllaç en la mateixa finestra.</a>
+
+        <br/>
+        <br/>
+        <p><strong>--->Exemple 40 etiqueta a amb direccio a un servidor FTP </strong></p>
+        <p>Enllaç al <a href="ftp://ftp.rediris.com">servidor FTP de rediris.</a></p>
+
+        <br/>
+        <p><strong>--->Exemple 41 etiqueta a amb direccio de correu </strong></p>
+        <p>Fent clic en aquest enllaç s'obrirà el client de correu per <a href="mailto:jose@example.com">enviar un correu a jose@example.com.</a></p>
+
+        <br/>
+        <p><strong>--->Exemple 42 etiqueta a amb enllaços interns</strong></p>
+        <h1>Exemple d'enllaços interns.</h1>
+        <h2><a id="seccio1">Secció 1</a></h2>
+        <p><a href="#seccio2">Anar a secció 2</a></p>
+        <p><a href="#seccio3">Anar a secció 3</a></p>
+        <p>text de farciment de la primera secció;</p>
+        <p>text de farciment</p>
+        <p>text de farciment</p>
+        <p>text de farciment</p>
+        <p>text de farciment</p>
+        <p>text de farciment</p>
+        <p>text de farciment</p>
+        <br/>
+        <h2><a id="seccio2">Secció 2</a></h2>
+        <p><a href="#seccio1">Anar a secció 1</a></p>
+        <p><a href="#seccio3">Anar a secció 3</a></p>
+        <p>estas a la segona secció;</p>
+        <p>text de farciment</p>
+        <p>text de farciment</p>
+        <br/>
+        <h2><a id="seccio3">Secció 3</a></h2>
+        <p><a href="#seccio1">Anar a secció 1</a></p>
+        <p><a href="#seccio2">Anar a secció 2</a></p>
+        <p>aquest text es de la secció tres;</p>
+        <p>text de farciment</p>
+        <p>text de farciment</p>
+        
+        <br/>
+        <p><strong>--->Exemple 43 etiqueta a amb una descarrega </strong></p>
+        <a href="doc/txt_exemple.txt" download="txt_exemple">Descarrega manual amb desc.</a>
+        <br/>
+        <a href="doc/txt_exemple.txt" download>Descarrega manual sense desc.</a>
+
+        <br/>
+        <p><strong>--->Exemple Personalitzat de DL DT DD </strong></p>
+        <dl>
+            <dt>Albaco</dt>
+            <dd>tex d'exemple<br/>salt de linea</dd>
+            <dt>Ardilla</dt>
+            <dd>tex d'exemple<br/>salt de linea</dd>
+            <dt>Armadillo</dt>
+            <dd>tex d'exemple<br/>salt de linea</dd>
+            <dt>Anguila</dt>
+            <dd>tex d'exemple<br/>salt de linea</dd>
+            <dt>Alce</dt>
+            <dd>tex d'exemple<br/>salt de linea</dd>
+            <dt>Abeja</dt>
+            <dd>tex d'exemple<br/>salt de linea</dd>
+            <dt>Asno</dt>
+            <dd>tex d'exemple<br/>salt de linea</dd>
+            <dt>Almeja</dt>
+            <dd>tex d'exemple<br/>salt de linea</dd>
+            <dt>Alacrán</dt>
+            <dd>tex d'exemple<br/>salt de linea</dd>
+        </dl>
+
+        <br/>
+        <p><strong>--->Exemple 44 taula d'exmeple (td text normal, th text destacat)</strong></p>
+        <table border="3">
+            <caption>Exemple de taula</caption>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <th>A</th>
+                    <th>B</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>A1</td>
+                    <td>B1</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>A2</td>
+                    <td>B2</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/>
+        <p><strong>--->Exemple 45 exemple de llegenda de taula</strong></p>
+        <table border="3">
+            <caption>Exemple de la llegenda de la taula que ocupa mès d'una línia</caption>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <th>A</th>
+                    <th>B</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>A1</td>
+                    <td>B1</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>A2</td>
+                    <td>B2</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/>
+        <p><strong>--->Exemple 46 exemple de taula amb diferent contingut</strong></p>
+        <table border="3">
+            <caption>Futbol la divisió</caption>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <th>2003/2004</th>
+                    <th>204/2005</th>
+                </tr>
+                <tr>
+                    <th>Campió</th>
+                    <td>València C.F.</td>
+                    <td>F.C. Barcelona</td>
+                </tr>
+                <tr>
+                    <th>Subcampìò</th>
+                    <td>F.C. Barcelona</td>
+                    <td>R. Madrid</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/>
+        <p><strong>--->Exemple 47 exemple de taula amb colspan</strong></p>
+        <table border="3">
+            <caption>Això es una taula</caption>
+            <tbody>
+                <tr>
+                    <td colspan="2">cel·les a1 i b1 unides</td>
+                </tr>
+                <tr>
+                    <td>cel·la a2</td>
+                    <td>cel·la b2</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/>
+        <p><strong>--->Exemple 48 exemple de taula amb rowspan</strong></p>
+        <table border="3">
+            <caption>Això es una taula</caption>
+            <tbody>
+                <tr>
+                    <td rowspan="2">cel·les a1 i a2 unides</td>
+                    <td>cel·la b1</td>
+                </tr>
+                <tr>
+                    <td>cel·la b2</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/>
+        <p><strong>--->Exemple 49 exemple de taula amb colspan i rowspan</strong></p>
+        <table border="3">
+            <caption>Això es una taula</caption>
+            <tbody>
+                <tr>
+                    <td colspan="2" rowspan="2">cel·les a1, a2, b1 i b2 unides</td>
+                    <td>cel·la c1</td>
+                </tr>
+                <tr>
+                    <td>cel·la c2</td>
+                </tr>
+                <tr>
+                    <td>cel·la a3</td>
+                    <td>cel·la b3</td>
+                    <td>cel·la c3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/>
+        <p><strong>--->Exemple 50 exemple taula amb cellpadding i cellspacing</strong></p>
+        <table border="3" cellpadding=10 cellspacing=10>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>E</td>
+                    <td>F</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/>
+        <p><strong>--->Exemple 51 exemple taula amb thead ,tbody i tfoot sense border</strong></p>
+        <table>
+            <caption>Table Title</caption>
+            <thead>
+                <tr>
+                    <td>Contigut del header</td>
+                    <td>Contigut del header</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Contigut del body</td>
+                    <td>Contigut del body</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Contigut del footer</td>
+                    <td>Contigut del footer</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <br/>
+        <p><strong>--->Exemple 51 exemple taula amb thead ,tbody i tfoot amb border</strong></p>
+        <table border="3">
+            <caption>Table Title</caption>
+            <thead>
+                <tr>
+                    <td>Contigut del header</td>
+                    <td>Contigut del header</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Contigut del body</td>
+                    <td>Contigut del body</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Contigut del footer</td>
+                    <td>Contigut del footer</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <br/>
+        <p><strong>--->Exemple 52 exemple taula 51.2 </strong></p>
+
+        <table border="3">
+            <caption>Exemple Taula</caption>
+            <thead>
+                <tr>
+                    <th>thead</th>
+                    <td>cel·la 1</td>
+                    <td>cel·la 2</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>tbody</th>
+                    <td>cel·la 1</td>
+                    <td>cel·la 2</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>tfoot</th>
+                    <td>cel·la 1</td>
+                    <td>cel·la 2</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <br/>
+        <p><strong>--->Exemple 53 exemple etiqueta ol </strong></p>
+        <ol>
+            <li>La llibertat d'usar el programa amb qualsevol propòsit.</li>
+            <li>La llibertat d'estudiar com funciona el programa i adaptar-ho a les teves necessitats.</li>
+            <li>La llibertat de distribuir còpies del programa.</li>
+            <li>La llibertat de millorar el programa i de fer pùbliques les millores als altres</li>
+        </ol>
+
+        <br/>
+        <p><strong>--->Exemple 54 exemple etiqueta ul </strong></p>
+        <ul>
+            <li>La llibertat d'usar el programa amb qualsevol propòsit.</li>
+            <li>La llibertat d'estudiar com funciona el programa i adaptar-ho a les teves necessitats.</li>
+            <li>La llibertat de distribuir còpies del programa.</li>
+            <li>La llibertat de millorar el programa i de fer pùbliques les millores als altres</li>
+        </ul>
+
+        <br/>
+        <p><strong>--->Exemple 55 exemple etiqueta dl dt dd  </strong></p>
+        <dl>
+            <dt>programari</dt>
+            <dd>Conjunt de programes, instruccions i regles informàtiques per a executar certes tasques en una computadora</dd>
+            <dt>lliure</dt>
+            <dd>Que té facultat per a obrar o no obrar.</dd>
+            <dd>Que no és esclau.</dd>
+            <dd>Que no està pres.</dd>
+            <dd>Llicenciós. </dd>
+        </dl>
+
+        <br/>
+        <p><strong>--->Exemple 56 exemple llistes a diferents nivells i tipus </strong></p>
+        <ul>
+            <li>Item 1</li>
+            <ol>
+                <li>Item 1 de subllista</li>
+                <ul>
+                    <li>Item 1 de sub-subllista</li>
+                    <li>Item 2 de sub-subllista</li>
+                </ul>
+                <li>Item 2 de subllista</li>
+                <ol>
+                    <li>Item 1 de sub-subllista</li>
+                    <li>Item 2 de sub-subllista</li>
+                </ol>
+                <li>Item 3 de subllista</li>
+                <li>Item 4 de subllista</li>
+            </ol>
+            <li>Item 2</li>
+            <ul>
+                <li>Item 1 de subllista</li>
+                <li>Item 2 de subllista</li>
+            </ul>
+        </ul>
+
+        <br/>
+        <p><strong>--->Exemple 57 exemple  llistes a diferents nivells </strong></p>
+        <ol>
+            <li>Item 1</li>
+            <ol>
+                <li>Item 1 de subllista</li>
+                <ol>
+                    <li>Item 1 de sub-subllista</li>
+                    <li>Item 2 de sub-subllista</li>
+                </ol>
+                <li>Item 2 de subllista</li>
+                <ol>
+                    <li>Item 1 de sub-subllista</li>
+                    <li>Item 2 de sub-subllista</li>
+                </ol>
+                <li>Item 3 de subllista</li>
+                <li>Item 4 de subllista</li>
+            </ol>
+            <li>Item 2</li>
+            <ol>
+                <li>Item 1 de subllista</li>
+                <li>Item 2 de subllista</li>
+            </ol>
+        </ol>
+
+        <br/>
+        <p><strong>--->Exemple 58 exemple llista amb començament per un numero diferent </strong></p>
+        <ol start="3">
+            <li>Aquest és el primer element de la llista.</li>
+            <li>Aquest és el segon element de la llista.</li>
+            <li>Aquest és el tercer element de la llista.</li>
+        </ol>
+
+        <br/>
+        <p><strong>--->Exemple 59 exemple de com mostra les llistes tabulades el buscador </strong></p>
+        <h1>Menú</h1>
+        <ul>
+            <li>Inici</li>
+            <li>Notícies</li>
+            <li>Articles</li>
+            <li>Contacte</li>
+        </ul>
+
+        <br/>
+        <p><strong>--->Exemple 60 exemple de diferents punts de llista </strong></p>
+        <p>lista type:"disc"</p>
+        <ul type="disc">
+            <li>Sección Primera</li>
+            <li>Sección Segunda</li>
+            <li>Sección Tercera</li>
+            <li>Sección Cuatra</li>
+        </ul>
+        <p>lista type:"circle"</p>
+        <ul type="circle">
+            <li>Sección Primera</li>
+            <li>Sección Segunda</li>
+            <li>Sección Tercera</li>
+            <li>Sección Cuatra</li>
+        </ul>
+        <p>lista type:"square"</p>
+        <ul type="square">
+            <li>Sección Primera</li>
+            <li>Sección Segunda</li>
+            <li>Sección Tercera</li>
+            <li>Sección Cuatra</li>
+        </ul>
+        <p>lista type:"none"</p>
+        <ul type="none">
+            <li>Sección Primera</li>
+            <li>Sección Segunda</li>
+            <li>Sección Tercera</li>
+            <li>Sección Cuatra</li>
+        </ul>
+        <p>lista con viñetas distintas</p>
+        <ul>
+            <li type="disc">Elemento tipo disco</li>
+            <li type="circle">Elemento tipo círculo</li>
+            <li type="square">Elemento tipo cuadrado</li>
+            <li type="none">Elemento tipo ninguno</li>
+        </ul>
+
+        <br/>
+        <p><strong>--->Exemple 61 exemple color en etiqueta body (mirar etiqueta body) </strong></p>
+
+        <br/>
+        <p><strong>--->Exemple 62 exemple definicio lletra i tamany </strong></p>
+        <h1 style="font: size 24pt;font-family:arial;">Titular</h1>
+
+        <br/>
+        <p><strong>--->Exemple 63 exemple color text </strong></p>
+        <p style="color: red;">Això e sun paràgraf de color vermell.</p>
+
+        <br/>
+        <p><strong>--->Exemple 64 exemple de definicio de style en el mateix full (mirar header) </strong></p>
+        <h6>Exemple de modificacio h6 en el head</h6>
+
+        <br/>
+        <p><strong>--->Exemple 65 exemple de definicio de style en el mateix full (mirar header) 2.0 </strong></p>
+        <h5>Segon exemple de modificacio h5 en el head</h5>
+
+        <br/>
+        <p><strong>--->Exemple 66 exemple estil predefinit (mirar l'estil al head) </strong></p>
+        <p class="exemple_estil">Exemple de estil definit al head</p>
+
+        <br/>
+        <p><strong>--->Exemple 67 exemple mateis nombre d'estil diferent etiqueta </strong></p>
+        <h1 class="estil_67">Titular primer nivell</h1>
+        <h2 class="estil_67">Titular segon nivell</h2>
+
+        <br/>
+        <p><strong>--->Exemple 68 exemple etiqueta span </strong></p>
+        <p>Això ès un paràgraf <span class="exemple_68">de prova</span> en que s'utilitza l'element <span class="exemple_68">"span"</span> d'html.</p>
+
+        <br/>
+        <p><strong>--->Exemple 69 exemple  </strong></p>
+        <p>Pintant l'arc de Sant Martí
+            <span style="color: rgb(255, 0, 0);">vermell</span>
+            <span style="color: rgb(255, 251, 0);">groc</span>
+            <span style="color: aqua;">blau</span>
+            <span style="color: rgb(111, 0, 255);">violeta</span>
+            <span style="color: rgb(255, 136, 0);">taronja</span>
+            <span style="color: rgb(0, 255, 13);">verd</span>
+        </p>
+
+        <br/>
+        <p id="exemple70"><strong>--->Exemple 70 exemple etiqueta div </strong></p>
+        <a href="exemples_a_part/exemple70.html">Exemple 70</a>
+
+        <br/>
+        <p id="exemple71"><strong>--->Exemple 71 exemple etiqueta div amb imatges </strong></p>
+        <a href="exemples_a_part/exemple71.html">Exemple 71</a>
+
+        <br/>
+        <p><strong>--->Exemple 72 exemple etiqueta details </strong></p>
+        <p>Berners-Lee creó el HTML basándose en SGML La IETF publicació la norma RCF 1866 en 1995 y el W3C punlicó la recomendación HTML 3.2 en 1997.</p>
+        <details>
+            <ul>
+                <li>HTML: HyperText Markup Language</li>
+                <li>SGML: Standard Generalized Markup Lenguage</li>
+                <li>IETF: Internet Engineering Task Force</li>
+                <li>W3C: World Wide Web Consortium</li>
+            </ul>
+        </details>
+
+        <br/>
+        <p><strong>--->Exemple 73 exemple etiqueta details </strong></p>
+        <p>En la película 1968...</p>
+        <details>
+            <summary>Spoiler</summary>
+            <p>En la escena final, el protagonista encuentra...</p>
+        </details>
+
+        <br/>
+        <p><strong>--->Exemple 74 exemple etiqueta details ja oberta </strong></p>
+        <p>En la película 1968...</p>
+        <details open>
+            <summary>Spoiler</summary>
+            <p>En la escena final, el protagonista encuentra...</p>
+        </details>
+
+        <br/>
+        <p><strong>--->Exemple 75 exemple etiqueta figure </strong></p>
+        <figure>
+            <img width="15%" alt="Twitter" src="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1.png"/>
+            <figcaption>Twitter</figcaption>
+        </figure>
+        <figure>
+            <img width="15%" alt="Twitch" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twitch_Glitch_Logo_Purple.svg/512px-Twitch_Glitch_Logo_Purple.svg.png?20200520095038"/>
+            <figcaption>Twitch</figcaption>
+        </figure>
+        <figure>
+            <img width="15%" alt="Youtube" src="https://www.freepnglogos.com/uploads/youtube-play-red-logo-png-transparent-background-6.png"/>
+            <figcaption>Youtube</figcaption>
+        </figure>
+
+        <br/>
+        <p><strong>--->Exemple 75 exemple etiqueta figure amb dos img </strong></p>
+        <figure>
+            <figcaption>Twitter i Twitch</figcaption>
+            <img width="15%" alt="Twitter" src="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1.png"/>
+            <img width="15%" alt="Twitch" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twitch_Glitch_Logo_Purple.svg/512px-Twitch_Glitch_Logo_Purple.svg.png?20200520095038"/>
+        </figure>
+
+        <br/>
+        <p id="exemple77"><strong>--->Exemple 77 exemple distribuicio HTML </strong></p>
+        <a href="exemples_a_part/exemple77.html">Exemple 77</a>
+
+        <br/>
+        <p id="exemple78"><strong>--->Exemple 78 exemple distribuicio HTML </strong></p>
+        <a href="exemples_a_part/exemple78.html">Exemple 78</a>
+
+        <br/>
+        <p id="exemple79"><strong>--->Exemple 79 exemple distribuicio HTML </strong></p>
+        <a href="exemples_a_part/exemple79.html">Exemple 79</a>
+
+        <br/>
+        <p id="exemple80"><strong>--->Exemple 80 exemple distribuicio HTML </strong></p>
+        <a href="exemples_a_part/exemple80.html">Exemple 80</a>
+
+        <br/>
+        <p id="exemple81"><strong>--->Exemple 81 exemple distribuicio HTML </strong></p>
+        <a href="exemples_a_part/exemple81.html">Exemple 81</a>
+
+        <br/>
+        <p id="exemple82"><strong>--->Exemple 82 exemple distribuicio HTML (Progresio completa desde example 77)</strong></p>
+        <a href="exemples_a_part/exemple82.html">Exemple 82</a>
+
+        <br/>
+        <p><strong>--->Exemple 83 exemple etiqueta video </strong></p>
+        <video width="50%" controls loop poster="img/fotograma.png">
+            <source src="video/lofi.mp4" type="video/mp4"/>
+            <!-- <source src="video/lofi.ogv" type="video/ogv"/>
+            <source src="video/lofi.webm" type="video/webm"/> 
+            
+            las lineas comentadas son para poner mas formatos de video
+            en elc aso de que el navegador no puediera reproducir el primero-->
+
+            <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español" />
+            <!-- Por cada idioma dque queramos poner subtitulos es un archivo diferente para cada uno -->
+        </video>
+
+        <br/>
+        <p><strong>--->Exemple 84 exemple etiqueta audio </strong></p>
+        <audio controls preload>
+            <source src="audio/ReGenesis.mp3" type="audio/mpeg" />
+        </audio>
+
+        <br/>
+        <p><strong>--->Experiment fet per Jose </strong></p>
+        <iframe src='https://my.spline.design/1up-f08b8135020cc576fcc383d86f4eef33/' frameborder='0' width='100%' height='500px'></iframe>
+
+    </body>
+</html>

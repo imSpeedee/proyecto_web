@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Act7 Jose</title>
+
+        <style>
+            div.borde input,select{
+                border: 1px solid rgb(82, 82, 255);
+                border-radius: 20px;
+                width: 550px;
+                height: 25px;
+                padding: 5px;
+            }
+
+            textarea{
+                border: 1px solid rgb(82, 82, 255);
+                border-radius: 20px;
+                width: 550px;
+                height: 225px;
+                padding: 5px;
+            }
+
+            div.button input{
+                background-color: rgb(189, 207, 255);
+                border: 1px solid rgb(189, 207, 255);
+                border-radius: 20px;
+                width: 125px;
+                height: 25px;
+                padding: 5px;
+                font-weight: bold;
+            }
+
+            .margin_300px_right{
+                margin-right: 300px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h2>Formulari de contacte.</h2>
+        <form>
+            <div class="borde">
+                <label for="nombre">Nom:</label><br>
+                <input type="text" id="nombre">
+            </div>
+            <br>
+            <div class="borde">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email">
+            </div>
+            <br>
+            <div class="borde">
+                <label for="assumpte">Assumpte:</label><br>
+                <input type="text" id="assumpte">
+            </div>
+            <br>
+            <div class="borde">
+                <label for="msg">Missatge:</label><br>
+                <textarea id="msg"></textarea>
+            </div>
+            <br>
+            <div>
+                <label for="interessos">Interessos:</label><br>
+                <select name="interessos">
+                    <option value="0" selected>Tria una opcio</option>
+                    <option value="1">un</option>
+                    <option value="2">dos</option>
+                    <option value="3">tres</option>
+                    <option value="4">quatre</option>
+                    <option value="5">cinc</option>
+                </select>
+            </div>
+            <br>
+            <div class="borde">
+                <label for="arxiu">Adjuntar arxius:</label><br>
+                <input type="file" name="arxiu">
+            </div>
+            <br>
+            <div>
+                <label for="sexe">Sexe:</label>
+                Home<input type="radio" name="sexe" value="home"> 
+                Dona<input type="radio" name="sexe" value="dona">
+            </div>
+            <br>
+            <div>
+                <label for="politica">Accepta la nostra politica de privacitat? </label>
+                <input type="checkbox" name="politica">
+            </div>
+            <br>
+            <div class="button">
+                <label for="restablecer"></label>
+                <input class="margin_300px_right" type="reset" value="Restablecer" name="restablecer">
+                <label for="enviar"></label>
+                <input type="submit" value="Enviar missatge" name="enviar">
+            </div>
+        </form>
+    </body>
+</html>

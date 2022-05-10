@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 2 examen Jose</title>
+
+        <style>
+
+            fieldset{
+                min-width: 310px;
+                max-width: 310px;
+            }
+
+            input{
+                margin: 5px;
+                border: 5px solid;
+            }
+
+            input:valid{
+                border: lime 5px solid;
+            }
+
+            input:invalid{
+                border: red 5px solid;
+            }
+
+            input[type="submit"],input[type="reset"]{
+                border: 1px solid;
+            }
+
+            input:focus{
+                border: yellow 5px solid;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: 80px 220px;
+            }
+
+            #button{
+                margin-left: 80px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <fieldset>
+            <div class="container">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" placeholder="nom" required>
+                
+                <label for="cognom">Cognom</label>
+                <input type="text" name="cognom" placeholder="cognom" required>
+                
+                <label for="correu">E-mail</label>
+                <input type="email" name="correu" placeholder="ex: xxx@xxx.com" required>
+                
+                <label for="web">Web</label>
+                <input type="text" name="web" placeholder="ej: http://www.elmaulloc.web">
+                
+                <label for="coment">Comentari</label>
+                <textarea name="coment" cols="20" rows="5"></textarea>
+            </div>
+            <div id="button">
+                <input type="submit" name="validar" value="Enviar dades">
+                <input type="reset" name="esborrar" value="Esborrar dades">
+            </div>
+        </fieldset>
+    </body>
+</html>

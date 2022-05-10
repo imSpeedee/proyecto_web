@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>act 1 Jose</title>
+        
+        <style>
+            input:invalid { 
+                border-color: red;
+            } 
+
+            input,input:valid { 
+                border-color: #ccc; 
+            }
+
+            form:valid::after{
+                content: "✔️";
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Ejercicios PATTERN</h2>
+        
+        <form>
+            <label for="coche">Modelo de coche: </label>
+            <input type="text" name="coche" required pattern="^A[1,3,4,15]">
+
+            <br><br>
+
+            <label for="once">Total de 11 numeros:</label>
+            <input type="text" name="once" pattern="[0-9]{11}">
+
+            <br><br>
+
+            <label for="tres">Total de 3 caracteres con 3 numeros:</label>
+            <input type="text" name="tres" pattern=".{3}[0-9]{3}">
+
+            <br><br>
+        </form>
+
+    </body>
+</html>

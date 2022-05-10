@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 11 Jose</title>
+
+        <script>
+            function sueldo(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='empleadossueldo' onclick='sueldo(this.id)'>1 Empresa de cinc treballadors. Click para introducir datos.</p>";
+                
+                var total = Number(0);
+
+                var bajo = Number(0);
+
+                var alto = Number(0);
+
+                var i = 0;
+                i = Number(i);
+
+                do{
+                    i++;
+
+                    do{
+                        var aux = prompt("Indica un numero (" + i + "):");
+                        aux = Number(aux);
+                    }while(aux<800 || aux>1300);
+
+                    total = total+aux;
+
+                    if(aux<1000){
+                        bajo++;
+                    }else{
+                        alto++;
+                    }
+                }while(i<5);
+
+                text.innerHTML += "<p>Cobran entre 800€-1000€: " + bajo + "<br>Cobran mas de 1000€: " + alto + "<br>Total de los sueldos: " + total + "€</p>";
+
+            }
+
+            function immobles(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='immoblesarray' onclick='immobles(this.id)'>2 Activitat immobles 1. Click para mostrar datos.</p>";
+                
+                var immobles = ["Xalet","Solar","Apartament"];
+
+                text.innerHTML += "<p>" + immobles[2] + "</p>";
+            }
+
+            
+            function immobles2(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='immoblesarray2' onclick='immobles2(this.id)'>3 Activitat immobles 2. Click para mostrar datos.</p>";
+                
+                var immobles = ["Xalet","Local","Apartament"];
+
+                text.innerHTML += "<p>" + immobles + "</p>";
+            }
+
+            function immobles3(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='immoblesarray3' onclick='immobles3(this.id)'>4 Activitat immobles 3. Click para mostrar datos.</p>";
+                
+                var immobles = ["Xalet","Solar","Apartament"];
+
+                text.innerHTML += "<p>" + immobles + "</p>";
+
+                text.innerHTML += "<p>Total de elementos dentro de la array: " + immobles.length + "</p>";
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="empleadossueldo" onclick="sueldo(this.id)">1 Empresa de cinc treballadors. Click para introducir datos.</p>
+        <p id="immoblesarray" onclick="immobles(this.id)">2 Activitat immobles 1. Click para mostrar datos.</p>
+        <p id="immoblesarray2" onclick="immobles2(this.id)">3 Activitat immobles 2. Click para mostrar datos.</p>
+        <p id="immoblesarray3" onclick="immobles3(this.id)">4 Activitat immobles 3. Click para mostrar datos.</p>
+    </body>
+</html>

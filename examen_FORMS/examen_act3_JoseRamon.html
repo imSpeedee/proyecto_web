@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 3 examen Jose</title>
+
+        <style>
+
+            #gran{
+                max-width: 500px;
+            }
+
+            input[type="number"]{
+                width: 50px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <form>
+            <fieldset id="gran">
+                <h2>Omple les dades següents:</h2>
+                <fieldset>
+                    <legend>Dades personals</legend>
+
+                    <label for="provincia">Provincia</label>
+                    <select name="provincia">
+                        <option value="0">- selecciona -</option>
+                        <option value="1">Barcelona</option>
+                        <option value="2">Lleida</option>
+                        <option value="3">Tarragona</option>
+                        <option value="4">Girona</option>
+                        <option value="5">Valencia</option>
+                        <option value="6">Zaragoza</option>
+                        <option value="7">Teruel</option>
+                        <option value="8">Huesca</option>
+                    </select><br><br>
+
+                    <label for="data">
+                        Data de naixement <br>
+                        <input type="number" name="dia">
+                        de
+                        <select name="mes">
+                            <option value="1">Gener</option>
+                            <option value="2">Febrer</option>
+                            <option value="3">Març</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Maig</option>
+                            <option value="6">Juny</option>
+                            <option value="7">Juliol</option>
+                            <option value="8">Agost</option>
+                            <option value="9">Setembre</option>
+                            <option value="10">Octubre</option>
+                            <option value="11">Novembre</option>
+                            <option value="12">Desmbre</option>
+                        </select>
+                        de
+                        <input type="number" name="any">
+                    </label><br><br>
+
+                    <label for="temes">Temes d'interès</label><br>
+                    <select name="temes" size="5" multiple>
+                        <option value="1">Administració de bases de dades</option>
+                        <option value="2">Gestió de projectes</option>
+                        <option value="3">Hardware, xarxes i seguretat</option>
+                        <option value="4">Helpdesk</option>
+                        <option value="5">Sistemes</option>
+                        <option value="6">Programació multiplataforma</option>
+                        <option value="7">Programació web</option>
+                    </select>
+                </fieldset>
+                <br><br>
+                <input type="submit" name="validar" value="Enviar dades">
+                <input type="reset" name="esborrar" value="Esborrar dades">
+            </fieldset>
+        </form>
+    </body>
+</html>

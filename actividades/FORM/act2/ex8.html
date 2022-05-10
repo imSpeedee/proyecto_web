@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Act8 Jose</title>
+
+        <style>
+            form{
+                max-width: 650px;
+            }
+
+            body{
+                font-size: 20px;
+            }
+
+            textarea{
+                width: 350px;
+                height: 75px;
+            }
+
+            input[type="radio"]{
+                margin-left: 40px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h2>Subscripcio a Revista</h2>
+        <form>
+            <fieldset>
+                <legend>Dades personals</legend>
+                <p>
+                    <label for="nom">Nom:</label>
+                    <input type="text" name="nom" size="20">
+                    <label for="Pcognom">Primer cogom:</label>
+                    <input type="text" name="Pcognom" size="25">
+                </p>
+                <p>
+                    <label for="Scognom">Segon cogom:</label>
+                    <input type="text" name="Scognom" size="25">
+                </p>
+                <p>
+                    <label for="carrer">Adreça:</label>
+                    <input type="text" name="carrer" placeholder="Carrer o plaça, numero i pis." size="50">
+                </p>
+                <p>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" size="35" placeholder="exemple@correu.com">
+                </p>
+                <p>
+                    <label for="pass">Contrasenya:</label>
+                    <input type="password" name="pass">
+                </p>
+                <p>
+                    Sexe<br><br>
+                    <input type="radio" name="hm" value="h">Home <br>
+                    <input type="radio" name="hm" value="m">Dona
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Nivell d'esudis i interessos</legend>
+                <p>
+                    Nivell d'estudis<br><br>
+                    <input type="radio" name="estudis" value="escola">Certificat escolar <br>
+                    <input type="radio" name="estudis" value="eso">Graduat en ESO <br>
+                    <input type="radio" name="estudis" value="batx">Batxiller
+                </p>
+                <p>
+                    Pots enviar el teu article sobre qualsevol tema. Farem una valoracio perque pugui ser publicat.
+                </p>
+                <p>
+                    <label for="arxiu">Pujar article: </label>
+                    <input type="file" name="arxiu">
+                </p>
+                <p>
+                    <label for="msg">Si vols enviar una opinio o comentari escriu aqui.</label><br>
+                    <textarea id="msg" placeholder="Escriu el teu comentari."></textarea>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Començar de nou</legend>
+                <p>
+                    Esborrar totes les dades del formulari.
+                    <label for="restablecer"></label>
+                    <input type="reset" value="Esborrar tot" name="restablecer">
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Començar de nou</legend>
+                <p>Enviar el fomulari per correu electronic: En premer el boto s'obrira la pagina d'enviament de correu:</p>
+                <p>
+                    <label for="enviar"></label>
+                    <input type="submit" value="Enviar per correu" name="enviar">
+                </p>
+            </fieldset>
+        </form>
+    </body>
+</html>

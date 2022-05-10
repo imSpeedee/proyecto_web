@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 9 Jose</title>
+
+        <script>
+            function traduccion(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='traducciones' onclick='traduccion(this.id)' >1 Traduccion de casa, mesa, perro o gato. Click para introducir datos.</p>";
+
+                var txt = prompt("Indica la palabar a traducir:");
+
+                switch(txt){
+                    case"casa":case"Casa":
+                        text.innerHTML += "<p>Castellano: Casa | Catalan: Casa</p>";
+                    break;
+                    case"mesa":case"Mesa":
+                        text.innerHTML += "<p>Castellano: Mesa | Catalan: Taula</p>";
+                    break;
+                    case"perro":case"Perro":
+                        text.innerHTML += "<p>Castellano: Perro | Catalan: Gos</p>";
+                    break;
+                    case"gato":case"Gato":
+                        text.innerHTML += "<p>Castellano: Gato | Catalan: Gat</p>";
+                    break;
+                    default:
+                        text.innerHTML += "<p>Esta palabra no se puede traducir.</p>";
+                    break;
+                }
+
+            }
+
+            function numcat(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='numeroscatalan' onclick='numcat(this.id)' >2 Numeros en catalan. Click para introducir datos.</p>";
+
+                var num = prompt("Indica un numero del 1 al 5:");
+                num = Number(num);
+
+                switch(num){
+                    case 1:
+                        text.innerHTML += "<p>1 = U</p>";
+                    break;
+                    case 2:
+                        text.innerHTML += "<p>2 = Dos</p>";
+                    break;
+                    case 3:
+                        text.innerHTML += "<p>3 = Tres</p>";
+                    break;
+                    case 4:
+                        text.innerHTML += "<p>4 = Quatre</p>";
+                    break;
+                    case 5:
+                        text.innerHTML += "<p>5 = Cinc</p>";
+                    break;
+                    default:
+                        text.innerHTML += "<p>Numero no valido.</p>";
+                    break;
+                }
+            }
+
+            function dias(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='diassemana' onclick='dias(this.id)' >3 Dias de la semana. Click para introducir datos.</p>";
+
+                var dia = prompt("Indica un numero del 1 al 7:");
+                dia = Number(dia);
+
+                switch(dia){
+                    case 1:
+                        text.innerHTML += "<p>1 = Lunes</p>";
+                    break;
+                    case 2:
+                        text.innerHTML += "<p>2 = Martes</p>";
+                    break;
+                    case 3:
+                        text.innerHTML += "<p>3 = Miercoles</p>";
+                    break;
+                    case 4:
+                        text.innerHTML += "<p>4 = Jueves</p>";
+                    break;
+                    case 5:
+                        text.innerHTML += "<p>5 = Viernes</p>";
+                    break;
+                    case 6:
+                        text.innerHTML += "<p>6 = Sabado</p>";
+                    break;
+                    case 7:
+                        text.innerHTML += "<p>7 = Domingo</p>";
+                    break;
+                    default:
+                        text.innerHTML += "<p>Numero no valido.</p>";
+                    break;
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="traducciones" onclick="traduccion(this.id)" >1 Traduccion de casa, mesa, perro o gato. Click para introducir datos.</p>
+        <p id="numeroscatalan" onclick="numcat(this.id)" >2 Numeros en catalan. Click para introducir datos.</p>
+        <p id="diassemana" onclick="dias(this.id)" >3 Dias de la semana. Click para introducir datos.</p>
+    </body>
+</html>

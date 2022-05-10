@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 4 Jose</title>
+
+        <script>
+            function grande(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='masgrande' onclick='grande(this.id)'>1 El mas grande. Click para introducir datos.</p>";
+
+                var num = 0;
+                num = Number(num);
+
+                for(i=0;i<3;i++){
+                    var numaux = prompt("Pon un numero:");
+                    numaux = Number(numaux);
+                    if(numaux>num){
+                        num = numaux;
+                    }
+                }
+                text.innerHTML += "<p>El numero mas grande es el " + num + ".</p>";
+            }
+
+            function tipo(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='tiponum' onclick='tipo(this.id)'>2 Como es el numero. Click para introducir datos.</p>";
+                
+                var num = prompt("Pon el numero que quieras:");
+                num = Number(num);
+
+                if(num>0){
+                text.innerHTML += "<p>El numero es positivo.</p>";
+                }else if(num<0){
+                text.innerHTML += "<p>El numero es negativo.</p>";
+                }else{
+                text.innerHTML += "<p>El numero es 0.</p>";
+                }
+            }
+
+            function cifras(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='cifras' onclick='cifras(this.id)'>3 Cuantas cifras. Click para introducir datos.</p>";
+                
+                do{
+                    var num = prompt("Pon un numero positivo (1-999):");
+                    num = Number(num);
+                }while(num<1 || num>999);
+
+                if(num<10){
+                    text.innerHTML += "<p>El numero tiene una cifra.</p>";
+                }else if(num>9 && num<100){
+                    text.innerHTML += "<p>El numero tiene dos cifras.</p>";
+                }else{
+                    text.innerHTML += "<p>El numero tiene tres cifras.</p>";
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="masgrande" onclick="grande(this.id)">1 El mas grande. Click para introducir datos.</p>
+        <p id="tiponum" onclick="tipo(this.id)">2 Como es el numero. Click para introducir datos.</p>
+        <p id="cifras" onclick="cifras(this.id)">3 Cuantas cifras. Click para introducir datos.</p>
+    </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 12 Jose</title>
+
+        <style>
+            .cuadrado{
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+            }
+
+            .bgblack{
+                background-color: black;
+                color: white;
+            }
+
+            .bgyellow{
+                background-color: rgb(255, 255, 146);
+            }
+
+            .ocultar{
+                display: none;
+            }
+
+            img{
+                width: 150px;
+                height: 100px;
+                margin: 10px;
+            }
+
+            #act1{
+                display: flex;
+            }
+
+            #act2{
+                display: flex;
+            }
+
+            #act5{
+                display: flex;
+            }
+
+            #act5 a{
+                margin: 5px;
+            }
+
+            #naranja{
+                border: 5px solid black;
+                background-color: orange;
+            }
+            #verde{
+                border: 5px solid black;
+                background-color: lime;
+            }
+            #aqua{
+                border: 5px solid black;
+                background-color: aqua;
+            }
+            #lila{
+                border: 5px solid black;
+                background-color: purple;
+            }
+            #rosa{
+                border: 5px solid black;
+                background-color: pink;
+            }
+        </style>
+
+        <script>
+            function elementfullcolor(id,color){
+                document.body.style.backgroundColor = color;
+            }
+
+            function txtItalic(id){
+                document.getElementById(id).style.fontStyle = 'Italic';
+            }
+
+            function txtBold(id){
+                document.getElementById(id).style.fontWeight = 'bold';
+            }   
+
+            function txtRed(id){
+                document.getElementById(id).style.color = 'red';
+            }
+
+            function txtBig(id){
+                document.getElementById(id).style.fontSize = '20px';
+            }
+
+            function cambioimg(id,url){
+                document.getElementById(id).src = url;
+            }
+
+            function traducirTXT(id){
+                document.getElementById(id).innerHTML = "Wellcome to my web site.";
+            }
+
+            function elementbgcolor(id,color){
+                if(color == 'black'){
+                    document.getElementById(id).style.color = 'white';
+                }else{
+                    document.getElementById(id).style.color = 'black';
+                }
+                document.getElementById(id).style.backgroundColor = color;
+            }
+
+            function mostrarmas(id,id2){
+                if(document.getElementById(id).style.display == "none"){
+                    document.getElementById(id).style.display = "block";
+                    document.getElementById(id2).style.display = "none";
+                }else{
+                    document.getElementById(id).style.display = "none";
+                    document.getElementById(id2).style.display = "block";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="act1">
+            <p id="naranja" onmouseover="elementfullcolor(this.id,'orange')" onmouseout="elementfullcolor(this.id,'white')" class="cuadrado"></p>
+            <p id="verde" onmouseover="elementfullcolor(this.id,'lime')" onmouseout="elementfullcolor(this.id,'white')" class="cuadrado"></p>
+            <p id="aqua" onmouseover="elementfullcolor(this.id,'aqua')" onmouseout="elementfullcolor(this.id,'white')" class="cuadrado"></p>
+            <p id="lila" onmouseover="elementfullcolor(this.id,'purple')" onmouseout="elementfullcolor(this.id,'white')" class="cuadrado"></p>
+            <p id="rosa" onmouseover="elementfullcolor(this.id,'pink')" onmouseout="elementfullcolor(this.id,'white')" class="cuadrado"></p>
+        </div>
+        <hr>
+        <br><br>
+        <div id="act2">
+            <button onclick="txtItalic('cambiostxt')">Italica</button>
+            <button onclick="txtBold('cambiostxt')">Negreta</button>
+            <button onclick="txtRed('cambiostxt')">Rojo</button>
+            <button onclick="txtBig('cambiostxt')">Tamanyo</button>
+        </div>
+        <p id="cambiostxt">Este texto cambiara su estilo en funcion del boton que clickes.</p>
+        <hr>
+        <br>
+        <img id="pandas" onmouseover="cambioimg(this.id,'https://misanimales.com/wp-content/uploads/2020/04/panda-rojo-cara-768x512.jpg')" onmouseout="cambioimg(this.id,'https://cienciaybiologia.com/wp-content/uploads/2017/06/panda-rojo-4.jpg')" src="https://cienciaybiologia.com/wp-content/uploads/2017/06/panda-rojo-4.jpg" alt="Alternar imagenes de oso">
+        <hr>
+        <br><br>
+        <button onclick="traducirTXT('txtIngles')">Traducir</button>
+        <p id="txtIngles">Benvingut al meu lloc web.</p>
+        <hr>
+        <div id="act5">
+            <a href="" onmouseover="elementbgcolor('cuadradocolor','red')" onmouseout="elementbgcolor('cuadradocolor','black')">Rojo</a>
+            <a href="" onmouseover="elementbgcolor('cuadradocolor','aqua')" onmouseout="elementbgcolor('cuadradocolor','black')">Azul</a>
+            <a href="" onmouseover="elementbgcolor('cuadradocolor','Lime')" onmouseout="elementbgcolor('cuadradocolor','black')">Verder</a>
+            <a href="" onmouseover="elementbgcolor('cuadradocolor','Grey')" onmouseout="elementbgcolor('cuadradocolor','black')">Gris</a>
+        </div>
+        <p id="cuadradocolor" class="cuadrado bgblack">Texto de la capa con estilos.</p>
+        <hr>
+        <p>Oferta 1 <button onclick="mostrarmas('of1','of2')">Mas info</button></p>
+        <p class="bgyellow" id="of1">El precio final de esta oferta es 100€</p>
+
+        <p>Oferta 2 <button onclick="mostrarmas('of2','of1')">Mas info</button></p>
+        <p class="bgyellow ocultar" id="of2">El precio final de esta oferta es 200€</p>
+</html>

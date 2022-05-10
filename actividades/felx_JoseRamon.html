@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex Jose</title>
+
+        <style>
+
+            main{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+                min-width: 1500px;
+            }
+
+            .cont_animales{
+                display: grid;
+                grid-template-columns: repeat(3, 350px);
+                grid-gap: 100px;
+            }
+
+            h2{   
+                flex-basis: 100%;
+            }
+
+            .animal{
+                width: 300px;
+                text-align: left;
+            }
+
+            img{
+                width: 300px;
+            }
+
+            .negrita{
+                font-weight: bold;
+            }
+
+            .inside{
+                background-color: orange;
+                padding-left: 20px;
+                padding-right: 20px;
+                min-height: 250px;
+            }
+
+            .centrar{
+                text-align: center;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <main>
+            <h2>LOREM IPSUM</h2>
+
+            <div class="cont_animales">
+                <div class="animal">
+                    <img src="https://peligrodeextincion.org/wp-content/uploads/2021/09/esto-es-una-atraco-panda-rojo.jpg" alt="panda rojo">
+                    <br>
+                    <div class="inside">
+                        <p class="negrita">Lorem ipsum dolor sit amet consectetur adipiscing elit fusc</p>
+                        <p>Suscipit metus tincidunt suspendisse congue auctor tristique felis, sagittis gravida id nostra ultricies fringilla phasellus</p>
+                        <div class="centrar"><button>Boton de ejemplo</button></div>
+                    </div>
+                </div>
+    
+                <div class="animal">
+                    <img src="https://peligrodeextincion.org/wp-content/uploads/2021/09/esto-es-una-atraco-panda-rojo.jpg" alt="panda rojo">
+                    <br>
+                    <div class="inside">
+                        <p class="negrita">Tincidunt sollicitudin curabitur mattis magna tortor nunc habitant,</p>
+                        <p>Suscipit metus tincidunt suspendisse congue auctor tristique felis, sagittis gravida id nostra ultricies fringilla phasellus</p>
+                        <div class="centrar"><button>Boton de ejemplo</button></div>
+                    </div>
+                </div>
+    
+                <div class="animal">
+                    <img src="https://peligrodeextincion.org/wp-content/uploads/2021/09/esto-es-una-atraco-panda-rojo.jpg" alt="panda rojo">
+                    <br>
+                    <div class="inside">
+                        <p class="negrita">Sed malesuada commodo etiam congue potenti volutpat dictum aliquam mus</p>
+                        <p>Suscipit metus tincidunt suspendisse congue auctor tristique felis, sagittis gravida id nostra ultricies fringilla phasellus</p>
+                        <div class="centrar"><button>Boton de ejemplo</button></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

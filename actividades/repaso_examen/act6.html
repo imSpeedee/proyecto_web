@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Repaso 6 Jose</title>
+
+        <style>
+            fieldset{
+                max-width: 650px;
+                min-width: 650px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Completar</legend>
+                <label for="dni">DNI:</label>
+                <input type="text" name="dni">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre">
+
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos">
+
+                <label for="email">Email:</label>
+                <input type="email" name="email"><br><br>
+
+                <input type="radio" name="p1" value="1">Intel<br>
+                <input type="radio" name="p1" value="2">AMD<br><br>
+
+                <label for="hora">Elija una hora:</label>
+                <input type="time" name="hora"><br>
+
+                <label for="ch1">Lunes</label>
+                <input type="checkbox" name="ch1"><br>
+                <label for="ch2">Martes</label>
+                <input type="checkbox" name="ch2"><br>
+                <label for="ch3">Miércoles</label>
+                <input type="checkbox" name="ch3"><br>
+                <label for="ch4">Jueves</label>
+                <input type="checkbox" name="ch4"><br>
+                <label for="ch5">Viernes</label>
+                <input type="checkbox" name="ch5"><br><br>
+
+                <label for="fichero">Elije un fichero:</label>
+                <input type="file" name="fichero"><br>
+
+                <label for="fecha">Elija una fecha:</label>
+                <input type="date" name="fecha">
+            </fieldset>
+
+            <fieldset>
+                <legend>Indique sus preferencias por favor</legend>
+
+                <select name="FP" size="4" multiple>
+                    <option value="1">SMIR</option>
+                    <option value="2">ASIR</option>
+                    <option value="3">DAM</option>
+                    <option value="4">DAW</option>
+                </select><br>
+
+                <textarea name="txt" cols="40" rows="5" placeholder="Inserte aquí el texto"></textarea><br><br>
+
+                <input type="radio" name="p1" value="1">Albacete
+                <input type="radio" name="p1" value="2">Ciudad Real
+                <input type="radio" name="p1" value="3">Cuenca
+                <input type="radio" name="p1" value="4">Guadalajara
+                <input type="radio" name="p1" value="5">Toledo<br><br>
+
+                <label for="hora2">Elija una hora:</label>
+                <input type="time" name="hora2"><br>
+
+                <label for="color">Elija un color:</label>
+                <input type="color" name="color"><br>
+            </fieldset>
+
+            <fieldset>
+                <input type="submit" name="validar" value="Validar">
+                <input type="reset" name="esborrar" value="Esborrar">
+            </fieldset>
+        </form>
+    </body>
+</html>

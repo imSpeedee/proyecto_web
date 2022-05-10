@@ -1,0 +1,2 @@
+Aixo es un exemple de text per a descarregar
+a traves d'un link en la meva pagina web

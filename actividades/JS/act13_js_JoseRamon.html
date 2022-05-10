@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <title>Activitat 13 Jose</title>
+
+        <style>
+            .wrap_container{
+                display: flex;
+            }
+
+            .ocultar{
+                display: none;
+            }
+
+            #act2 button{
+                margin: 5px;
+            }
+        </style>
+
+        <script>
+            function mostrarLink(box,link){
+                document.getElementById(box).value = link;
+            }
+
+            function mostrarBoton(box,boton){
+                document.getElementById(box).value = boton;
+            }
+
+            function cambioFondo1(urlImg){
+                document.body.style.backgroundImage = "url(https://data.viaje-a-china.com/kcfinder/upload/vac/pic/ly/99c654518c9f4611880380.jpg)";
+            }
+            function cambioFondo2(urlImg){
+                document.body.style.backgroundImage = "url(https://i0.wp.com/hipertextual.com/wp-content/uploads/2022/01/sid-balachandran-_9a-3NO5KJE-unsplash-scaled.jpg?fit=2560%2C1704&ssl=1)";
+            }
+            function cambioFondo3(urlImg){
+                document.body.style.backgroundImage = "url(https://s1.eestatic.com/2017/08/31/ciencia/animales-ciencia_243237703_44853030_1706x960.jpg)";
+            }
+
+            /*Actividad 4*/
+            function fuenteBodyGrande(){
+                document.body.style.fontSize = "20px";
+            }
+
+            function fuenteBodyNormal(){
+                document.body.style.fontSize = "16px";
+            }
+
+            function colorBodyLime(){
+                document.body.style.backgroundColor = "lime";
+            }
+
+            function colorBodyNormal(){
+                document.body.style.backgroundColor = "white";
+            }
+
+            function fuenteSectGrande(id){
+                document.getElementById(id).style.fontSize = "20px";
+            }
+
+            function fuenteSectNormal(id){
+                document.getElementById(id).style.fontSize = "16px";
+            }
+
+            function colorSectLime(id){
+                document.getElementById(id).style.backgroundColor = "lime";
+            }
+
+            function colorSectNormal(id){
+                document.getElementById(id).style.backgroundColor = "white";
+            }
+
+            function fontfamilySect(id){
+                document.getElementById(id).style.fontFamily = "'Lobster', cursive";
+            }
+            /*Actividad 4*/
+
+            function txtOculto(idTxt,idLink){
+                if(document.getElementById(idTxt).style.display == "none"){
+                    document.getElementById(idTxt).style.display = "block";
+                    document.getElementById(idLink).innerText = "Ocultar contenido";
+                }else{
+                    document.getElementById(idTxt).style.display = "none";
+                    document.getElementById(idLink).innerText = "Mostrar contenido";
+                }
+            }
+
+            function mostrarTxtBox(idBox){
+                document.getElementById(idBox).style.display = "block";
+            }
+
+            function confirmarPagina(){
+                var opcion = confirm("Desea abrir una pestaña con la pagina web del periodico El Pais?.");
+                if (opcion == true) {
+                    // Abrir nuevo tab
+                    var win = window.open("https://elpais.com", "_blank");
+                    // Cambiar el foco al nuevo tab (punto opcional)
+                    win.focus();
+                } else {
+
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <ul>
+            <li><a href="https://www.adobe.com/es/" onmouseover="mostrarLink('txtLink','https://www.adobe.com/es/')">Adobe</a></li>
+            <li><a href="https://www.apple.com/es/" onmouseover="mostrarLink('txtLink','https://www.apple.com/es/')">Apple</a></li>
+            <li><a href="https://www.ibm.com/es/" onmouseover="mostrarLink('txtLink','https://www.ibm.com/es/')">IBM</a></li>
+        </ul>
+        <input type="text" id="txtLink">
+        <hr>
+        <br>
+        <div id="act2" class="wrap_container">
+            <button onclick="mostrarBoton('txtBoton','Pulsado el Boton 1')">Boton 1</button>
+            <button onclick="mostrarBoton('txtBoton','Pulsado el Boton 2')">Boton 2</button>
+            <button onclick="mostrarBoton('txtBoton','Pulsado el Boton 3')">Boton 3</button>
+            <input type="text" id="txtBoton">
+        </div>
+        <br>
+        <hr>
+        <div id="act2" class="wrap_container">
+            <p>Selecciona un fondo de pagina.</p>
+            <button onclick="cambioFondo1()">Fondo imagen 1</button>
+            <button onclick="cambioFondo2()">Fondo imagen 2</button>
+            <button onclick="cambioFondo3()">Fondo imagen 3</button>
+        </div>
+        <hr>
+
+        <div id="act4">
+            <p><a href="#" onclick="fuenteBodyGrande()">Aumenta el tamaño de la fuente de toda la pagina</a></p>
+            <p><a href="#" onclick="fuenteBodyNormal()">Tamaño normal</a></p>
+            <p><a href="#" onclick="colorBodyLime()">Cambiar color de fondo</a></p>
+            <p><a href="#" onclick="colorBodyNormal()">Color normal</a></p>
+            <p><a href="#" onclick="fuenteSectGrande('act4')">Aumenta el tamaño de la fuente de solo esta seccion</a></p>
+            <p><a href="#" onclick="fuenteSectNormal('act4')">Tamaño normal</a></p>
+            <p><a href="#" onclick="colorSectLime('act4')">Cambiar el color de esta seccion</a></p>
+            <p><a href="#" onclick="colorSectNormal('act4')">Color normal</a></p>
+            <p><a href="#" onmouseover="fontfamilySect('act4')">Camabia el tipo de fuente empleada en esta seccion al situar el raton encima de este vinculo</a></p>
+        </div>
+        <hr>
+        <p id="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis nunc sed blandit libero volutpat. Feugiat in ante metus dictum at tempor. Ante metus dictum at tempor commodo ullamcorper a lacus vestibulum. Tincidunt augue interdum velit euismod in pellentesque massa placerat duis. Est ullamcorper eget nulla facilisi etiam. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Semper viverra nam libero justo laoreet sit amet cursus. Morbi leo urna molestie at elementum eu facilisis. Diam donec adipiscing tristique risus nec feugiat in fermentum posuere. Et malesuada fames ac turpis egestas maecenas pharetra. Fames ac turpis egestas maecenas pharetra convallis posuere morbi. Velit laoreet id donec ultrices. Suspendisse interdum consectetur libero id faucibus.</p>
+        <p><a href="#" id="linkMostrar" onclick="txtOculto('lorem',this.id)">Ocultar contenido</a></p>
+        <hr>
+        <div id="divLorem">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis nunc sed blandit libero volutpat. Feugiat in ante metus dictum at tempor. Ante metus dictum at tempor commodo ullamcorper a lacus vestibulum. Tincidunt augue interdum velit euismod in pellentesque massa placerat duis. Est ullamcorper eget nulla facilisi etiam. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Semper viverra nam libero justo laoreet sit amet cursus. Morbi leo urna molestie at elementum eu facilisis. Diam donec adipiscing tristique risus nec feugiat in fermentum posuere. Et malesuada fames ac turpis egestas maecenas pharetra. Fames ac turpis egestas maecenas pharetra convallis posuere morbi. Velit laoreet id donec ultrices. Suspendisse interdum consectetur libero id faucibus.</p>
+            <p>Leo in vitae turpis massa sed. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Gravida arcu ac tortor dignissim convallis aenean. Nulla facilisi morbi tempus iaculis urna id. Tempor id eu nisl nunc mi. Lorem ipsum dolor sit amet consectetur adipiscing elit duis. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Eu volutpat odio facilisis mauris sit amet. Ut consequat semper viverra nam libero justo. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Elit ut aliquam purus sit amet luctus venenatis lectus. Nisi scelerisque eu ultrices vitae auctor eu augue ut lectus. Tellus id interdum velit laoreet id donec. Nisl purus in mollis nunc. Tellus rutrum tellus pellentesque eu tincidunt tortor. Amet tellus cras adipiscing enim eu turpis. Pulvinar pellentesque habitant morbi tristique senectus.</p>
+            <p>Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Massa sed elementum tempus egestas sed sed risus pretium. Pretium aenean pharetra magna ac placerat vestibulum lectus mauris ultrices. At volutpat diam ut venenatis tellus. Elit eget gravida cum sociis natoque penatibus et magnis dis. Lobortis feugiat vivamus at augue eget arcu dictum varius. Neque convallis a cras semper. Quis eleifend quam adipiscing vitae proin sagittis. Eu volutpat odio facilisis mauris sit amet massa vitae tortor. Phasellus vestibulum lorem sed risus ultricies. Nibh praesent tristique magna sit amet. Nulla malesuada pellentesque elit eget gravida cum sociis.</p>
+        </div>
+        <p><a href="#" id="linkMostrarDiv" onclick="txtOculto('divLorem',this.id)">Ocultar contenido</a></p>
+        <hr>
+        <p>Seleccione un curso</p>
+            <form>
+                <input type="radio" name="rb" value="1">HTML <br>
+                <input type="radio" name="rb" value="2">CSS <br>
+                <input type="radio" name="rb" value="3" onclick="mostrarTxtBox('boxOtros')" id="btnOtro">OTRO
+                <div id="boxOtros" class="ocultar">
+                    Especifique:
+                    <input type="text">
+                </div>
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+        <hr>
+        <a href="#linkPeriodico" onclick="confirmarPagina()" id="linkPeriodico">Periodico El Pais</a>
+    </body>
+</html>

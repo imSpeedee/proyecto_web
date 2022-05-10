@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Repaso 4 Jose</title>
+
+        <style>
+            fieldset{
+                max-width: 650px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Rellenar</legend>
+                <input type="radio" name="p1" value="1">Inglés<br>
+                <input type="radio" name="p1" value="2">Alemán<br>
+                <input type="radio" name="p1" value="3">Francés<br><br>
+                <select name="data" size="1">
+                    <option value="1">Paralelo</option>
+                    <option value="2">opt2</option>
+                    <option value="3">opt3</option>
+                    <option value="4">opt4</option>
+                </select><br><br>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" size="25"><br>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" size="25"><br><br>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Indique sus preferencias por favor</legend>
+                <select name="sexe" size="4" multiple>
+                    <option value="h">Hombre</option>
+                    <option value="m">Mujer</option>
+                </select>
+                <br><br>
+                <input type="checkbox" name="mujer">Mujer <br>
+                <input type="checkbox" name="hombre">Hombre <br><br>
+                Elija una fecha:
+                <input type="date">
+            </fieldset>
+            <fieldset>
+                <input type="submit" name="validar" value="Validar">
+                <input type="reset" name="esborrar" value="Esborrar">
+            </fieldset>
+        </form>
+    </body>
+</html>

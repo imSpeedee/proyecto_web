@@ -1,0 +1,159 @@
+.resaltado{
+    color: #000000;
+    background-color: #ffff00;
+    font-style: italic;
+}
+
+#act2{
+    background-color: rgb(172, 172, 172);
+    color: blue;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+
+body{
+    font-size: 20px;
+}
+
+body.act7{
+    margin-top: 60px;
+}
+
+a.act3:link{
+    background-color: lime;
+    color: red;
+}
+a.act3:hover{
+    background-color: red;
+    color: lime;
+}
+a.act3:visited{
+    background-color: blueviolet;
+    color: lime;
+}
+a.act3:active {
+    color: rgb(0, 236, 12);
+    background-color: transparent;
+}
+
+a.act4:link{
+    text-decoration: none;
+}
+a.act4:visited{
+    text-decoration: none;
+}
+
+li.act5::first-letter{
+    text-decoration: underline;
+}
+
+p.act6a{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+p.act6b{
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    position: relative;
+    left: 50px;
+    top: -140px;
+    z-index: 1;
+}
+p.act6c{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    position: relative;
+    left: 25px;
+    top: -400px;
+
+    margin-bottom: -350px;/*Margin per a que la pagina web no quedi tan separada*/
+}
+
+div.act7superior{
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    clear: both;
+    margin-top: -60px;
+    letter-spacing: 5px;
+    height: 50px;
+}
+div.act7lateral{
+    top: 60px;
+    width: 25%;
+    float: left;
+}
+div.act7contenido{
+    top: 60px;
+    left: 20px;
+    width: 75%;
+    overflow: auto;
+    line-height: 1.2;
+    float: right;
+}
+
+img.act8{
+    width: 150px;
+    float: right;
+    margin: 10px;
+}
+p.act8{
+    text-align: justify;
+}
+
+p.act9::first-letter{
+    font-size: 300%;
+    float: left;
+}
+
+div.act10{
+    background-color: rgb(241, 228, 149);
+    width: 250px;
+    float: left;
+    margin: 10px;
+}
+div.act10clear{
+    background-color: rgb(241, 228, 149);
+    width: 250px;
+    float: left;
+    margin: 10px;
+    clear: left;
+}
+
+div.act11 > p{
+    color: blue;
+}
+
+li.act12:first-child{
+    color: green;
+}
+li.act12:last-child{
+    color: red;
+}
+
+ul.act13{
+    color: red;
+    font-size: 35px;
+}
+ul.act13 li{
+    display:inline;
+    padding-left:12px;
+    padding-right:12px;
+}
+
+div.act14{
+    width: 100px;
+    align-items: center;
+    text-align: center;
+}
+div.act14 a{
+    color: red;
+}

@@ -1,0 +1,36 @@
+h1{
+    text-align: center;
+}
+
+main{
+    max-width: 640px;
+    min-width: 640px;
+    margin: 0 auto;
+}
+
+div{
+    padding: 5px;
+    text-align: justify;
+}
+
+div.aqua{
+    background-color: aqua;
+    margin-bottom: 20px;
+}
+
+div.orange{
+    background-color: rgb(199, 129, 0);
+}
+
+div.yellow{
+    background-color: yellow;
+    max-width: 200px;
+    min-width: 200px;
+    position: relative;
+    left: 10px;
+    top: -340px;
+}
+
+.padding_text_left{
+    padding-left: 230px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 1 examen Jose</title>
+
+        <style>
+            
+            .text_bold{
+                font-weight: bold;
+            }
+
+            .mini{
+                width: 60px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Dades generals</legend>
+                <label for="nom">Nom</label><br>
+                <input type="text" name="nom" size="50"><br><br>
+    
+                
+                <label for="desc">Descripciò</label><br>
+                <textarea name="desc" cols="35" rows="5"></textarea><br><br>
+    
+                <label for="foto">Foto</label>
+                <input type="file" name="foto"><br><br>
+    
+                <input type="checkbox" name="comptador">
+                <label for="comptador">Afegir comptador de visites</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Ddades informàtiques</legend>
+                <label for="element"></label>
+                <select name="element" size="4" multiple>
+                    <option class="text_bold" value="0">Grupo de elementos A</option>
+                    <option value="1">Elemento A1</option>
+                    <option value="2">Elemento A2</option>
+                    <option value="3">Elemento A3</option>
+                    <option value="4">Elemento A4</option>
+                    <option value="5">Elemento A5</option>
+                    <option value="6">Elemento A6</option>
+                    <option value="7">Elemento A7</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dades econòmiques</legend>
+                <label for="preu">
+                    Preu
+                    <input class="mini" type="number" name="preu">
+                    euro/s.
+                </label><br><br>
+
+                Impostos <br><br>
+
+                Promoció <br>
+                <input type="radio" name="promo" value="1">Cap <br>
+                <input type="radio" name="promo" value="2">Transport gratuit <br>
+                <input type="radio" name="promo" value="3">Descompte 5%
+            </fieldset><br>
+
+            <input type="submit" name="validar" value="Enviar dades">
+            <input type="reset" name="esborrar" value="Esborrar dades">
+        </form>
+    </body>
+</html>

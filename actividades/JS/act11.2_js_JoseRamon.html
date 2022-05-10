@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 11.2 Jose</title>
+
+        <script>
+            function cincoencinco(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='contarcincuenta' onclick='cincoencinco(this.id)'>1 Contar de 5 en 5. Click para ejecutar.</p>";
+
+                var i = 0;
+                i = Number(i);
+
+                text.innerHTML += "<p>";
+
+                for(i=0;i<=50;i+=5){
+                    text.innerHTML += i + "<br>";
+                }
+                text.innerHTML += "</p>";
+            }
+
+            function condiciones(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='condicionesususario' onclick='condiciones(this.id)'>2 Aceptar condiciones de usuario. Click para ejecutar.</p>";
+
+                var opcion = confirm("Click en Aceptar o Cancelar nuestras condiciones de usuario.");
+                if (opcion == true) {
+                    text.innerHTML += "<p>Has aceptado nuestras condiciones de usuario.</p>";
+                } else {
+                    // Abrir nuevo tab
+                    var win = window.open("https://www.google.es", "_blank");
+                    // Cambiar el foco al nuevo tab (punto opcional)
+                    win.focus();
+                }
+            }
+
+            function listaperso(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='listapersosonas' onclick='listaperso(this.id)'>3 Persona dentro la lista. Click para ejecutar.</p>";
+
+                var personas = ["Juan","Carla","David","Maria","Julia"];
+
+                var perso = prompt("Indica el nombre de la persona que buscas:");
+
+                if(personas.includes(perso)){
+                    text.innerHTML += "<p>Nombre: " + perso + " | Posicion en la lista: " + (personas.indexOf(perso)+1) + "</p>";
+                }else{
+                    text.innerHTML += "<p>Nombre no encontrado en la lista.</p>";
+                }
+            }
+
+            function parejos(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='parejoshasta' onclick='parejos(this.id)'>4 Numeros parejos hasta un numero. Click para ejecutar.</p>";
+
+                var numero = prompt("Indica un numero positivo:");
+                numero = Number(numero);
+
+                var i = 0;
+                i = Number(i);
+
+                text.innerHTML += "<p>";
+
+                for(i=0;i<=numero;i+=2){
+                    text.innerHTML += i + "<br>";
+                }
+                text.innerHTML += "Tu numero: " + numero + "</p>";
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="contarcincuenta" onclick="cincoencinco(this.id)">1 Contar de 5 en 5. Click para ejecutar.</p>
+        <p id="condicionesususario" onclick="condiciones(this.id)">2 Aceptar condiciones de usuario. Click para ejecutar.</p>
+        <p id="listapersosonas" onclick="listaperso(this.id)">3 Persona dentro la lista. Click para ejecutar.</p>
+        <p id="parejoshasta" onclick="parejos(this.id)">4 Numeros parejos hasta un numero. Click para ejecutar.</p>
+    </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 6 Jose</title>
+
+        <script>
+            function ultimos(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='dieznums' onclick='ultimos(this.id)'>1 Diez numeros. Click para introducir datos.</p>";
+                
+                var total = 0;
+                total = Number(total);
+
+                var i = 0;
+                i = Number(i);
+                for(i=0;i<10;i++){
+
+                    var numaux = prompt("Indica el numero " + (i+1) + ":");
+                    numaux = Number(numaux);
+
+                    if(i>4){
+                        total += numaux;
+                    }
+                }
+                text.innerHTML += "<p>La suma de los ultimos 5 numeros es: " + total + "</p>";
+            }
+
+            function sumcinco(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='cinconums' onclick='sumcinco(this.id)'>2 Suma de 5 numeros. Click para introducir datos.</p>";
+                
+                var total = 0;
+                total = Number(total);
+
+                var i = 0;
+                i = Number(i);
+                for(i=0;i<5;i++){
+
+                    var numaux = prompt("Indica el numero " + (i+1) + ":");
+                    numaux = Number(numaux);
+
+                    total += numaux;
+                }
+                text.innerHTML += "<p>La suma de todos los numeros es: " + total + "</p>";
+            }
+
+            function tresfunc(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='tresfunciones' onclick='tresfunc(this.id)'>3 Cantidad de valortes diferentes. Click para introducir datos.</p>";
+                
+                var pos = 0;
+                var neg = 0;
+                var par = 0;
+
+                pos = Number(pos);
+                neg = Number(neg);
+                par = Number(par);
+
+                var i = 0;
+                i = Number(i);
+                for(i=0;i<10;i++){
+
+                    var numaux = prompt("Indica el numero " + (i+1) + ":");
+                    numaux = Number(numaux);
+
+                    if(numaux<0){
+                        neg += 1;
+                    }else if(numaux>0){
+                        pos += 1;
+                    }
+
+                    if(numaux%2 || numaux==0){
+                        par += 1;
+                    }
+                }
+                text.innerHTML += "<p>Pares:" + par + " Positivos:" + pos + " Negativos:" + neg + "</p>";
+            }
+
+            function contador(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='negypos' onclick='contador(this.id)'>4 Cuantos negativos y positivos. Click para introducir datos.</p>";
+                
+                var pos = 0;
+                var neg = 0;
+
+                pos = Number(pos);
+                neg = Number(neg);
+
+                var i = 0;
+                i = Number(i);
+                for(i=0;i<10;i++){
+
+                    var numaux = prompt("Indica el numero " + (i+1) + ":");
+                    numaux = Number(numaux);
+
+                    if(numaux<0){
+                        neg += 1;
+                    }else if(numaux>0){
+                        pos += 1;
+                    }
+                }
+                text.innerHTML += "<p>Positivos:" + pos + " Negativos:" + neg + "</p>";
+
+                text.innerHTML += "<p></p>";
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="dieznums" onclick="ultimos(this.id)">1 Diez numeros. Click para introducir datos.</p>
+        <p id="cinconums" onclick="sumcinco(this.id)">2 Suma de 5 numeros. Click para introducir datos.</p>
+        <p id="tresfunciones" onclick="tresfunc(this.id)">3 Cantidad de valortes diferentes. Click para introducir datos.</p>
+        <p id="negypos" onclick="contador(this.id)">4 Cuantos negativos y positivos. Click para introducir datos.</p>
+    </body>
+</html>

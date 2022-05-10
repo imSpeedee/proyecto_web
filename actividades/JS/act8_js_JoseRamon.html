@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 8 Jose</title>
+
+        <script>
+            function ultimo(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='elultimo' onclick='ultimo(this.id)'>1 9999 el utimo. Click para introducir datos.</p>";
+            
+                var total = 0;
+                total = Number(total);
+
+                do{
+                    var aux = prompt("Indica un numero para sumar (si no quiers seguir poniendo numero pon el 9999)");
+                    aux = Number(aux);
+
+                    if(aux != 9999){
+                        total += aux;
+                    }
+                }while(aux != 9999);
+                
+                text.innerHTML += "<p>El total es= " + total;
+
+                if(total>0){
+                    text.innerHTML += "Es un numero posotivo.</p>";
+                }else if(total<0){
+                    text.innerHTML += "Es un numero neagtivo.</p>";
+                }else{
+                    text.innerHTML += "Es el numero 0.</p>";
+                }
+            }
+
+            
+            function clave(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='clavecorrecta' onclick='clave(this.id)'>2 Clave correcta (clave). Click para introducir datos.</p>";
+            
+                var pass = "clave";
+
+                do{
+                    var passUser = prompt("Que contraseña es la correcta?");
+                }while(passUser != "clave");
+
+                text.innerHTML += "<p>Clave encontrada.</p>";
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="elultimo" onclick="ultimo(this.id)">1 9999 el utimo. Click para introducir datos.</p>
+        <p id="clavecorrecta" onclick="clave(this.id)">2 Clave correcta (clave). Click para introducir datos.</p>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Repaso 1 Jose</title>
+
+        <style>
+            .text_bold{
+                font-weight: bold;
+            }
+
+            fieldset{
+                max-width: 650px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Dades personals</legend>
+                <label for="nom">Nom:</label><br>
+                <input type="text" name="nom" size="25"><br><br>
+                <label for="desc">Descripció:</label><br>
+                <textarea name="desc" cols="26" rows="5"></textarea><br><br>
+                <label for="foto">Foto:</label>
+                <input type="file" name="foto"><br><br>
+                <input type="checkbox" name="compt">
+                <label for="compt">Afegir Comptador de visites</label>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Dades informàtiques</legend>
+                <select name="element" size="4" multiple>
+                    <option class="text_bold" value="0">Grupo de elemento A</option>
+                    <option value="1">Elemento A1</option>
+                    <option value="2">Elemento A2</option>
+                    <option value="3">Elemento A3</option>
+                    <option value="4">Elemento A4</option>
+                    <option value="5">Elemento A5</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <input type="submit" name="validar" value="Validar">
+                <input type="reset" name="esborrar" value="Esborrar">
+            </fieldset>
+        </form>
+        <br><br>
+        <form>
+            <fieldset>
+                <legend>Seleccione tipo de pizzas</legend>
+                Pizza:
+                <select name="pizza1">
+                    <option value="1">Mozzarella</option>
+                    <option value="2">BBQ</option>
+                    <option value="3">Crispy chicken</option>
+                </select>
+                Cantidad:
+                <select name="cant1">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select><br>
+                Pizza:
+                <select name="pizza2">
+                    <option value="1">Mozzarella</option>
+                    <option value="2">BBQ</option>
+                    <option value="3">Crispy chicken</option>
+                </select>
+                Cantidad:
+                <select name="cant2">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select><br>
+                Pizza:
+                <select name="pizza3">
+                    <option value="1">Mozzarella</option>
+                    <option value="2">BBQ</option>
+                    <option value="3">Crispy chicken</option>
+                </select>
+                Cantidad:
+                <select name="cant3">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Datos</legend>
+                <label for="nom">Nombre:</label>
+                <input type="text" name="nom" size="30"><br>
+                <label for="direccion">Direccion:</label>
+                <input type="text" name="direccion" size="25"><br>
+                <label for="telef">Telefono:</label>
+                <input type="number" name="telef" size="10">
+            </fieldset>
+            <input type="submit" name="enviar" value="Enviar">
+        </form>
+    </body>
+</html>

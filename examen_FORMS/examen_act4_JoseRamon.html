@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 4 examen Jose</title>
+
+        <style>
+
+            form{
+                max-width: 800px;
+                min-width: 800px;
+            }
+
+            input[type="number"]{
+                width: 50px;
+            } 
+
+        </style>
+
+    </head>
+    <body>
+        <h2>Cuestinario de cine</h2>
+        <form>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" name="nombre" size="25"><br>
+                
+                <label for="apellidos">Apellidos:</label><br>
+                <input type="text" name="apellidos" size="25"><br>
+                
+                <label for="dni">DNI:</label><br>
+                <input type="text" name="dni" size="25"><br>
+                
+                <label for="edad">Edad:</label><br>
+                <input type="number" name="edad"><br>
+
+                <label for="sexo">Sexo:</label><br>
+                <select name="sexo">
+                    <option value="0">---</option>
+                    <option value="h">Hombre</option>
+                    <option value="m">Mujer</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Mejor pelicula</legend>
+                <input type="radio" name="pelicula" value="1">El Padrino <br>
+                <input type="radio" name="pelicula" value="2">Crepúsculo <br>
+                <input type="radio" name="pelicula" value="3">Los odiosos 8 <br>
+                <input type="radio" name="pelicula" value="4">Anatomia de un asesinato
+            </fieldset>
+            <fieldset>
+                <legend>Tu opninion</legend>
+                <textarea name="opinion" id="" cols="50" rows="10"></textarea>
+            </fieldset>
+
+            <!-- En l'activitat se que no hi ha botons pero em semblava extrany que no
+                hi hagues cap boto per enviar o esborrar i per si acas els e ficat -->
+            <br><br>
+            <input type="submit" name="validar" value="Enviar dades">
+            <input type="reset" name="esborrar" value="Esborrar dades">
+        </form>
+    </body>
+</html>

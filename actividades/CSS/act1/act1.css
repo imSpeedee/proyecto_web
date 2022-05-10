@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(196, 118, 83);
+    font-family: 'Roboto', sans-serif;
+    margin-top: 60px;
+}
+
+h1{
+    background-color: black;
+    color: white;
+    letter-spacing: 20px;
+    text-align: center;
+    align-items: center;
+    font-size: 45px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    clear: both;
+    margin-top: -60px;
+}
+
+div{
+    border: black 5px dashed;
+    background-color: rgb(0, 124, 124);
+    height: 200px;
+    width: 200px;
+    overflow: auto;
+	margin: 10px;
+    font-style: italic;
+    float: left;
+    padding: 10px;
+}
+
+div.bck_org{
+    background-color: rgb(255, 72, 0);
+}
+
+div.bck_img{
+    background-image: url(vb.jpg);
+}
+
+div.solid_brd{
+    border: black 5px solid;
+}
+
+div:first-letter{
+    font-size: 400%;
+    color: white;
+    font-style: normal;
+    float: left;
+    line-height: 0.8;
+}
+
+div.red_init:first-letter{
+    color: red;
+}

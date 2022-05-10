@@ -1,0 +1,44 @@
+div{
+    background-color: bisque;
+    border: 3px solid;
+    width: 200px;
+    height: 200px;
+}
+
+div.red{
+    border-color: red;
+    z-index: 5;
+    position: absolute;
+    left: 20px;
+    top: 80px;
+}
+
+div.blue{
+    border-color: blue;
+    z-index: 2;
+    position: absolute;
+    left: 140px;
+    top: 50px;
+}
+
+div.blue:hover{
+    background-color: blue;
+    color: white;
+    z-index: 4;
+}
+
+div.green{
+    border-color: green;
+    z-index: 3;
+    position: absolute;
+    left: 210px;
+    top: 100px;
+}
+
+div.yellow{
+    border-color: rgb(189, 189, 0);
+    z-index: 1;
+    position: absolute;
+    left: 50px;
+    top: 20px;
+}

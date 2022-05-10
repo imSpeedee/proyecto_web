@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 5 Jose</title>
+
+        <script>
+            function fecha(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='pedirfecha' onclick='fecha(this.id)'>1 Dia de navidad. Click para introducir datos.</p>";
+
+                var dia = prompt("Indica un dia:");
+                var mes = prompt("Indica un mes:");
+                var anyo = prompt("Indica un año:");
+
+                dia = Number(dia);
+                mes = Number(mes);
+                anyo = Number(anyo);
+                
+                if(dia==25 && mes==12){
+                    text.innerHTML += "<p>Esta fecha corresponde a la de Navidad.</p>";
+                }else{
+                    text.innerHTML += "<p>Esta fecha no corresponde a la de Navidad.</p>";
+                }
+            }
+            
+            function sum(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='sumnums' onclick='sum(this.id)'>2 Numeros iguales. Click para introducir datos.</p>";
+
+                var num1 = prompt("Introduce el primer numero:");
+                var num2 = prompt("Introduce el segundo numero:");
+                var num3 = prompt("Introduce el tercer numero:");
+
+                num1 = Number(num1);
+                num2 = Number(num2);
+                num3 = Number(num3);
+
+                if(num2==num1 && num3==num1){
+                    text.innerHTML += "<p>(" + num1 + "+" + num2 + ")*" + num3 + "=" + ((num1+num2)*num3)  + "</p>";
+                }else{
+                    text.innerHTML += "<p>Los numeros no son iguales.</p>";
+                }
+                
+            }
+
+            function menores(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='numsmenores' onclick='menores(this.id)'>3 Menores de 10. Click para introducir datos.</p>";
+
+                var num1 = prompt("Introduce el primer numero:");
+                var num2 = prompt("Introduce el segundo numero:");
+                var num3 = prompt("Introduce el tercer numero:");
+
+                num1 = Number(num1);
+                num2 = Number(num2);
+                num3 = Number(num3);
+
+                if(num1<10 && num2<10 && num3<10){
+                    text.innerHTML += "<p>Todos los numeros son menores de 10.</p>";
+                }else{
+                    text.innerHTML += "<p>NO todos los numeros son menores de 10.</p>";
+                }
+            }
+
+            function sueldo(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='sueldoemp' onclick='sueldo(this.id)'>4 Sueldo de un empleado. Click para introducir datos.</p>";
+
+                var sueldo = prompt("Introduce el sueldo:");
+                var anyos = prompt("Introduce los años:");
+
+                sueldo = Number(sueldo);
+                anyos = Number(anyos);
+
+                if(sueldo<500 && anyos>=10){
+                    text.innerHTML += "<p>Sueldo: " + (sueldo*1.20) + "€</p>";
+                }else if(sueldo<500 && anyos<10){
+                    text.innerHTML += "<p>Sueldo: " + (sueldo*1.05) + "€</p>";
+                }else if(sueldo>=500){
+                    text.innerHTML += "<p>Sueldo: " + sueldo + "€</p>";
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="pedirfecha" onclick="fecha(this.id)">1 Dia de navidad. Click para introducir datos.</p>
+        <p id="sumnums" onclick="sum(this.id)">2 Numeros iguales. Click para introducir datos.</p>
+        <p id="numsmenores" onclick="menores(this.id)">3 Menores de 10. Click para introducir datos.</p>
+        <p id="sueldoemp" onclick="sueldo(this.id)">4 Sueldo de un empleado. Click para introducir datos.</p>
+    </body>
+</html>

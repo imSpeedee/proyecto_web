@@ -1,0 +1,114 @@
+/*#region body*/
+body{
+    font-family: OCR A Std, monospace;
+    background-color: lightgrey;
+}
+/*#endregion body*/
+
+/*#region a*/
+a:link {
+    color: rgb(0, 30, 128);
+    background-color: transparent;
+    text-decoration: none;
+    text-decoration: underline;
+}
+a:visited {
+    color: rgb(0, 153, 89);
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: rgb(0, 236, 12);
+    background-color: transparent;
+    text-decoration: underline;
+}
+/*#endregion a*/
+
+hr{
+    border: 2px solid black;
+}
+
+form.ex49 input:focus{
+    background-color: red;
+}
+
+form.ex50 input[type="checkbox"]:checked{
+    box-shadow: 0 0 0 3px hotpink;
+}
+
+form.ex51 input:disabled{
+    background-color: red;
+}
+form.ex51 input:enabled{
+    background-color: green;
+}
+
+form.ex52 input[type="text"]{
+    width: 20%;
+    padding: 15px 22px;
+    margin: 10px 5px;
+    background-color: orange;
+}
+
+form.ex53 input[type="checkbox"]:checked+label{
+    color: red;
+    font-style: italic;
+}
+
+p.ex54::before{
+    content: "ATENCIO!!!";
+    color: #d14;
+}
+
+p.ex55::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+}
+
+div.ex56 input:required{
+    border: 3px solid red;
+    background: yellow;
+}
+div.ex56 input:valid{
+    border: 3px solid green;
+    background: #fff;
+}
+div.ex56 input:invalid{
+    border: 3px solid red;
+    background: #000;
+    box-shadow: 0 0 10px 2px red;
+    color: #888;
+}
+
+input.ex57:out-of-range{
+    border: 5px solid red;
+}
+
+input.ex58:in-range{
+    background-color: green;
+    color: white;
+}
+
+p.emoji_apple::before{
+    content: "🍏";
+}
+
+p.emoji_ball::after{
+    content: "🏐";
+}
+
+input.inpInv:invalid { 
+    border-color: red; 
+} 
+
+input.inpInv,input.inpInv:valid { 
+    border-color: #ccc; 
+}

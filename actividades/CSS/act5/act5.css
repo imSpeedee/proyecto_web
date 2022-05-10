@@ -1,0 +1,65 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 60px;
+}
+
+h1{
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    clear: both;
+    margin-top: -60px;
+    letter-spacing: 5px;
+}
+
+section#tres_columnes p{
+    margin: 10px;
+    text-align: justify;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+p:first-letter{
+    text-transform: uppercase;
+    color: red;
+    font-size: 400%;
+    font-style: normal;
+    float: left;
+    line-height: 0.8;
+}
+
+section#tres_columnes{
+    display: flex;
+}
+
+p.bck_img{
+    background-image: url(don_Quijote.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+img{
+    width: 80px;
+    height: 80px;
+    border: 3px solid orange;
+}
+
+img#imx_box1{
+    float: left;
+    margin: 10px;
+    margin-bottom: -5px;
+}
+
+img#imx_box3{
+    float: right;
+    margin: 10px;
+}
+
+footer{
+    min-width: 960px;
+    max-width: 960px;
+}

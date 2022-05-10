@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 3.1 Jose</title>
+
+        <script>
+            function coches(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='ford' onclick='coches(this.id)'>1 Descuento coche. Click para introducir datos.</p>";
+
+                var coche = prompt("Introduce tu coche(fiesta = ford fiesta | focus = ford focus):");
+            
+                if(coche=="fiesta"){
+                    text.innerHTML += "<p>Tienes uni 5% de descuento.</p>";
+                }else if(coche=="focus"){
+                    text.innerHTML += "<p>Tienes uni 10% de descuento.</p>";
+                }else{
+                    text.innerHTML += "<p>No hay descuento para este coche.</p>";
+                }
+            }
+
+            function mes(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='dias' onclick='mes(this.id)'>2 Dias del mes. Click para introducir datos.</p>";
+                
+                var mes = prompt("Indica un mes (1 al 12):");
+                mes = Number(mes);
+
+                switch(mes){
+                    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                        text.innerHTML += "<p>Este mes tiene 31 dias.</p>";
+                    break;
+                    case 4: case 6: case 9: case 11:
+                        text.innerHTML += "<p>Este mes tiene 30 dias.</p>";
+                    break;
+                    case 2:
+                        text.innerHTML += "<p>Este mes tiene puede tener 28 o 29 dias.</p>";
+                    break;
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="ford" onclick="coches(this.id)">1 Descuento coche. Click para introducir datos.</p>
+        <p id="dias" onclick="mes(this.id)">2 Dias del mes. Click para introducir datos.</p>
+    </body>
+</html>

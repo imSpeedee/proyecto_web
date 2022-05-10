@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 3 Jose</title>
+
+        <script>
+            function dosNums(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='nums' onclick='dosNums(this.id)'>1 Los dos numeros. Click para ingresar datos.</p>";
+
+                var num1 = prompt("Pon el primer numero.");
+                var num2 = prompt("Pon el segundo numero.");
+
+                num1 = Number(num1);
+                num2 = Number(num2);
+
+                if(num1>num2){
+                    text.innerHTML += "<p>Suma: " + num1 + "+" + num2 + "=" + (num1+num2) + "<br> Diferencia entre los dos es de " + (num1-num2) + "</p>"
+                }else{
+                    text.innerHTML += "<p>Producto: " + num1 + "*" + num2 + "=" + (num1*num2) + "<br> Division: " + num1 + "/" + num2 + "=" + (num1/num2) + "</p>"
+                }
+            }
+
+            function notas(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='notas' onclick='notas(this.id)'>2 Notas de un alumno. Click para ingresar datos.</p>";
+
+                const numNotas = 3;
+
+                var suma = 0;
+                suma = Number(suma);
+
+                for(i=0;i<numNotas;i++){
+                    var n1 = prompt("Nota del alumno:");
+                    n1 = Number(n1);
+                    suma = suma + n1;
+                }
+                
+                var media = suma/numNotas;
+
+                if(media>=5){
+                    text.innerHTML += "<p>Nota media: " + media + " | Aprobado</p>"
+                }else{
+                    text.innerHTML += "<p>Nota media: " + media + " | NO aprobado</p>"
+                }
+            }
+
+            function digitos(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='nums2' onclick='digitos(this.id)'>3 Uno o dos digitos. Click para ingresar datos.</p>";
+
+                var num = 0;
+
+                while(num<1 || num>99){
+                    num = prompt("Indica un numero del 1 al 99");
+                }
+                num = Number(num);
+                if(num<=9){
+                    text.innerHTML += "<p>Te un digit.</p>";
+                }else{
+                    text.innerHTML += "<p>Te dos digits.</p>";
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="nums" onclick="dosNums(this.id)">1 Los dos numeros. Click para ingresar datos.</p>
+        <p id="notas" onclick="notas(this.id)">2 Notas de un alumno. Click para ingresar datos.</p>
+        <p id="nums2" onclick="digitos(this.id)">3 Uno o dos digitos. Click para ingresar datos.</p>
+    </body>
+</html>

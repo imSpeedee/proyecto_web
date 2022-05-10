@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 2 Jose</title>
+
+        <script>
+            function notas(id){
+                const numNotas = 3;
+
+                var text = document.getElementById(id);
+
+                var suma = 0;
+                suma = Number(suma);
+
+                for(i=0;i<numNotas;i++){
+                    var n1 = prompt("Nota del alumno:");
+                    n1 = Number(n1);
+                    suma = suma + n1;
+                }
+                
+                var media = suma/numNotas;
+
+                text.innerHTML = "<p id='Anotas' onclick='notas(this.id)'>1 Caluclo de notas. Click para introducir datos.</p>";
+                if(media>=7){
+                    text.innerHTML += "<h3>Nota media: " + media + " | Promocionado</h3>"
+                }else{
+                    text.innerHTML += "<h3>Nota media: " + media + " | NO promocionado</h3>"
+                }
+            }
+
+            function constraenas(id){
+                var text = document.getElementById(id);
+
+                var pass1 = prompt("Introduce una contraseña:");
+                var pass2 = prompt("Vuelve a introducir la contraseña:");
+
+                text.innerHTML = "<p id='Bpass' onclick='constraenas(this.id)'>2 Contraseñas verificadas. Click para introducir datos.</p>";
+                if(pass1==pass2){
+                    text.innerHTML += "<h3>La contraseña esta verificada.</h3>";
+                }else{
+                    text.innerHTML += "<h3>ERROR Las contraseñas son diferentes.</h3>";
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="Anotas" onclick="notas(this.id)">1 Caluclo de notas. Click para introducir datos.</p>
+
+        <p id="Bpass" onclick="constraenas(this.id)">2 Contraseñas verificadas. Click para introducir datos.</p>
+    </body>
+</html>

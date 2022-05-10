@@ -1,0 +1,991 @@
+/*Esto es un comentario en hoja de estilos CSS*/
+
+/*#region body*/
+body{
+    font-family: OCR A Std, monospace;
+    background-color: lightgray;
+}
+/*#endregion body*/
+
+/*#region perso*/
+.colortexto{color: rgb(0, 182, 106);}
+.centrartext{text-align: center; color: grey;}
+
+.error{color: red;}
+.destacat{font-size: 15px;}
+.especial{font-weight: bold;}
+.error.destacat{color: blue;}
+
+.esquerra{float: left;}
+.dreta{float: right;}
+
+.flex-container{
+    display: flex;
+    background-color: grey;
+}
+.flex-item{
+    background-color: white;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+}
+
+.flex-container2{
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+}
+.flex-item2{
+    background-color: white;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+}
+
+.flex-container3{
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+}
+.flex-item3{
+    background-color: white;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+}
+
+.flex-container4{
+    background-color: yellow;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+.flex-item4{
+    background-color: orange;
+    width: 50%;
+    height: 50px;
+}
+
+.flex-containerCss100{
+    background-color: yellow;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.flex-item1Css100{
+    background-color: orange;
+    width: 100px;
+    height: 50px;
+}
+.flex-item2Css100{
+    background-color: blue;
+    width: 100px;
+    height: 50px;
+}
+.flex-item3Css100{
+    background-color: green;
+    width: 100px;
+    height: 50px;
+}
+.flex-item4Css100{
+    background-color: red;
+    width: 100px;
+    height: 50px;
+}
+.flex-item5Css100{
+    background-color: white;
+    width: 100px;
+    height: 50px;
+}
+
+.css102{
+    display: inline;
+}
+
+#avis{
+     color: rgb(255, 145, 0);
+}
+
+#css114recuadro1{
+    transform: rotate(25deg);
+    border-radius: 20px;
+    background-color: rgb(148, 148, 148);
+    width: 200px;
+    padding: 10px;
+}
+
+#css114recuadro2{
+    transform: rotate(-25deg);
+    border-radius: 20px;
+    background-color: rgb(148, 148, 148);
+    width: 200px;
+    padding: 10px;
+}
+
+/*#endregion  perso*/
+
+/*#region p*/
+p{
+    color: blueviolet;
+}
+
+p.center{
+    text-align: center;
+    color: brown;
+}
+
+p.large{
+    font-size: 300%;
+}
+
+p.urgent{
+    color: rgb(0, 85, 57);
+}
+
+p.css35:first-letter{
+    font-size: 400%;
+}
+
+p.css44{
+    text-align: justify;
+}
+
+p.subratllat{
+    text-decoration: underline;
+}
+
+p.ubratllat_top{
+    text-decoration: overline;
+}
+
+p.ratllat{
+    text-decoration: line-through;
+}
+
+p.css47{
+    text-indent: 25px;
+}
+
+p.css48{
+    letter-spacing: 5px;
+}
+
+p.css49{
+    letter-spacing: 5px;
+    text-decoration: underline;
+}
+
+p.css50a{
+    text-transform: capitalize;
+}
+
+p.css50b{
+    text-transform: uppercase;
+}
+
+p.css50c{
+    text-transform: lowercase;
+}
+
+p.sombrejat{
+    font-size: 200%;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-align: center;
+    text-shadow: rgb(187, 157, 216) 6px 0;
+    text-transform: uppercase;
+}
+
+p.css52a{
+    direction: ltr;
+}
+
+p.css52b{
+    direction: rtl;
+}
+
+p.css61{
+    border: blue 5px solid;
+}
+
+p.css62a{
+    border: blue 5px hidden;
+}
+
+p.css62b{
+    border: blue 5px dotted;
+}
+
+p.css62c{
+    border: blue 5px dashed;
+}
+
+p.css62d{
+    border: blue 5px solid;
+}
+
+p.css62e{
+    border: blue 5px double;
+}
+
+p.css62f{
+    border: blue 5px groove;
+}
+
+p.css62g{
+    border: blue 5px ridge;
+}
+
+p.css62h{
+    border: blue 5px inset;
+}
+
+p.css62i{
+    border: blue 5px outset;
+}
+
+p.css63a{
+    border-left: red 5px solid;
+}
+
+p.css63b{
+    border-top: black 5px dashed;
+    border-left: red 5px solid;
+}
+
+p.css63c{
+    border-top: black 5px dashed;
+    border-bottom: blue 10px dotted;
+    border-left: red 5px solid;
+}
+
+p.css63d{
+    border-top: black 5px dashed;
+    border-right: green 10px double;
+    border-bottom: blue 10px dotted;
+    border-left: red 5px solid;
+}
+
+p.css64a{
+    border-color: red;
+    border-width: 10px;
+    border-style: solid;
+}
+
+p.css64b{
+    border-color: red black;
+    border-width: 10px;
+    border-style: solid;
+}
+
+p.css64c{
+    border-color: red black green;
+    border-width: 10px;
+    border-style: solid;
+}
+
+p.css64d{
+    border-color: red black green;
+    border-width: 10px 40px;
+    border-style: dashed solid dotted;
+}
+
+p.blockquote1{
+    padding: 3px 10px;
+    border: rgb(26, 146, 161) 5px solid;
+    border-radius: 20px;
+}
+
+p.blockquote2{
+    padding: 3px 10px;
+    border: rgb(26, 146, 161) 5px solid;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+p.blockquote3{
+    padding: 3px 10px;
+    border: rgb(26, 146, 161) 5px double;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+p.blockquote4{
+    padding: 3px 10px;
+    border: rgb(26, 146, 161) 5px dashed;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+p.css66{
+    margin: 20px;
+    border: blue 2px solid;
+}
+
+p.css67{
+    margin: 0px;
+    border: blue 2px solid;
+}
+
+p.css68{
+    margin-left: 20px;
+    border: blue 2px solid;
+}
+
+p.css69{
+    margin-left: 0px;
+    border: blue 2px solid;
+}
+
+p.css70{
+    border: green 3px solid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+p.css71a{
+    border: rgb(26, 146, 161) 2px solid;
+    padding: 10px;
+}
+
+p.css71b{
+    border: rgb(26, 146, 161) 2px solid;
+    padding: 7px;
+}
+
+p.css71c{
+    border: rgb(26, 146, 161) 2px solid;
+    padding: 4px;
+}
+
+p.css71d{
+    border: rgb(26, 146, 161) 2px solid;
+    padding: 0px;
+}
+
+p.css72a{
+    border: rgb(26, 146, 161) 2px solid;
+    padding-left: 10px;
+}
+
+p.css72b{
+    border: rgb(26, 146, 161) 2px solid;
+    padding-left: 7px;
+}
+
+p.css72c{
+    border: rgb(26, 146, 161) 2px solid;
+    padding-left: 4px;
+}
+
+p.css72d{
+    border: rgb(26, 146, 161) 2px solid;
+    padding-left: 0px;
+}
+
+p.css87a{
+    border: black 1px solid;
+}
+
+p.css87b{
+    border: black 1px solid;
+    width: 50%;
+}
+
+p.css87c{
+    border: black 1px solid;
+    width: 20em;
+}
+
+p.css87d{
+    border: black 1px solid;
+    width: 200px;
+}
+
+p.css88a{
+    border: black 1px solid;
+}
+
+p.css88b{
+    border: black 1px solid;
+    height: 50%;
+}
+
+p.css88c{
+    border: black 1px solid;
+    height: 20em;
+}
+
+p.css88d{
+    border: black 1px solid;
+    height: 200px;
+}
+
+p.css90a{
+    border: black 1px solid;
+}
+
+p.css90b{
+    border: black 1px solid;
+    width: 20px;
+    min-width: 40%;
+}
+
+p.css90c{
+    border: black 1px solid;
+    width: 20px;
+}
+
+p.css103{
+    display: none;
+}
+
+p.css104{
+    visibility: hidden;
+}
+
+p.css105a{
+    background-color: lightblue;
+    height: 150px;
+    width: 150px;
+}
+
+p.css105b{
+    background-color: #DDDDDD;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    left: 50px;
+    top: -50px;
+}
+
+p.css106a{
+    background-color: lightblue;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    left: 50px;
+    top: 0px;
+    z-index: 1;
+}
+
+p.css106b{
+    background-color: #DDDDDD;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    left: 0px;
+    top: -50px;
+}
+
+p.css107a{
+    background-color: lightblue;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    left: 50px;
+    top: 0px;
+}
+
+p.css107b{
+    background-color: #DDDDDD;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    left: 0px;
+    top: -50px;
+}
+
+p.css108a{
+    background-color: lightblue;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    left: 50px;
+    top: 0px;
+    z-index: 2;
+}
+
+p.css108b{
+    background-color: #DDDDDD;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    left: 0px;
+    top: -50px;
+    z-index: 1;
+}
+
+p.css109{
+    column-count: 2;
+    text-align: justify;
+}
+
+p.css110{
+    column-width: 10em;
+    text-align: justify;
+}
+
+p.css111{
+    column-width: 3em;
+    columns: 3;
+    text-align: justify;
+}
+
+p.css112{
+    column-rule: black solid 2px;
+    columns: 3;
+    text-align: justify;
+}
+
+p.css113{
+    column-rule: black dashed 2px;
+    columns: 3;
+    text-align: justify;
+}
+/*#endregion p*/
+
+/*#region div*/
+div.borde{
+    border: black 3px solid;
+    font-size: 20px;
+}
+
+div.css18{
+    border: rgb(121, 0, 0) 3px solid;
+    margin: 10px;
+    padding: 10px;
+}
+
+div h1{
+    color: rgb(255, 154, 87);
+}
+
+div li h1{
+    color: rgb(80, 156, 61);
+}
+
+div>h2{
+    color: rgb(170, 0, 79);
+}
+
+div~h3{
+    color: rgb(136, 25, 201);
+}
+
+div.css25 p:first-child{
+    text-transform: uppercase;
+}
+
+div.css27 :first-child{
+    text-transform: uppercase;
+}
+
+div.css91a{
+    border: black 1px solid;
+    height: 100px;
+    width: 100px;
+}
+
+div.css91b{
+    border: black 1px solid;
+    height: 100px;
+    width: 100px;
+    overflow: visible;
+}
+
+div.css91c{
+    border: black 1px solid;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+
+div.css91d{
+    border: black 1px solid;
+    height: 100px;
+    width: 100px;
+    overflow: scroll;
+}
+
+div.css91e{
+    border: black 1px solid;
+    height: 100px;
+    width: 100px;
+    overflow: auto;
+}
+
+div.css93{
+    border: 2px rgb(131, 131, 131) solid;
+    padding: 1em;
+    margin: 1em 01em 4em;
+    width: 300px;
+}
+
+div.css94{
+    border: 2px rgb(131, 131, 131) solid;
+    padding: 1em;
+    margin: 1em 01em 4em;
+    width: 300px;
+}
+div.css94 img{
+    position: relative; /*En este ejemplo se utiliza absolute
+                          pero el absolute es sobre la pagina
+                          web entera entonces en este caso
+                          nos saldria en la aprte superior
+                          de la pagina web*/
+    top: 50px;
+    left: 50px;
+}
+
+div.css95pag{
+    border: 1px solid #CCC;
+    background-color: #E0E0E0;
+    padding: .5em;
+}
+
+div.css95clear{
+    clear: both;
+    border: 0px;
+}
+
+div.css115{
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: scale(2,3);
+}
+
+div.css116{
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: rotate(150deg);
+}
+
+div.css117{
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(0, 225, 255);
+    border: 1px solid black;
+    transition: width 1s, height 4s;
+}
+div.css117:hover{
+    width: 400px;
+}
+
+div.css117{
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(212, 0, 255);
+    border: 1px solid black;
+    transition: width 1s, height 1s, background-color 1.5s;
+}
+div.css117:hover{
+    width: 400px;
+    height: 300px;
+    background-color: rgb(0, 225, 255);
+}
+
+div.css119{
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(81, 255, 0);
+    border: 1px solid black;
+    animation-name: css119;
+    animation-duration: 1s;
+}
+@keyframes css119{
+    from{width: 300px; height: 300px;
+    background-color: rgb(255, 174, 0);}
+    to{background-color: rgb(81, 255, 0);}
+}
+/*#endregion div*/
+
+/*#region h*/
+h1{
+    color: red;
+}
+
+h2{
+    color: blue;
+}
+
+h3{
+    color: green;
+}
+
+h4,h5,h6{
+    color: rgb(0, 174, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+h4{font-size: 2em;} 
+h5{font-size: 1.5em;}
+h6{font-size: 1.2em;}
+
+h1.css44{
+    text-align: center;
+}
+
+h2.css44{
+    text-align: right;
+}
+
+h4.center{
+    text-align: center;
+}
+
+h4[class]{
+    text-transform: uppercase;
+}
+
+h5.fontfamily{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h6.mincaps{
+    font-variant: small-caps;
+}
+/*#endregion h*/
+
+/*#region a*/
+a:link {
+    color: rgb(0, 30, 128);
+    background-color: transparent;
+    text-decoration: none;
+    text-decoration: underline;
+}
+a:visited {
+    color: rgb(0, 153, 89);
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: rgb(0, 236, 12);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a.css82:hover {
+    color: #D7C8B6;
+    background-color: white;
+}
+
+a.css82{
+    color: black;
+    padding: 0 4px;
+    text-decoration: none;
+}
+/*#endregion a*/
+
+/*#region img*/
+img.bottom{
+    vertical-align: text-bottom;
+}
+
+img.top{
+    vertical-align: text-top;
+}
+
+img.css89{
+    height: 100px;
+    width: 100px;
+}
+
+img.css91img{
+    position: static;
+}
+
+img.css92{
+    position: relative;
+    top: 8em;
+}
+/*#endregion img*/
+
+/*#region hr*/
+hr.css53{
+    background-color: blueviolet;
+    height: 10px;
+}
+
+hr.css54{
+    background-color: blueviolet;
+    height: 5px;
+    width: 50%;
+}
+
+hr.css55{
+    background-color: blue;
+    height: 3px;
+}
+
+hr.css56{
+    color: blueviolet;
+    height: 10px;
+}
+
+hr.css57{
+    background-color: blueviolet;
+    height: 10px;
+    width: 50%;
+}
+
+hr.css58{
+    background-color: blueviolet;
+    height: 10px;
+    margin-left: 0%;
+    margin-right: 50%;
+}
+
+hr.css59{
+    background-color: blueviolet;
+    height: 10px;
+    margin-left: 50%;
+    margin-right: 0%;
+}
+
+hr.css60{
+    background-color: blueviolet;
+    height: 10px;
+    margin-left: 50%;
+    margin-right: 25%;
+}
+/*#endregion hr*/
+
+/*#region ul_ol_li*/
+ul.css73a{
+    list-style-type: lower-greek;
+}
+
+ul.css73b{
+    list-style-type: upper-roman;
+}
+
+ul.css74{
+    list-style-image: url('../img/vb_mini.jpg');
+}
+
+ul.css75{
+    list-style-position: inside;
+}
+
+li.css75{
+    background-color: rgb(177, 143, 209);
+}
+
+ul.css76{
+    list-style-position: outside;
+}
+
+li.css76{
+    background-color: rgb(177, 143, 209);
+}
+
+ul.css79{
+    list-style-type: none;
+}
+
+li.css79{
+    background-color: #F6E3CA;
+    float: left; /*Esta linea hace que se coloque en orizontal los elementos de una lista*/
+    text-align: center;
+    width: 5em;
+}
+
+ul.css80{
+    list-style-type: none;
+}
+
+li.css80{
+    background-color: #F6E3CA;
+    float: left; /*Esta linea hace que se coloque en orizontal los elementos de una lista*/
+    margin-right: 10px;
+    padding: 0 4px;
+}
+
+ul.css81{
+    list-style-type: none;
+}
+
+li.css81{
+    background-color: #F6E3CA;
+    border: #D7C8B6 4px solid;
+    float: left; /*Esta linea hace que se coloque en orizontal los elementos de una lista*/
+    margin-right: 10px;
+    padding: 0 4px;
+}
+
+ul.css82{
+    list-style-type: none;
+}
+
+li.css82{
+    background-color: #F6E3CA;
+    border: #D7C8B6 4px solid;
+    float: left; /*Esta linea hace que se coloque en orizontal los elementos de una lista*/
+    margin-right: 10px;
+    padding: 0 4px;
+}
+
+
+/*#endregion ul_ol_li*/
+
+/*#region table*/
+table.css84{
+    border-collapse: separate;
+}
+
+table.css85{
+    border-collapse: collapse;
+}
+
+table.css86{
+    margin: 15px;
+    padding: 15px;
+    background: rgb(250, 128, 128);
+}
+tbody.css86{
+    margin: 15px;
+    padding: 15px;
+    background: rgb(250, 197, 128);
+}
+tr.css86{
+    margin: 15px;
+    padding: 15px;
+    background: rgb(128, 246, 250);
+}
+td.css86{
+    margin: 15px;
+    padding: 15px;
+    background: rgb(232, 250, 128);
+}
+
+/*#endregion table*/
+
+/*fin documento*/

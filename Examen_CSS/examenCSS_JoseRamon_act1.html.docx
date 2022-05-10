@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Examen CSS Jose</title>
+        <style>
+            a:link{
+                color: #CC0000;
+            }
+
+            a:hover{
+                background-color: #CC0000;
+                color: #fff;
+            }
+
+            a:visited{
+                color: rgb(179, 179, 179);
+            }
+        </style>
+    </head>
+    <body>
+        <a href="(text aleatori per comprovar link no visitat)">Enllaç número 1</a><br/><br/>
+        <a href="(text aleatori per comprovar link no visitat)">Enllaç número 2</a><br/><br/>
+        <a href="">Enllaç número 3</a>
+    </body>
+</html>

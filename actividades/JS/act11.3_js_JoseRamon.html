@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 11.3 Jose</title>
+
+        <script>
+
+            var act2 = Number(act2);
+
+            function calificaciones(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='calificacionesnotas' onclick='calificaciones(this.id)'>1 Calificaciones segun la nota. Click para ejecutar JS.</p>";
+
+                var nota = prompt("Introduce tu nota:");
+                nota = Number(nota);
+
+                if(nota>=0 && nota<=3){
+                    text.innerHTML += "<p>Muy deifciente.</p>";
+                }else if(nota>3 && nota<5){
+                    text.innerHTML += "<p>Insuficiente.</p>";
+                }else if(nota>=5 && nota<6){
+                    text.innerHTML += "<p>Suficiente.</p>";
+                }else if(nota>=6 && nota<7){
+                    text.innerHTML += "<p>Bien.</p>";
+                }else if(nota>=7 && nota<9){
+                    text.innerHTML += "<p>Notable.</p>";
+                }else if(nota>=9 && nota<=10){
+                    text.innerHTML += "<p>Sobresaliente.</p>";
+                }else{
+                    text.innerHTML += "<p>Nota invalida.</p>";
+                }
+            }
+            
+            function precio(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='precioiva' onclick='precio(this.id)'>2 Precio con iva. Click para ejecutar JS.</p>";
+                
+                var precio = prompt("Indica el precio:");
+                precio = Number(precio);
+
+                var iva = prompt("Indica el iva:");
+                iva = Number(iva);
+                
+                return ivacalc(precio,iva);
+            }
+
+            function ivacalc(precio,iva){
+                return (precio*iva/100)+precio;
+            }
+            
+            function cuenta(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='cuentacorriente' onclick='cuenta(this.id)'>3 Datos de una cuenta corriente. Click para ejecutar JS.</p>";
+
+                var total = 0;
+                total = Number(total);
+
+                var cont = -1;
+                cont = Number(cont);
+
+                var listaNum = new Array();
+                var listaNombre = new Array();
+                var listaSaldo = new Array();
+                var listaSaldoTxt = new Array();
+
+                do{
+                    cont++;
+
+                    var numcuenta = prompt("Indica numero de cuenta:");
+                    numcuenta = Number(numcuenta);
+                    listaNum[cont]=numcuenta;
+
+                    if(numcuenta<0){
+                        break;
+                    }
+
+                    var nombre = prompt("Indica tu nombre:");
+                    listaNombre[cont]=nombre;
+
+                    var saldo = prompt("Indica tu saldo actual:");
+                    saldo = Number(saldo);
+                    listaSaldo[cont]=saldo;
+
+                    if(saldo>0){
+                        listaSaldoTxt[cont] = "Acreedor";
+                    }else if(saldo<0){
+                        listaSaldoTxt[cont] = "Deudor";
+                    }else{
+                        listaSaldoTxt[cont] = "Nulo";
+                    }
+
+                    total += saldo;
+                }while(numcuenta>0);
+                
+                for(i=0;i<cont;i++){
+                    text.innerHTML += "<p>Numero de cuenta: " + listaNum[i] + " | Nombre: " + listaNombre[i] + " | Saldo: " + listaSaldo[i] + ", " + listaSaldoTxt[i] + "</p>";
+                }
+
+                text.innerHTML += "<p>Suma de todos los saldos: " + total + "</p>";
+            }
+            
+            function censadas(id){
+                 var text = document.getElementById(id);
+                text.innerHTML = "<p id='personascensadas' onclick='censadas(this.id)'>4 Personas censadas. Click para ejecutar JS.</p>";
+
+                var cont = 0;
+                cont = Number(cont);
+
+                var varon = 0;
+                varon = Number(varon);
+
+                var mujer = 0;
+                mujer = Number(mujer);
+
+                var edad = 0;
+                contEdad = Number(edad);
+
+                do{
+                    var numdoc = prompt("Indica numero de documento:");
+                    numdoc = Number(numdoc);
+
+                    if(numdoc==0){
+                        break;
+                    }
+
+                    var edad = prompt("Indica tu edad:");
+                    edad = Number(edad);
+                    if(edad>=16 && edad<=65){
+                        contEdad++;
+                    }
+
+                    do{
+                        var sexo = prompt("Indica tu sexo (femenino o masculino):");
+                    }while(uppercase(sexo)!='FEMENINO' && uppercase(sexo)!='MASCULINO');
+
+                    if(sexo='femenino'){
+                        mujer++;
+                    }else if(sexo='masculino'){
+                        varon++;
+                    }
+
+                    cont++;
+                }while(numdoc!=0);
+
+                text.innerHTML += "<p>Total personas: " + cont + " | Varones: " + varon + " | Mujeres: " + mujer + " | Cantidad entre 16 y 65 años: " + contEdad + "</p>";
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="calificacionesnotas" onclick="calificaciones(this.id)">1 Calificaciones segun la nota. Click para ejecutar JS.</p>
+        <p id="precioiva" onclick="act2 = precio(this.id); document.write('Precio con iva: ' + act2);">2 Precio con iva. Click para ejecutar JS.</p>
+        <p id="cuentacorriente" onclick="cuenta(this.id)">3 Datos de una cuenta corriente. Click para ejecutar JS.</p>
+        <p id="personascensadas" onclick="censadas(this.id)">4 Personas censadas. Click para ejecutar JS.</p>
+    </body>
+</html>

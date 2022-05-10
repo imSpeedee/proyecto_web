@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 7 Jose</title>
+
+        <script>
+            function cinco(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='cinconuums' onclick='cinco(this.id)'>1 Suma de 5 numeros. Click para introducir datos.</p>";
+            
+                var total = 0;
+                total = Number(total);
+
+                var i = 0;
+                i = Number(i);
+
+                text.innerHTML += "<p>";
+
+                do{
+                    i++;
+
+                    var aux = prompt("Indica un numero (" + i + "):");
+                    aux = Number(aux);
+
+                    total += aux;
+
+                    text.innerHTML += aux;
+
+                    if(i!=5){
+                        text.innerHTML += "+"; 
+                    }
+
+                }while(i<5);
+
+                text.innerHTML += "=" + total +  "</p>";
+            }
+
+            function notas(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='notasalum' onclick='notas(this.id)'>2 Notas de los alumnos. Click para introducir datos.</p>";
+            
+                var mas = 0;
+                mas = Number(mas);
+
+                var menos = 0;
+                menos = Number(menos);
+
+                var i = 0;
+                i = Number(i);
+
+                do{
+                    i++;
+
+                    var nota = prompt("Indica una nota (" + i + "):");
+                    nota = Number(nota);
+
+                    if(nota<7){
+                        menos++;
+                    }else{
+                        mas++;
+                    }
+
+                }while(i<10);
+
+                text.innerHTML += "<p>Notas con mas de 7=" + mas + ". Notas con menos de 7=" + menos + ".</p>";
+            }
+
+            function alturas(id){                
+                var promedio = 0;
+                promedio = Number(promedio);
+
+                var i = 0;
+                i = Number(i);
+
+                do{
+                    i++;
+
+                    var aux = prompt("Indica una altura (" + i + "):");
+                    aux = Number(aux);
+
+                    promedio += aux;
+                }while(i<5);
+
+                promedio = promedio/5;
+
+                alert("Promedio de las alturas es: " + promedio + "m");
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="cinconuums" onclick="cinco(this.id)">1 Suma de 5 numeros. Click para introducir datos.</p>
+        <p id="notasalum" onclick="notas(this.id)">2 Notas de los alumnos. Click para introducir datos.</p>
+        <p id="alturamedia" onclick="alturas(this.id)">3 Altura media. Click para introducir datos.</p>
+    </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exemplos de JavaScript Jose</title>
+        <meta name="description">---Pagina web JS Jose---</meta>
+        <link href="CSS/perso.css" rel="stylesheet" type="text/css">
+
+        <style>
+            #lime,#aqua{
+                border: 5px solid black;
+                margin: 5px;
+            }
+
+            #lime{
+                background-color: limegreen;
+            }
+
+            #aqua{
+                background-color: aqua;
+            }
+        </style>
+
+        <script type="text/JavaScript" src="scripts/exemples_js.js"></script>
+
+    </head>
+    <body>
+        <!-- nonscript es per a quan un navegador no te JS activat -->
+        <noscript>
+            <p>Aquesta pàgina requereix JavaScript per al seu correcte funcionament. <br>Comproveu si JavaScript està deshabilitat en el navegador.</p>
+        </noscript>
+
+        <p onclick="alert('Escript exemple dins duna etiqueta html')">Script en una etiqueta html (fes clic per veure)</p>
+    
+        <p>Script amb una de les frases mes famoses de la programacio.</p>
+        <script>document.write("Hello World!");</script>
+        <br>
+        <br>
+        <script>
+            document.write("Primera linia");
+            document.write("<br>");
+            document.write("Segona linia");
+        </script>
+
+        <p id="suma"></p>
+        <script>
+            var x=10;
+            x+=5;
+            document.getElementById("suma").innerHTML=x;
+        </script>
+
+        <p id="suma2"></p>
+        <script>
+            var x=10;
+            var y=15;
+            var z=x+y;
+            document.getElementById("suma2").innerHTML=z;
+        </script>
+
+        <p id="sumatxt"></p>
+        <script>
+            var txt1="Joan";
+            var txt2="Petit";
+            document.getElementById("sumatxt").innerHTML=txt1+" "+txt2;
+        </script>
+
+        <br>
+
+        <p id="boleanos">Boleano: </p>
+        <script>
+            var x=5;
+            if(x<=8){
+                document.getElementById("boleanos").innerHTML="Boleano: cierto."
+            }else{
+                document.getElementById("boleanos").innerHTML="Boleano: falso."
+            }
+        </script>
+
+        <p>OPERADORES BASICOS</p>
+        <p onclick="
+            var a = prompt('Escriu un numero');
+            var b = prompt('Escriu un altre numero');
+            a = Number(a);
+            b = Number(b);
+            
+            var suma = a + b;
+            var resta = a - b;
+            var multiplicacio = a * b;
+            var divisio = a / b;
+            var modul = a % b;
+
+            document.write('suma:'+a+'+'+b+'='+suma+'<br>');
+            document.write('resta:'+a+'-'+b+'='+resta+'<br>');
+            document.write('multiplicacio:'+a+'*'+b+'='+multiplicacio+'<br>');
+            document.write('divisio:'+a+'/'+b+'='+divisio+'<br>');
+            document.write('modul:'+a+'mod.'+b+'='+modul+'<br>');
+        ">Clic aqui per a introduir numeros i fer operacions simples.</p>
+
+        <hr>
+
+        <p id="ex17">Aquest text estara en la var futura: </p>
+        <script>
+            var txtex17 = document.getElementById("ex17");
+            document.getElementById("ex17").innerHTML = txtex17.innerHTML + "text despres del del paragraf.";
+        </script>
+
+        <p id="ex19"></p>
+        <script>
+            var txtex19 = "Text afegit";
+            var element = document.getElementById("ex19");
+            element.innerHTML += txtex19;
+        </script>
+
+        <p id="ex21"></p>
+        <script>
+            var cars=["Mustang","Civic","Shelby"];
+            document.getElementById("ex21").innerHTML = cars;
+        </script>
+
+        <p id="ex22"></p>
+        <script>
+            var cars=new Array("Mustang","Civic","Shelby");
+            document.getElementById("ex22").innerHTML = cars;
+        </script>
+
+        <p id="ex23a"></p>
+        <p id="ex23b"></p>
+        <p id="ex23c"></p>
+        <script>
+            var cars=["Mustang","Civic","Shelby"];
+            document.getElementById("ex23a").innerHTML = cars[0];
+            document.getElementById("ex23b").innerHTML = cars[1];
+            document.getElementById("ex23c").innerHTML = cars[2];
+        </script>
+        <hr>
+        <p onclick="
+            var txtex24 = prompt('Escriu el teu text.');
+            var long = txtex24.length;
+            alert('El teu text te ' + long + ' caracters.');
+        ">Click per a contar caracters d'una palabra/frase.</p>
+        <hr>
+
+        <h2>Pasa el mouse per sobre de les caixes.</h2>
+        <h3>Estas en: <span id="resposta">cap</span></h3>
+        <div id="lime" onmouseover="text.innerHTML = colors[1]" onmouseout="text.innerHTML = colors[0]">
+            lime
+        </div>
+
+        <div id="aqua" onmouseover="text.innerHTML = colors[2]" onmouseout="text.innerHTML = colors[0]">
+            aqua
+        </div>
+
+        <script>
+            var colors = ["cap","lime","aqua"];
+            var text = document.getElementById("resposta");
+        </script>
+
+        <hr>
+
+        <p onclick="hello_world()">Click here.</p>
+
+        <p onclick="suma()" id="exsum"></p>
+        <script>
+            document.getElementById("exsum").innerHTML = "Suma de dos parametres: " + suma(5,6);
+        </script>
+
+        <p onclick="ex29()">Click per a comprobar si numero A esta entre 10 i 20</p>
+        
+        <p onclick="ex30()">Click per veure la teva edat.</p>
+
+        <p id="ex31resul" onclick="ex31(this.id)">Click per veure exemple de bucle.</p>
+        
+        <p id="ex32dies" onclick="ex32(this.id)">Click per veure els dies de la setmana.</p>
+
+        <p id="ex33cars" onclick="ex33(this.id)">Click per veure el llistat de cotxes.</p>s
+
+        <p id="ex34nums" onclick="ex34(this.id)">Click per veure un numero.</p>
+
+        <button onclick="bodylightaqua()">Cambiar fondo a light aqua.</button>
+
+        <br><br>
+        <button id="buttonalime" onclick="elementlime(this.id)">Cambiar fondo boton lime.</button>
+
+        <br><br>
+        <button id="buttonmasgrande" onclick="elementbigger(this.id)">Cambiar tamañano boton.</button>
+
+        <br><br>
+        <button id="buttonimg" onclick="elementimg(this.id)">Cambiar fondo boton.</button>
+
+    </body>
+</html>

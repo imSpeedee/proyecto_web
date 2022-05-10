@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 1 Jose</title>
+
+        <script>
+
+            function a1(id){
+                var nom = prompt("Quin es el teu nom?");
+                var text = document.getElementById(id);
+                
+                text.innerHTML = "<p id='act1' onclick='a1(this.id)'>Click per la primera activitat.</p>";
+                text.innerHTML += "<p>El teu nom es " + nom + ".</p>";
+            }
+
+            function a2(id){
+                var num = prompt("Quan CM mesura un cosatat del quadrat?");
+                num = Number(num);
+                var text = document.getElementById(id);
+                
+                text.innerHTML = "<p id='act2' onclick='a2(this.id)'>Calcul del perimetre d'un quadrat. Click per introduir dades.</p>";
+                text.innerHTML += "<p>El quadrat te un perimetre de " + num*4 + "cm.</p>";
+            }
+
+            function a3(id){
+                var num1 = prompt("Indica el primer numero:");
+                num1 = Number(num1);
+                var num2 = prompt("Indica el segon numero:");
+                num2 = Number(num2);
+                var num3 = prompt("Indica el tercer numero:");
+                num3 = Number(num3);
+                var num4 = prompt("Indica el quart numero:");
+                num4 = Number(num4);
+                var suma = num1+num2;
+                suma = Number(suma);
+                var prod = num3*num4;
+                prod = Number(prod);
+                var text = document.getElementById(id);
+                
+                text.innerHTML = "<p id='act3' onclick='a3(this.id)'>Calculs basics. Click per introduir dades.</p>";
+                text.innerHTML += "<p>" + num1 + "+" + num2 + "=" + suma + "<br>" + num3 + "*" + num4 + "=" + prod + "</p>";
+            }
+
+            function a4(id){
+                var num1 = prompt("Indica el primer numero:");
+                num1 = Number(num1);
+                var num2 = prompt("Indica el segon numero:");
+                num2 = Number(num2);
+                var num3 = prompt("Indica el tercer numero:");
+                num3 = Number(num3);
+                var num4 = prompt("Indica el quart numero:");
+                num4 = Number(num4);
+                var suma = num1+num2+num3+num4;
+                suma = Number(suma);
+                var prod = num1*num2*num3*num4;
+                prod = Number(prod);
+                var text = document.getElementById(id);
+                
+                text.innerHTML = "<p id='act4' onclick='a4(this.id)'>4 Calculs llargs. Click per introduir dades.</p>";
+                text.innerHTML += "<p>" + num1 + "+" + num2 + "+" + num3 + "+" + num4 + "=" + suma + "<br>" + num1 + "*" + num2 + "*" + num3 + "*" + num4 + "=" + prod + "</p>";
+            }
+
+            function a5(id){
+                var num1 = prompt("Indica el preu del producte en €(ex: 0.00):");
+                num1 = Number(num1);
+                var num2 = prompt("Indica la quantitat que vols agafar:");
+                num2 = Number(num2);
+                var prod = num1*num2;
+                prod = Number(prod);
+                var text = document.getElementById(id);
+                
+                text.innerHTML = "<p id='act5' onclick='a5(this.id)'>5 Calculs de compra. Click per introduir dades.</p>";
+                text.innerHTML += "<p>Total a pagar:" + prod + "€</p>";
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <p id="act1" onclick="a1(this.id)">1 El teu nom. Click per introduir dades.</p>
+    
+        <p id="act2" onclick="a2(this.id)">2 Calcul del perimetre d'un quadrat. Click per introduir dades.</p>
+
+        <p id="act3" onclick="a3(this.id)">3 Calculs basics. Click per introduir dades.</p>
+
+        <p id="act4" onclick="a4(this.id)">4 Calculs llargs. Click per introduir dades.</p>
+    
+        <p id="act5" onclick="a5(this.id)">5 Calculs de compra. Click per introduir dades.</p>
+    </body>
+</html>

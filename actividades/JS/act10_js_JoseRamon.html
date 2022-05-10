@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 10 Jose</title>
+
+        <script>
+
+            var act1 = Number(act1);
+            var act2 = Number(act2);
+            var act3 = Number(act3);
+            var act4 = Number(act4);
+
+            function mayor(id){
+
+                var num = 0;
+                num = Number(num);
+
+                var i = 0;
+                i = Number(i);
+
+                do{
+                    i++;
+                    var aux = prompt("Indica un numero (" + i + "):");
+                    if(aux>num){
+                        num = aux;
+                    }
+                }while(i<3);
+
+                return num;
+            }
+
+            function quadrado(id){
+                var permietro = prompt("Indica la medidda del lado de un cuadrado(0cm):");
+                permietro = Number(permietro);
+
+                permietro = permietro*4;
+
+                return permietro;
+            }
+
+            function promedio(id){
+                var total = 0;
+                total = Number(total);
+
+                var i = 0;
+                i = Number(i);
+
+                for(i=0;i<3;i++){
+                    var aux = prompt("Indica un numero (" + (i+1) + "):");
+                    aux = Number(aux);
+
+                    total += aux;
+                }
+
+                total = total/3;
+
+                return total;
+            }
+
+            function sumcinco(id){
+                var total = 0;
+                total = Number(total);
+
+                var i = 0;
+                i = Number(i);
+
+                for(i=0;i<5;i++){
+                    var aux = prompt("Indica un numero (" + (i+1) + "):");
+                    aux = Number(aux);
+
+                    total += aux;
+                }
+
+                return total;
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="tresnums" onclick="act1 = mayor(this.id); document.write('El mayor de los tres es: ' + act1);">1 El mayor de los tres. Click para introducir datos.</p>
+        <p id="perimcuadrado" onclick="act2 = quadrado(this.id); document.write('El perimetro del cuadrado es: ' + act2);">2 Perimetro de un cuadrado. Click para introducir datos.</p>
+        <p id="promediotres" onclick="act3 = promedio(this.id); document.write('El promedio de los numeros es es: ' + act3);">3 Promedio de tres numeros. Click para introducir datos.</p>
+        <p id="sumadecinco" onclick="act4 = sumcinco(this.id); document.write('La suma de todos es es: ' + act4);">4 Suma de cinco valores. Click para introducir datos.</p>
+    </body>
+</html>

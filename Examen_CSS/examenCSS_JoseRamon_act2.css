@@ -1,0 +1,10 @@
+img{
+    width: 200px;
+    border: 2px solid orange;
+    padding: 5px;
+    margin: 20px;
+}
+
+div{
+    min-width: 800px;
+}

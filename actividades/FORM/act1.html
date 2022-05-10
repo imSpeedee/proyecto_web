@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 1 Jose</title>
+        <style>
+            hr{
+                border: 2px solid black;
+            }
+
+            div.flex{ 
+                display: flex;
+            }
+
+            .desc{
+                height: 100px;
+                width: 400px;
+            }
+
+            .CSS_2{
+                background-color: yellow;
+                border: dotted red 2px;
+            }
+
+            .misstage{
+                height: 150px;
+                width: 590px;
+                resize:both;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <p>Color: <input type="color"></p>
+        <p>Data: <input type="date"></p>
+        <p>Data Hora: <input type="datetime"></p>
+        <p>Data Hora Local: <input type="datetime-local"></p>
+        <p>Hora: <input type="time"></p>
+        <p>Mes: <input type="month"></p>
+        <p>Setmana: <input type="week"></p>
+        <p>Correu electronic: <input type="email"></p>
+        <p>Numer: <input type="number"></p>
+        <p>Rang: <input type="range"></p>
+        <p>Busqueda: <input type="search"></p>
+        <p>Telefon: <input type="tel"></p>
+        <p>Adreça web: <input type="url"></p>
+        <p>Pagina web: <input type="url"></p>
+
+        <hr>
+
+        <h2>I els clasics:</h2>
+        <p>Text: <input type="text"></p>
+        <p>Clau: <input type="password"></p>
+        <p>Imatge: <input type="image"></p>
+        <p>Casella de verificacio: <input type="checkbox"></p>
+        <p>Radio: 1<input type="radio">2<input type="radio">3<input type="radio"></p>
+        <p>Arxiu: <input type="file"></p>
+        <p>Boto: <input type="button"></p>
+        <p>Esborrat: <input type="reset"></p>
+        <p>Enviament: <input type="submit"></p>
+
+        <hr>
+
+        <fieldset>
+            <legend>Alta en el servei</legend>
+            <p>Nom <input type="text" name="nom" size="30"> Cognom <input type="text" name="cognom" size="60"> DNI <input type="text" name="dni" size="10"> Contrasenya <input type="password" name="pass" size="30"> <input type="submit" value="Donar-me d'alta"></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Alta en el servei</legend>
+            <p>Nom <br><input type="text" name="nom" size="30"></p>
+            <p>Cognom <br><input type="text" name="cognom" size="60"></p>
+            <p>DNI <br><input type="text" name="dni" size="10"></p>
+            <p>Contrasenya <br><input type="password" name="pass" size="30"></p>
+            <p><input type="submit" value="Donar-me d'alta"></p>
+        </fieldset>
+
+        <hr>
+
+        <div class="flex">
+            <fieldset>
+                <legend>Alta en el servei</legend>
+                <p>Nom <br><input type="text" name="nom" size="30"></p>
+                <p>Cognom <br><input type="text" name="cognom" size="60"></p>
+                <p>DNI <br><input type="text" name="dni" size="10"></p>
+                <p>Contrasenya <br><input type="password" name="pass" size="30"></p>
+                <p><input type="submit" value="Donar-me d'alta"></p>
+            </fieldset>
+            <fieldset>
+                <legend>Alta en el servei</legend>
+                <p>Nom <br><input type="text" name="nom" size="30"></p>
+                <p>Cognom <br><input type="text" name="cognom" size="60"></p>
+                <p>DNI <br><input type="text" name="dni" size="10"></p>
+                <p>Contrasenya <br><input type="password" name="pass" size="30"></p>
+                <p><input type="submit" value="Donar-me d'alta"></p>
+            </fieldset>
+        </div>
+
+        <hr>
+
+        <h2>Formulari de registre</h2>
+        <p>Nom: <input type="text" name="nom"></p>
+        <p>Cognom: <input type="text" name="cognom"></p>
+        <p>Sexe: <input type="radio" name="hm" value="h">Home <input type="radio" name="hm" value="m">Dona</p>
+        <p>Correu: <input type="email"></p>
+        Poblacio:
+        <select name="menu">
+            <option>Igualada</option>
+            <option>Vilanova del Cami</option>
+            <option>Odena</option>
+        </select>
+        <p>Descripcio: <textarea class="desc" type="text"></textarea></p>
+        <p><input type="checkbox"> Desitjo rebre informacio sobre novetats i ofertes</p>
+        <p><input type="checkbox"> Declaro haver llegit i acceptar les condicins generals del programa i la normativa sobre proteccio de dades</p>
+
+        <hr>
+
+        <h2>Omple el teu CV</h2>
+        
+        <form action="exemple.php">
+            <p>Nom <br><input type="text" name="nom" size="30"></p>
+            <p>Cognom <br><input type="text" name="cognom" size="60"></p>
+            <p>DNI <br><input type="text" name="dni" size="10"></p>
+            <p>Contrasenya <br><input type="password" name="pass" size="10"></p>
+            <p>Sexe <br><input type="radio" name="hm" value="h">Home <br><input type="radio" name="hm" value="m">Dona</p>
+            <p>Incloure la meva foto <input type="image"></p>
+            <p><input type="checkbox"> Suscriurem al butlleti de novetats</p>
+            <p><input type="submit" value="Desar canvis"> <input type="reset" value="Esborrar"></p>
+        </form>
+
+        <hr>
+
+        <p>Nom: <br><input class="CSS_2" type="text" name="nom" size="80"></p>
+        <p>E-mail: <br><input class="CSS_2" type="email" name="correo" size="80"></p>
+        <p>Assumpte: <br><input class="CSS_2" type="text" name="assumpte" size="80"></p>
+        <p>Missatge: <br><textarea class="CSS_2 misstage" type="text" name="missatge" size="80"></textarea></p>
+        <p>Adjuntar arxiu: <br><input class="CSS_2" type="file" name="imatge"></p>
+        
+    </body>
+</html>

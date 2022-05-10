@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Examen CSS Jose</title>
+        <style>
+            img{
+                width: 200px;
+                border: 2px solid orange;
+                padding: 5px;
+                margin: 20px;
+            }
+
+            div{
+                min-width: 800px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img src="https://external-preview.redd.it/2qEqKl6-cM6nOkhwDOafobfhh6GoECi2wz0v3Jo3dG0.jpg?width=640&crop=smart&auto=webp&s=6e29652bddae51863749297d246d74417eb10d07" alt="imagen oso de videojuego">
+            <img src="https://external-preview.redd.it/2qEqKl6-cM6nOkhwDOafobfhh6GoECi2wz0v3Jo3dG0.jpg?width=640&crop=smart&auto=webp&s=6e29652bddae51863749297d246d74417eb10d07" alt="imagen oso de videojuego">
+            <img src="https://external-preview.redd.it/2qEqKl6-cM6nOkhwDOafobfhh6GoECi2wz0v3Jo3dG0.jpg?width=640&crop=smart&auto=webp&s=6e29652bddae51863749297d246d74417eb10d07" alt="imagen oso de videojuego">
+        </div>
+        <div>
+            <img src="https://external-preview.redd.it/2qEqKl6-cM6nOkhwDOafobfhh6GoECi2wz0v3Jo3dG0.jpg?width=640&crop=smart&auto=webp&s=6e29652bddae51863749297d246d74417eb10d07" alt="imagen oso de videojuego">
+            <img src="https://external-preview.redd.it/2qEqKl6-cM6nOkhwDOafobfhh6GoECi2wz0v3Jo3dG0.jpg?width=640&crop=smart&auto=webp&s=6e29652bddae51863749297d246d74417eb10d07" alt="imagen oso de videojuego">
+            <img src="https://external-preview.redd.it/2qEqKl6-cM6nOkhwDOafobfhh6GoECi2wz0v3Jo3dG0.jpg?width=640&crop=smart&auto=webp&s=6e29652bddae51863749297d246d74417eb10d07" alt="imagen oso de videojuego">
+        </div>
+        <div>
+            <img src="https://external-preview.redd.it/2qEqKl6-cM6nOkhwDOafobfhh6GoECi2wz0v3Jo3dG0.jpg?width=640&crop=smart&auto=webp&s=6e29652bddae51863749297d246d74417eb10d07" alt="imagen oso de videojuego">
+            <img src="https://external-preview.redd.it/2qEqKl6-cM6nOkhwDOafobfhh6GoECi2wz0v3Jo3dG0.jpg?width=640&crop=smart&auto=webp&s=6e29652bddae51863749297d246d74417eb10d07" alt="imagen oso de videojuego">
+            <img src="https://external-preview.redd.it/2qEqKl6-cM6nOkhwDOafobfhh6GoECi2wz0v3Jo3dG0.jpg?width=640&crop=smart&auto=webp&s=6e29652bddae51863749297d246d74417eb10d07" alt="imagen oso de videojuego">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat Arrays Jose</title>
+
+        <script>
+            function sumanums(id){
+                const numeros = 10;
+
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='sumas' onclick='sumanums(this.id)'>Ejercicio de arrays, click para introducir datos.</p>";
+
+                var lista = new Array();
+
+                var sumatotal = 0;
+                sumatotal = Number(sumatotal);
+
+                var sumaveinte = 0;
+                sumaveinte = Number(sumaveinte);
+
+                var qttreinta = 0;
+                qttreinta = Number(qttreinta);
+
+                var i = 0;
+                i = Number(i);
+
+                for(i=0;i<numeros;i++){
+                    var num = prompt("Indica un numero(" + (i+1) + "):");
+                    num = Number(num);
+
+                    lista[i] = num;
+
+                    sumatotal += num;
+
+                    if(num>=20){
+                        sumaveinte += num;
+                    }
+                    if(num>=30){
+                        qttreinta++;
+                    }
+
+                }
+
+                text.innerHTML += "Suma de todos: " + sumatotal + " | Suma de los numeros mas grandes que 20: " + sumaveinte + " | Cantidad de numeros mas grandes que 30: " + qttreinta;
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="sumas" onclick="sumanums(this.id)">Ejercicio de arrays, click para introducir datos.</p>
+    </body>
+</html>

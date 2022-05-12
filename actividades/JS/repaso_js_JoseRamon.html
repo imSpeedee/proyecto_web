@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat Repas Jose</title>
+
+        <script>
+            function act1(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='idact1' onclick='act1(this.id)'>1 Cuenta atras. Click para introducir datos.</p>";
+
+                var num = prompt("Indica un numero:");
+                num = Number(num);
+
+                while(num!=0){
+                    text.innerHTML += num + " ";
+                    num--;
+                }
+            }
+            
+            function act2(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='idact2' onclick='act2(this.id)'>2 Tipo de valor. Click para introducir datos.</p>";
+
+                var txtusuario = prompt("Itroduce algun dato:");
+
+                if(isNaN(txtusuario)){
+                    text.innerHTML += "Es una cadena de letras y numeros";
+                }else{
+                    text.innerHTML += "Es un numero";
+                }
+
+            }
+            
+            function act3(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='idact3' onclick='act3(this.id)'>3 Columna de 100. Click para ejecutar.</p>";
+
+                var i = 0;
+
+                for(i=0;i<100;i++){
+                    text.innerHTML += i + "<br>";
+                }
+                text.innerHTML += "<br><br>";
+
+                for(i=100;i>0;i--){
+                    text.innerHTML += i + "<br>";
+                }
+            }
+            
+            function act4(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='idact4' onclick='act4(this.id)'>4 Datos personales. Click para introducir datos.</p>";
+
+                var nombre = prompt("Indica tu nombre:");
+                var apellido = prompt("Indica tu primer apellido:");
+                var poblacion = prompt("Indica tu poblacion:");
+
+                text.innerHTML += "=========================<br>";
+                text.innerHTML += "Bon dia " + nombre + " " + apellido + "<br>";
+                text.innerHTML += "Hasta otra<br>";
+                text.innerHTML += "=========================<br>";
+            }
+            
+            function act5(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='idact5' onclick='act5(this.id)'>5 Porcentajes de una sala. Click para introducir datos.</p>";
+
+                var qtSala = prompt("Cantidad de personas en la sala:");
+                qtSala = Number(qtSala);
+
+                var qtH = prompt("Cantidad de Hombres en la sala:");
+                qtH = Number(qtH);
+
+                var qtM = prompt("Cantidad de Mujeres en la sala:");
+                qtM = Number(qtM);
+
+                text.innerHTML += "<p>Total sala: " + qtSala + "</p>";
+                text.innerHTML += "<p>Hombres: " + (100*qtH/qtSala) + "%</p>";
+                text.innerHTML += "<p>Mujeres: " + (100*qtM/qtSala) + "%</p>";
+            }
+            
+            function act6(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='idact6' onclick='act6(this.id)'>6 Cantidad der numeros pares. Click para introducir datos.</p>";
+
+                var num1 = prompt("Indica un numero:");
+                num1 = Number(num1);
+
+                var num2 = prompt("Indica otro numero:");
+                num2 = Number(num2);
+
+                var qtP = 0;
+
+                if(num1<num2){
+                    for(i=num1;i<=num2;i++){
+                        if(i%2==0){
+                            qtP++;
+                        }
+                    }
+                }else{
+                    for(i=num2;i>=num1;i--){
+                        if(i%2==0){
+                            qtP++;
+                        }
+                    }
+                }
+                text.innerHTML += "<p>Cantidad de numeros pares: " + qtP + "</p>";
+            }
+            
+            function act7(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='idact7' onclick='act7(this.id)'>7 Coste de una cena. Click para introducir datos.</p>";
+
+                var totalPagar = 0;
+
+                var principal = prompt("1 Para Costellar | 2 PAra Pescado");
+                principal = Number(principal);
+
+                if(principal == 1){
+                    totalPagar += 23;
+                }else{
+                    totalPagar += 15;
+                }
+
+                var opcion = confirm("Quieres postre?");
+                if (opcion == true) {
+                    totalPagar += 3;
+                } else {}
+
+                totalPagar = totalPagar + (totalPagar*6/100);
+
+                text.innerHTML += "Total a pagar por el menu: " + totalPagar;
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="idact1" onclick="act1(this.id)">1 Cuenta atras. Click para introducir datos.</p>
+        <p id="idact2" onclick="act2(this.id)">2 Tipo de valor. Click para introducir datos.</p>
+        <p id="idact3" onclick="act3(this.id)">3 Columna de 100. Click para ejecutar.</p>
+        <p id="idact4" onclick="act4(this.id)">4 Datos personales. Click para introducir datos.</p>
+        <p id="idact5" onclick="act5(this.id)">5 Porcentajes de una sala. Click para introducir datos.</p>
+        <p id="idact6" onclick="act6(this.id)">6 Cantidad der numeros pares. Click para introducir datos.</p>
+        <p id="idact7" onclick="act7(this.id)">7 Coste de una cena. Click para introducir datos.</p>
+    </body>
+</html>

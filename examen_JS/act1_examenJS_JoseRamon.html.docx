@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 1 Examen JS Jose Ramon</title>
+
+        <script>
+            function numeros(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='act1' onclick='numeros(this.id)'>1 Quantitat de numeros. Click per a introduir dades.</p>";
+
+                var neg = 0;
+                var pos = 0;
+                var total = 0;
+                var i = 0;
+
+                for(i=0;i<10;i++){
+                    var aux = prompt("Indica un valor(" + (i+1) + "): ");
+                    aux = Number(aux);
+
+                    if(aux<0){
+                        neg++;
+                    }else{
+                        pos++;
+                        total += aux;
+                    }
+                }
+                text.innerHTML += "<p>Total numero negatius: " + neg + " | Total numeros positius: " + pos + " | Suma dels numeros positius: " + total + "</p>";
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="act1" onclick="numeros(this.id)">1 Quantitat de numeros. Click per a introduir dades.</p>
+    </body>
+</html>

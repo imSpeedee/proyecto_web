@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 2 Examen JS Jose Ramon</title>
+
+        <script>
+            var act1 = Number(act1);
+            var act2 = Number(act2);
+            var act3 = Number(act3);
+                
+            function suma(num1,num2,num3){
+                return num1+num2+num3;
+            }
+            
+            function producte(num1,num2,num3){
+                return num1*num2*num3;
+            }
+
+            function promig(num1,num2,num3){
+                return (num1+num2+num3)/3;
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <p id="act2_1" onclick="act1 = suma(2,5,8); document.write('La suma es: ' + act1);">1 Fer una suma. Click per a executa JS.</p>
+        <p id="act2_2" onclick="act2 = producte(2,5,8); document.write('El producte es: ' + act2);">2 Obtenir el producte. Click per a executa JS.</p>
+        <p id="act2_3" onclick="act3 = promig(2,5,8); document.write('El promig es: ' + act3);">3 Obtenir un promig. Click per a executa JS.</p>
+    </body>
+</html>

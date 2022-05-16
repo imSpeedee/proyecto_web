@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 3 Examen JS Jose Ramon</title>
+
+        <script>
+            function mesgran(num1,num2,num3){
+                if(num1>num2 && num1>num3){
+                    return num1;
+                }else if(num2>num1 && num2>num3){
+                    return num2;
+                }else{
+                    return num3;
+                }
+            }
+
+            function preguntamesgran(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='act3' onclick='preguntamesgran(this.id)'>1 El numero mes gran. Click per introduir dades.</p>";
+
+                var numero1 = prompt("Indica el primer numero:");
+                var numero2 = prompt("Indica el segon numero:");
+                var numero3 = prompt("Indica el tercer numero:");
+
+                text.innerHTML = "<p>El numero mes gran es el: " + mesgran(numero1,numero2,numero3) + "</p>";
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="act3" onclick="preguntamesgran(this.id)">1 El numero mes gran. Click per introduir dades.</p>
+    </body>
+</html>

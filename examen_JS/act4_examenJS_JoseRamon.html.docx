@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 4 Examen JS Jose Ramon</title>
+
+        <style>
+            .wrap_container{
+                display: flex;
+            }
+        </style>
+
+        <script>
+            function colorTxt(id){
+                document.getElementById(id).style.color = "green";
+            }
+
+            function fontTxt(id){
+                document.getElementById(id).style.fontFamily = "Arial black";
+            }
+
+            function bckgColorTxt(id){
+                document.getElementById(id).style.backgroundColor = "chartreuse";
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="wrap_container">
+            <button onclick="colorTxt('txt')">Verd</button>
+            <button onclick="fontTxt('txt')">Arial black</button>
+            <button onclick="bckgColorTxt('txt')">Chartreuse</button>
+        </div>
+        <p id="txt">Aquest text camnviarà el teu estil</p>
+    </body>
+</html>

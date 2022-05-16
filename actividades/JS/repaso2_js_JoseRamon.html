@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat Repas 2 Jose</title>
+
+        <script>
+            function funcionact(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='act' onclick='funcionact(this.id)'>Edad media de los trabajadores. Click para introducir datos.</p>";
+
+                var totalA = 0;
+                var totalB = 0;
+                var totalC = 0;
+                var totalAll = 0;
+
+                for(i=0;i<2;i++){
+                    var aux = prompt("Edad del trbajador(" + i + ") empresa A:");
+                    aux = Number(aux);
+
+                    totalA += aux;
+                    totalAll += aux;
+                }
+                for(i=0;i<3;i++){
+                    var aux = prompt("Edad del trbajador(" + i + ") empresa B:");
+                    aux = Number(aux);
+
+                    totalB += aux;
+                    totalAll += aux;
+                }
+                for(i=0;i<9;i++){
+                    var aux = prompt("Edad del trbajador(" + i + ") empresa C:");
+                    aux = Number(aux);
+
+                    totalC += aux;
+                    totalAll += aux;
+                }
+
+                totalA = (totalA/2).toFixed(0);
+                totalB = (totalB/3).toFixed(0);
+                totalC = (totalC/9).toFixed(0);
+
+                text.innerHTML += "<p>Edad media de la empresa A: " + totalA + "</p>";
+                text.innerHTML += "<p>Edad media de la empresa B: " + totalB + "</p>";
+                text.innerHTML += "<p>Edad media de la empresa C: " + totalC + "</p><br>";
+                if(totalA>totalB && totalA>totalC){
+                    text.innerHTML += "<p>La empresa con la edad media mas grande es la A.</p>";
+                }else if(totalB>totalA && totalB>totalC){
+                    text.innerHTML += "<p>La empresa con la edad media mas grande es la B.</p>";
+                }else{
+                    text.innerHTML += "<p>La empresa con la edad media mas grande es la C.</p>";
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="act" onclick="funcionact(this.id)">Edad media de los trabajadores. Click para introducir datos.</p>
+    </body>
+</html>

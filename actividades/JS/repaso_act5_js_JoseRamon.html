@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat Repas Jose</title>
+
+        <script>
+            function act5(id){
+                var text = document.getElementById(id);
+                text.innerHTML = "<p id='idact5' onclick='act5(this.id)'>5 Porcentajes de una sala. Click para introducir datos.</p>";
+
+                var qtSala = prompt("Cantidad de personas en la sala:");
+                qtSala = Number(qtSala);
+
+                var qtH = 0;
+
+                var qtM = 0;
+
+                for(i=0;i<qtSala;i++){
+                    var personaG = prompt("Es hombre o mujer?");
+
+                    if("HOMBRE" == personaG.toUpperCase()){
+                        qtH++;
+                    }else{
+                        qtM++;
+                    }
+                }
+
+                text.innerHTML += "<p>Total sala: " + qtSala + "</p>";
+                text.innerHTML += "<p>Hombres: " + (100*qtH/qtSala) + "%</p>";
+                text.innerHTML += "<p>Mujeres: " + (100*qtM/qtSala) + "%</p>";
+            }
+        </script>
+
+    </head>
+    <body>
+        <p id="idact5" onclick="act5(this.id)">5 Porcentajes de una sala. Click para introducir datos.</p>
+    </body>
+</html>

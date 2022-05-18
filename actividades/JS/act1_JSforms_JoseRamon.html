@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 1 JS Forms Jose Ramon</title>
+
+        <script>
+            function passVerify(){
+                var pass = document.getElementById("pass").value;
+                var passVerify = document.getElementById("passV").value;
+
+                if(pass == passVerify){
+                    alert("Contrasenyes iguals.");
+                    return true;
+                }else{
+                    alert("Contrasenyes no iguals.");
+                    return false;
+                }
+            }
+
+            function preuPizza(){
+                var pizza = document.getElementById("pizzas").value;
+                var pizzaPreu = document.getElementById("pizzasPreu");
+
+                if(pizza == 'Pernil i formatge'){
+                    pizzaPreu.value = "10.50€";
+                }else if(pizza == 'Hawaiana'){
+                    pizzaPreu.value = "9.00€";
+                }else if(pizza == '4 Formatges'){
+                    pizzaPreu.value = "13.75€";
+                }else{
+                    pizzaPreu.value = " ";
+                }
+            }
+
+            function calculPresupost(){
+                var procesador = document.getElementById("procesadorPrecio").value;
+                var monitor = document.getElementById("monitorPrecio").value;
+                var discdur = document.getElementById("discdurPrecio").value;
+                var PCpreu = document.getElementById("PCpreu");
+
+                var total = 0;
+
+                if(procesador == 'Intel I3 - 400€'){
+                    total += 400;
+                }else if(procesador == 'Intel I5 - 600€'){
+                    total += 600;
+                }else if(procesador == 'Intel I7 - 800€'){
+                    total += 800;
+                }else{}
+
+                if(monitor == "Smasung 20' - 250€"){
+                    total += 250;
+                }else if(monitor == "Samsung 22' - 350€"){
+                    total += 350;
+                }else if(monitor == "Samsung 26' - 550€"){
+                    total += 550;
+                }else{}
+
+                if(discdur == '500 GB - 30€'){
+                    total += 30;
+                }else if(discdur == '1 TB - 55€'){
+                    total += 55;
+                }else if(discdur == '3 TB - 90€'){
+                    total += 90;
+                }else{}
+
+                PCpreu.value = total + "€";
+            }
+
+            function calcuarQtPizzas(){
+                var pizza = document.getElementById("pizzas2").value;
+                var qtPizza = Number(document.getElementById("qtPizza").value);
+                var txtQtPizza = document.getElementById("qtPizzaPreu");
+
+                if(pizza == 'Pernil i formatge : 4€'){
+
+                    txtQtPizza.value = (4*qtPizza).toFixed(2) + "€";
+                }else if(pizza == 'Quatre estacions : 6€'){
+
+                    txtQtPizza.value = (6*qtPizza).toFixed(2) + "€";
+                }else if(pizza == 'Quatre formatges : 10€'){
+
+                    txtQtPizza.value = (10*qtPizza).toFixed(2) + "€";
+                }else{
+                    txtQtPizza.value = "Cap pizza seleccionada.";
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <form>
+            <label for="pass">Introduir contrasenya: </label>
+            <input type="password" id="pass">
+            <br>
+            <label for="passV">Repetir contrasenya: </label>
+            <input type="password" id="passV">
+            <br>
+            <input type="submit" onclick="passVerify()">
+        </form>
+        <br>
+        <hr>
+        <br>
+        <form>
+            <select name="pizza" id="pizzas" onchange="preuPizza(this)">
+                <option>Escull una pizza</option>
+                <option>Pernil i formatge</option>
+                <option>Hawaiana</option>
+                <option>4 Formatges</option>
+            </select>
+            <br>
+            <input type="text" id="pizzasPreu" disabled>
+        </form>
+        <br>
+        <hr>
+        <br>
+        <form>
+            <select name="procesador" id="procesadorPrecio">
+                <option>Procesador</option>
+                <option>Intel I3 - 400€</option>
+                <option>Intel I5 - 600€</option>
+                <option>Intel I7 - 800€</option>
+            </select>
+            <br>
+            <select name="monitor" id="monitorPrecio">
+                <option>Monitor</option>
+                <option>Smasung 20' - 250€</option>
+                <option>Samsung 22' - 350€</option>
+                <option>Samsung 26' - 550€</option>
+            </select>
+            <br>
+            <select name="discdur" id="discdurPrecio">
+                <option>Disc dur</option>
+                <option>500 GB - 30€</option>
+                <option>1 TB - 55€</option>
+                <option>3 TB - 90€</option>
+            </select>
+        </form>
+        <br>
+        <button onclick="calculPresupost()">Calcular presupost</button>
+        <input type="text" id="PCpreu" disabled value="0€">
+        <br><br>
+        <hr>
+        <br>
+        <ul>
+            <li>Pernil i formatge : 4€</li>
+            <li>Quatre estacions : 6€</li>
+            <li>Quatre formatges : 10€</li>
+        </ul>
+        Selecciona el tipus de pizza: 
+        <select name="pizza2" id="pizzas2">
+            <option>Escull una pizza</option>
+            <option>Pernil i formatge : 4€</option>
+            <option>Quatre estacions : 6€</option>
+            <option>Quatre formatges : 10€</option>
+        </select>
+        <br>
+        <label for="qtPizza">Quantitat de pizzes: </label>
+        <input type="number" id="qtPizza">
+        <br>
+        <button onclick="calcuarQtPizzas()">Calcular preu</button>
+        <input type="text" id="qtPizzaPreu" disabled>
+    </body>
+</html>

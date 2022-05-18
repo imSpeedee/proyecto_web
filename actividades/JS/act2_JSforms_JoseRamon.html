@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 2 JS Forms Jose Ramon</title>
+
+        <script>
+            function mostrarEsport(){
+                var txtAlert = "Esports: ";
+
+                if(document.getElementById("voleibol").checked){
+                    txtAlert += "Voleibol ";
+                }
+
+                if(document.getElementById("tennis").checked){
+                    txtAlert += "Tennis ";
+                }
+
+                if(document.getElementById("basquet").checked){
+                    txtAlert += "Basquet ";
+                }
+
+                if(txtAlert == "Esports: "){
+                    txtAlert += "Cap esport seleccionat.";
+                }
+
+                alert(txtAlert);
+            }
+
+            function majorEdat(){
+                if(document.getElementById("edat1").checked){
+                    alert("Pots accedir al lloc web.");
+                }else if(document.getElementById("edat2").checked){
+                    alert("No pots accedir al lloc web.");
+                }else{
+                    alert("Selecciona una opcio.");
+                }
+            }
+
+            function visites(){
+                var txt = "";
+
+                txt += "Nom: " + document.getElementById("nom").value;
+                txt += "\nMail: " + document.getElementById("correu").value;
+                txt += "\nComentari: " + document.getElementById("txtUsu").value;
+
+                alert(txt);
+            }
+
+            function verifyPass(){
+                var pass = document.getElementById("pass").value;
+                if(pass.length<7 || pass.length>20){
+                    alert("La contrasenya a de tenir entre 7 i 20 caracters.");
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+
+        Selecciona els esports que practiques:
+        <br>
+        <input type="checkbox" id="voleibol">
+        <label for="voleibol">Voleibol</label>
+        <br>
+        <input type="checkbox" id="tennis">
+        <label for="tennis">Tennis</label>
+        <br>
+        <input type="checkbox" id="basquet">
+        <label for="basquet">Basquet</label>
+        <br>
+        <input type="button" value="Mostrar" onclick="mostrarEsport()">
+
+        <hr>
+
+        Ets major d'edat?
+        <br>
+        <input type="radio" name="edat" value="si" id="edat1"> Si <br>
+        <input type="radio" name="edat" value="no" id="edat2"> No <br>
+        <input type="button" value="Verificar" onclick="majorEdat()">
+
+        <hr>
+
+        <label for="nom">Ingressa nom: </label>
+        <input type="text" id="nom">
+        <br>
+        <label for="correu">Ingressa mail: </label>
+        <input type="email" id="correu">
+        <br>
+        Comentaris:
+        <br>
+        <textarea id="txtUsu" cols="30" rows="5"></textarea>
+        <br>
+        <input type="button" onclick="visites()" value="Confirmar">
+
+        <hr>
+
+        <label for="nomUsu">Introduir nom d'usuari: </label>
+        <input type="text" id="nomUsu">
+        <br>
+        <label for="pass">Ingresar contrasenya: </label>
+        <input type="password" id="pass">
+        <br>
+        <input type="button" onclick="verifyPass()" value="Confirmar">
+
+    </body>
+</html>

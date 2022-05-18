@@ -118,3 +118,13 @@ function elementbigger(id){
 function elementimg(id){
     document.getElementById(id).style.backgroundImage = "url('img/fotograma.png')";
 }
+
+function scull(){
+    var llista = document.getElementById("colorsid");
+    if(llista.selectedIndex == null || llista.selectedIndex == 0){
+        alert("El formulari no ha estat enviat, Has d'escollir un color de la llista.");
+        return false;
+    }else{
+        alert("El formulari ha estat enviat.");
+    }
+}

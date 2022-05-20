@@ -21,16 +21,22 @@
             #aqua{
                 background-color: aqua;
             }
+
+            #arcoiris{
+                color: green;
+            }
         </style>
 
         <script type="text/JavaScript" src="scripts/exemples_js.js"></script>
 
     </head>
-    <body>
+    <body onload="cargar()">
         <!-- nonscript es per a quan un navegador no te JS activat -->
         <noscript>
             <p>Aquesta pàgina requereix JavaScript per al seu correcte funcionament. <br>Comproveu si JavaScript està deshabilitat en el navegador.</p>
         </noscript>
+
+        <h2 id="arcoiris">EL ARCOIRIS</h2>
 
         <p onclick="alert('Escript exemple dins duna etiqueta html')">Script en una etiqueta html (fes clic per veure)</p>
     
@@ -201,5 +207,21 @@
             </select>
             <input type="submit">
         </form>
+        <br><br>
+        <input type="button" onclick="act76()" value="Click para ver un txt en dos segundos">
+        <br><br>
+        <p>Boton "Iniciar" 3 segundos despues aparece una ventana.</p>
+        <p>Boton "Parar" para esta ejecucion si se clicka antes de los 3 segundos</p>
+        <button onclick="myTimeOut=setTimeout(act76_1,3000)">Iniciar</button>
+        <button onclick="clearTimeout(myTimeOut)">Parar</button>
+        <br><br>
+        <button onclick="myInterval=setInterval(act80,1000)">Mostrar segundos</button>
+        <button onclick="clearInterval(myInterval)">Parar</button>
+        <form>
+            <input type="text" id="act80p" value="1">
+        </form>
+        <br><br>
+        
+        
     </body>
 </html>

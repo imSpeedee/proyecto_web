@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Imagenes</title>
+
+        <script>
+            function cambiar_img(){
+                var imagen = document.getElementById('imgOso');
+                
+                var rutas = new Array;
+                rutas[0] = "https://cloudfront-us-east-1.images.arcpublishing.com/culturacolectiva/QFKYEVHDSBFRVJFJDGWBWMBYAY.jpg";
+                rutas[1] = "https://s1.eestatic.com/2017/08/31/ciencia/animales-ciencia_243237703_44853031_1024x576.jpg";
+                rutas[2] = "https://s1.best-wallpaper.net/wallpaper/m/1208/Happy-polar-bear_m.jpg";
+                rutas[3] = "https://www.ngenespanol.com/wp-content/uploads/2018/09/oso-grizzly-caza-1280x720.png";
+                
+                if(imagen.src == rutas[0]){
+                    imagen.src = rutas[1];
+                }else if(imagen.src == rutas[1]){
+                    imagen.src = rutas[2];
+                }else if(imagen.src == rutas[2]){
+                    imagen.src = rutas[3];
+                }else{
+                    imagen.src = rutas[0];
+                }
+            }
+        
+            function cargar(){
+                setInterval('cambiar_img()',2000);
+            }
+        </script>
+
+    </head>
+    <body onload="cargar()">
+        <img id="imgOso" src="https://cloudfront-us-east-1.images.arcpublishing.com/culturacolectiva/QFKYEVHDSBFRVJFJDGWBWMBYAY.jpg" alt="imagenes de panda" width="500px">
+    </body>
+</html>

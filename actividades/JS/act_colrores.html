@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Colores</title>
+
+        <style>
+            #arcoiris{
+                color: green;
+            }
+        </style>
+        <script>
+            function letras_arcoiris(){
+                var obj = document.getElementById('arcoiris');
+                if(obj.style.color == 'green'){
+                        obj.style.color = 'lime';
+                }else if(obj.style.color == 'lime'){
+                    obj.style.color = 'aqua';
+                }else if(obj.style.color == 'aqua'){
+                    obj.style.color = 'blue';
+                }else if(obj.style.color == 'blue'){
+                    obj.style.color = 'purple';
+                }else if(obj.style.color == 'purple'){
+                    obj.style.color = 'pink';
+                }else if(obj.style.color == 'pink'){
+                    obj.style.color = 'magenta';
+                }else if(obj.style.color == 'magenta'){
+                    obj.style.color = 'red';
+                }else if(obj.style.color == 'red'){
+                    obj.style.color = 'orange';
+                }else if(obj.style.color == 'orange'){
+                    obj.style.color = 'yellow';
+                }else{
+                    obj.style.color = 'green';
+                }
+            }
+
+            function cargar(){
+                setInterval('letras_arcoiris()',500);
+            }
+        </script>
+
+    </head>
+    <body onload="cargar()">
+        <h2 id="arcoiris">EL ARCOIRIS</h2>
+    </body>
+</html>

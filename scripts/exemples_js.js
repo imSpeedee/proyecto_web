@@ -128,3 +128,60 @@ function scull(){
         alert("El formulari ha estat enviat.");
     }
 }
+
+function act76(){
+    setTimeout("alert('Mensage enviado pasado dos segundos.');",2000);
+    //Tambien se pueden llamar funciones creadas por el usuario
+    //setTimeout(funcion,2000);
+}
+
+function onloadHTML(){
+    setTimeout("window.alert('Pareces interesado en esta pagina')",10000);
+}
+
+function act76_1(){
+    alert("Ventana actividad 76");
+}
+
+function act80(){
+    var val = document.getElementById('act80p').value;
+    document.getElementById('act80p').value = parseInt(val)+1;
+}
+
+
+function letras_arcoiris(){
+    var obj = document.getElementById('arcoiris');
+    if(obj.style.color == 'green'){
+            obj.style.color = 'lime';
+    }else if(obj.style.color == 'lime'){
+        obj.style.color = 'aqua';
+    }else if(obj.style.color == 'aqua'){
+        obj.style.color = 'blue';
+    }else if(obj.style.color == 'blue'){
+        obj.style.color = 'purple';
+    }else if(obj.style.color == 'purple'){
+        obj.style.color = 'pink';
+    }else if(obj.style.color == 'pink'){
+        obj.style.color = 'magenta';
+    }else if(obj.style.color == 'magenta'){
+        obj.style.color = 'red';
+    }else if(obj.style.color == 'red'){
+        obj.style.color = 'orange';
+    }else if(obj.style.color == 'orange'){
+        obj.style.color = 'yellow';
+    }else{
+        obj.style.color = 'green';
+    }
+}
+
+
+
+
+
+
+function cargar(){
+    setInterval('letras_arcoiris()',500);
+
+
+
+}

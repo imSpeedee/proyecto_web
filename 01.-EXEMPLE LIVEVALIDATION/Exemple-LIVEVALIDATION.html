@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Exercicis de l'objecte String</title>
+        <script type="text/javascript" src="livevalidation/src/livevalidation_standalone.js"></script>
+    </head>
+    <body>
+        <!-- Exercici 2 -->
+        <form id="form-input" method="get" action="#">
+            <p><label for="name-input">Nom:</label>
+                <input type="text" id="name-input"></p>
+            
+            <p><label for="edat-input">Edat:</label>
+                <input type="text" id="edat-input"></p>
+            
+            <p><label for="email-input">Email:</label>
+                <input type="text" id="email-input" value=""/></p>
+
+            <p><label for="pass-input">Contrasenya:</label>
+                <input type="text" id="pass-input" value="" class="LV_valid_field"/></p>
+
+            <p><label for="confpass-input">Confirmar contrasenyar:</label>
+                <input type="text" id="confpass-input" value="" class="LV_valid_field"/></p>
+            
+            <p><select id="select-input">
+                <option value="0">Selecciona un idioma...</option>
+                <option value="1">Català</option>
+                <option value="2">Castellà</option>
+                <option value="3">Anglès</option>
+                </select></p>
+            
+            <p><label for="accept-input">Accepto les condicions de servei:</label>
+                <input type="checkbox" id="accept-input" value="1" class="checkbox"/></p>
+
+            <input type="submit" value="Enviar dades">
+        </form>
+
+        <script type="text/javascript" src="JS/scriptLV2.js"></script>
+
+    </body>
+</html>

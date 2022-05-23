@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exemples de forms amb js i lib Jose Ramon</title>
+        <link href="CSS/form.css" rel="stylesheet" type="text/css">
+        <script type="text/JavaScript" src="scripts/livevalidation/src/livevalidation_standalone.js"></script>
+        <!-- Hoja de sripts de la libreria que se utilizara en esta pagina -->
+    </head>
+    <body>
+        <form id="form-input" method="get" action="#">
+            <p><label for="name-input">Nom:</label>
+                <input type="text" id="name-input"></p> <!-- Estos ID's se estan poniendo como se nos marca en la libreria (xxxx-input) -->
+            
+            <p><label for="edat-input">Edat:</label>
+                <input type="text" id="edat-input"></p>
+            
+            <p><label for="email-input">Email:</label>
+                <input type="text" id="email-input" value=""/></p>
+
+            <p><label for="pass-input">Contrasenya:</label>
+                <input type="text" id="pass-input" value="" class="LV_valid_field"/></p>
+
+            <p><label for="confpass-input">Confirmar contrasenyar:</label>
+                <input type="text" id="confpass-input" value="" class="LV_valid_field"/></p>
+            
+            <p><select id="select-input">
+                <option value="0">Selecciona un idioma...</option>
+                <option value="1">Català</option>
+                <option value="2">Castellà</option>
+                <option value="3">Anglès</option>
+                </select></p>
+            
+            <p><label for="accept-input">Accepto les condicions de servei:</label>
+                <input type="checkbox" id="accept-input" value="1" class="checkbox"/></p>
+
+            <input type="submit" value="Enviar dades">
+        </form>
+
+
+
+        <script type="text/JavaScript" src="scripts/exemples_forms_lib.js"></script>
+        <!-- Poner nuestra hoja de JS al final del archivo HTML para que primero cargeu todos nuestros campos con sus ID's -->
+    </body>
+</html>

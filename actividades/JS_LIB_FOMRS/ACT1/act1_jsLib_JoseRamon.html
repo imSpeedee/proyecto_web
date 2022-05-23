@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 1 JS LIB Jose Ramon</title>
+        <script type="text/JavaScript" src="livevalidation/src/livevalidation_standalone.js"></script>
+    </head>
+    <body>
+        <form id="form-input" method="get" action="#">
+            <label for="nom-input">Nom </label>
+            <input type="text" id="nom-input">
+            <br><br>
+            <label for="edat-input">Edat </label>
+            <input type="text" id="edat-input">
+            <br><br>
+            <label for="correu-input">Email </label>
+            <input type="text" id="correu-input" value=""/>
+            <br><br>
+            <label for="pass-input">Contrasenya </label>
+            <input type="text" id="pass-input" value="" class="LV_valid_field"/>
+            <br><br>
+            <label for="verifyPass-input">Repetir contrasenyar </label>
+            <input type="text" id="verifyPass-input" value="" class="LV_valid_field"/>
+            <br><br>
+            Idioma 
+            <select id="selectIdioma-input">
+                <option value="0">Selecciona un idioma...</option>
+                <option value="1">Català</option>
+                <option value="2">Castellà</option>
+                <option value="3">Anglès</option>
+            </select>
+            <br><br>
+            <label for="condicions-input">Accepto les condicions de servei</label>
+            <input type="checkbox" id="accept-input" value="1" class="checkbox"/>
+            <br><br>
+            <input type="submit" value="Enviar dades">
+        </form>
+
+        <br>
+        <h2>Formulari registre</h2>
+        <form action="form-input">
+            <label for="nom2-input">Nom </label>
+            <input type="text" id="nom2-input">
+            <br><br>
+            <label for="cognoms2-input">Cognoms </label>
+            <input type="text" id="cognoms2-input">
+            <br><br>
+            Sexe 
+            <select id="selectSexe-input">
+                <option value="0">Selecciona un sexe...</option>
+                <option value="1">Home</option>
+                <option value="2">Dona</option>
+            </select>
+            <br><br>
+            <label for="correu2-input">Correu </label>
+            <input type="text" id="correu2-input" value=""/>
+            <br><br>
+            Poblacio 
+            <select id="selectPoblacio-input">
+                <option value="0">Selecciona una poblacio...</option>
+                <option value="1">Vilanova del Cami</option>
+                <option value="2">Igualada</option>
+                <option value="3">Odena</option>
+            </select>
+            <br><br>
+            <label for="desc-input">Descripcio </label>
+            <textarea id="desc-input" cols="60" rows="10"></textarea>
+            <br><br>
+            <input type="checkbox" id="novetats-input" value="1" class="checkbox"/>
+            <label for="novetats-input">Desitjo rebre informacio sobre novetats i ofertes</label>
+            <br><br>
+            <input type="checkbox" id="cond-input" value="1" class="checkbox"/>
+            <label for="cond-input">Declaro haber llegit i acceptar les condicions generlas del programa i la normativa sobre la proteccio de dades</label>
+            <br><br>
+            <input type="submit" value="Enviar">
+        </form>
+
+        <script type="text/JavaScript" src="act1.js"></script>
+    </body>
+</html>

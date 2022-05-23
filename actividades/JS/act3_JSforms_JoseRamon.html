@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 3 JS Forms Jose Ramon</title>
+
+        <style>
+            #advertencia{
+                color: red;
+                visibility: collapse;
+            }
+        </style>
+
+        <script>
+            function nombrecompleto(){
+                document.getElementById('completo1').value = document.getElementById('nombre1').value.toUpperCase() + " " + document.getElementById('apellido1').value.toUpperCase();
+
+            }
+
+            function comprovarFocus(){
+                if(document.getElementById('txtComp').value == ""){
+                    document.getElementById('txtComp').focus();
+                    document.getElementById('advertencia').style.visibility = 'visible';
+                }else{
+                    document.getElementById('advertencia').style.visibility = 'collapse';
+                }
+            }
+
+            function marcarOpciones(formulario){
+                /* Opcion 1 poco eficaz
+                formulario.elements[1].checked = 'true';
+                formulario.elements[2].checked = 'true';
+                formulario.elements[3].checked = 'true';*/
+
+                for(i=0;i<=formulario.elements.length;i++){
+                    formulario.elements[i].checked = 'true';
+                }
+            }
+
+            function convertirTxt(){
+                if(document.getElementById('caps1').checked){
+                    document.getElementById('txtCaps').value = document.getElementById('txtCaps').value.toUpperCase();
+                }else if(document.getElementById('caps2').checked){
+                    document.getElementById('txtCaps').value = document.getElementById('txtCaps').value.toLowerCase();
+                }else{}
+            }
+
+            function verPais(){
+                var montaña = document.getElementById('monatañaName');
+
+                if(montaña.value == 'Everest'){
+                    document.getElementById('montañaPais').value = 'Nepal | República Popular China';
+                }else if(montaña.value == 'Montaña K2'){
+                    document.getElementById('montañaPais').value = 'Pakistán | República Popular China';
+                }else{
+                    document.getElementById('montañaPais').value = 'India | Nepal';
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <form>
+            <label for="nombre1">Nombre:</label>
+            <input type="text" id="nombre1">    
+            <label for="apellido1">Apellido:</label>
+            <input type="text" id="apellido1">
+            <br><br>
+            <input type="button" value="Nombre completo" onclick="nombrecompleto()">
+            <br>
+            <input type="text" id="completo1" disabled size="50">
+        </form>
+        <br>
+        <hr>
+            <p>Poner texto</p>
+            <label for="txtComp">Texto:</label>
+            <input type="text" id="txtComp" onfocusout="comprovarFocus()">
+            <p id="advertencia">Inserte texto antes de continuar.</p>
+            <hr>
+            <br>
+        <form>
+            <input type="button" onclick="marcarOpciones(this.form)" value="Marcar las 3 opciones">
+            <br>
+            <input type="checkbox" id="1opcio">
+            <label for="1opcio">Primera Opcion.</label>
+            <br>
+            <input type="checkbox" id="2opcio">
+            <label for="2opcio">Segunda Opcion.</label>
+            <br>
+            <input type="checkbox" id="3opcio">
+            <label for="3opcio">Tercera Opcion.</label>
+        </form>
+        <br>
+        <hr>
+        <br>
+        <form>
+            <label for="txtCaps"></label>
+            <input type="text" id="txtCaps"><br>
+            <input type="radio" name="caps" value="1" id="caps1">Mayusculas <br>
+            <input type="radio" name="caps" value="2" id="caps2">Minusculas <br>
+            <input type="radio" name="caps" value="3" id="caps3">Sin cambios <br>
+            <input type="button" onclick="convertirTxt()" value="Convertir">
+        </form>
+        <br>
+        <hr>
+        <p>Selecciona una montaña 
+            <select name="monatañaName" id="monatañaName" onchange="verPais()">
+                <option>Everest</option>
+                <option>Montaña K2</option>
+                <option>Kanchenjunga</option>
+            </select>
+             El pais de la montaña es :
+             <input type="text" disabled id="montañaPais" size="50" value="Nepal | República Popular China">
+        </p>
+    </body>
+</html>

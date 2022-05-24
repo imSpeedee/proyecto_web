@@ -174,8 +174,39 @@ function letras_arcoiris(){
     }
 }
 
+function soloH4(id){
+    var seccion = document.getElementById(id);
+    //var titulos = seccion.getElementsByTagName("h4");
+    var titulos = seccion.querySelectorAll("h4");
 
+    titulos[0].style.color = "red";
+    titulos[1].style.color = "red";
+}
 
+function soloP(id){
+    var seccion = document.getElementById(id);
+    var parrafos = seccion.getElementsByTagName("p");
+
+    for(i=0;i<parrafos.length;i++){
+        parrafos[i].style.color = "lime";
+    }
+
+    /* este solo pilla el primero de esa etiqueta
+    
+    seccion.querySelector("p").style.color = "lime";
+
+    */
+
+}
+
+function soloP1(id){
+    var seccion = document.getElementById(id);
+    var parrafos = seccion.getElementsByClassName("p1");
+
+    for(i=0;i<parrafos.length;i++){
+        parrafos[i].style.color = "aqua";
+    }
+}
 
 
 

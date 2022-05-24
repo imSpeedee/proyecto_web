@@ -19,9 +19,9 @@ contrasenya.add(Validate.Presence);
 contrasenya.add(Validate.Length, {minimum: 3, maximum: 15});
 
 //  CONFIRMAR CONTRASENYA 
-var conf_contra=new LiveValidation('verifyPass-input');
-conf_contra.add(Validate.Presence);
-conf_contra.add(Validate.Confirmation, {match: 'pass-input'});
+var verifyPass=new LiveValidation('verifyPass-input');
+verifyPass.add(Validate.Presence);
+verifyPass.add(Validate.Confirmation, {match: 'pass-input'});
 
 //  IDIOMA 
 var idioma=new LiveValidation('selectIdioma-input');
@@ -34,33 +34,44 @@ acceptar.add(Validate.Acceptance);
 //-------------FOMRULARIO REGISTRO----------------
 
 //  NOM 
-var nom=new LiveValidation('nom2-input'); 
-nom.add(Validate.Presence); 
-nom.add(Validate.Length, {minimum: 3, maximum: 15}); 
+var nom2=new LiveValidation('nom2-input'); 
+nom2.add(Validate.Presence); 
+nom2.add(Validate.Length, {minimum: 3, maximum: 15}); 
 
 //  COGNOMS 
-var nom=new LiveValidation('cognoms2-input'); 
-nom.add(Validate.Presence); 
-nom.add(Validate.Length, {minimum: 10, maximum: 30}); 
+var cognoms2=new LiveValidation('cognoms2-input'); 
+cognoms2.add(Validate.Presence); 
+cognoms2.add(Validate.Length, {minimum: 10, maximum: 30}); 
 
 //  SEXE 
-var idioma=new LiveValidation('selectSexe-input');
-idioma.add(Validate.Exclusion, {within: ['0'], failureMessage:"Manca selecCionar un sexe!"});
+var selectSexe=new LiveValidation('selectSexe-input');
+selectSexe.add(Validate.Exclusion, {within: ['0'], failureMessage:"Manca selecCionar un sexe!"});
 
 //  EMAIL 
-var email=new LiveValidation('correu2-input');
-email.add(Validate.Presence);
-email.add(Validate.Email); 
+var correu2=new LiveValidation('correu2-input');
+correu2.add(Validate.Presence);
+correu2.add(Validate.Email); 
 
 //  POBLACIO 
-var idioma=new LiveValidation('selectPoblacio-input');
-idioma.add(Validate.Exclusion, {within: ['0'], failureMessage:"Manca selecCionar un sexe!"});
+var selectPoblacio=new LiveValidation('selectPoblacio-input');
+selectPoblacio.add(Validate.Exclusion, {within: ['0'], failureMessage:"Manca selecCionar un sexe!"});
 
 //  DESCRIPCIO 
-var nom=new LiveValidation('desc-input'); 
-nom.add(Validate.Presence); 
-nom.add(Validate.Length, {minimum: 10}); 
+var desc=new LiveValidation('desc-input'); 
+desc.add(Validate.Presence); 
+desc.add(Validate.Length, {minimum: 10}); 
+
+//  ACCEPTAR NOVETATS 
+var novetats=new LiveValidation('novetats-input');
+novetats.add(Validate.Acceptance);
 
 //  ACCEPTAR CONDICIONS 
-var acceptar=new LiveValidation('cond-input');
-acceptar.add(Validate.Acceptance);
+var cond=new LiveValidation('cond-input');
+cond.add(Validate.Acceptance);
+
+
+function btnEnviarEnable(){
+    if(document.getElementById("novetats-input").checked && document.getElementById("cond-input").checked){
+        document.getElementById("btnEnviar").disabled = false;
+    }
+}

@@ -68,13 +68,13 @@
             <label for="desc-input">Descripcio </label>
             <textarea id="desc-input" cols="60" rows="10"></textarea>
             <br><br>
-            <input type="checkbox" id="novetats-input" value="1" class="checkbox"/>
+            <input type="checkbox" id="novetats-input" value="1" class="checkbox" onclick="btnEnviarEnable()"/>
             <label for="novetats-input">Desitjo rebre informacio sobre novetats i ofertes</label>
             <br><br>
-            <input type="checkbox" id="cond-input" value="1" class="checkbox"/>
+            <input type="checkbox" id="cond-input" value="1" class="checkbox" onclick="btnEnviarEnable()"/>
             <label for="cond-input">Declaro haber llegit i acceptar les condicions generlas del programa i la normativa sobre la proteccio de dades</label>
             <br><br>
-            <input type="submit" value="Enviar">
+            <input id="btnEnviar" type="submit" value="Enviar" disabled>
         </form>
 
         <script type="text/JavaScript" src="act1.js"></script>

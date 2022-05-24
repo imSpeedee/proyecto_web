@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 14 Jose</title>
+
+        <script>
+            function selectAnimales(){
+                var animales = document.getElementsByClassName("animal");
+                for(i=0;i<animales.length;i++){
+                    animales[i].checked = true;
+                }
+            }
+
+            function selectColores(){
+                var animales = document.getElementsByClassName("color");
+                for(i=0;i<animales.length;i++){
+                    animales[i].checked = true;
+                }
+            }
+
+            function div1Color(){
+                var div = document.getElementById("div1");
+                var parrafos = div.getElementsByTagName("p");
+
+                parrafos[0].style.color = "red";
+                parrafos[2].style.color = "red";
+
+                parrafos[0].innerHTML = "Bon dia";
+                parrafos[2].innerHTML = "Bon dia";
+            }
+
+            function div2Color(){
+                var div = document.getElementById("div2");
+                var parrafos = div.getElementsByTagName("p");
+
+                parrafos[1].style.color = "red";
+            }
+        </script>
+
+    </head>
+    <body>
+        <input type="checkbox" class="animal">GATO
+        <input type="checkbox" class="animal">PERRO
+        <input type="checkbox" class="animal">LORO
+        <input type="checkbox" class="color">ROJO
+        <input type="checkbox" class="color">VERDE
+        <br>
+        <button onclick="selectAnimales()">Seleccionar animales</button>
+        <button onclick="selectColores()">Seleccionar colores</button>
+        <hr>
+        <div id="div1">
+            <p>Parrafo 1</p>
+            <p>Parrafo 2</p>
+            <p>Parrafo 3</p>
+            <p>Parrafo 4</p>
+        </div>
+        <button onclick="div1Color()">Cambiar color</button>
+        <hr>
+        <div id="div2">
+            <p>Parrafo 1</p>
+            <p>Parrafo 2</p>
+            <p>Parrafo 3</p>
+            <p>Parrafo 4</p>
+        </div>
+        <p>Soy un parrafo que no esta dentro del DIV</p>
+        <button onclick="div2Color()">Cambiar color</button>
+    </body>
+</html>

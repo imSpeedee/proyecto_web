@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test de Voleibol pista</title>
+
+        <style>
+            p{
+                color: rgb(5, 136, 97);
+            }
+
+            .botones{
+                margin: 0px 10px;
+            }
+        </style>
+
+        <script>
+            function bienvenida(){
+                alert("BIENVENIDO AL CUESTIONARIO\nDE VOLEIBOL");
+            }
+
+            function decirCorrectas(){
+                alert("1:B 2:C 3:A \n\n4:A 5:B 6:A\n\n7:C 8:C 9:B\n\n10:B");
+            }
+
+            function resultados(){
+                var totalPuntos = 0;
+                var totalSinContestar = 0;
+                var radioButtons = document.getElementsByTagName('input');
+                
+                for(i=0;i<radioButtons.length;i++){
+                    if(radioButtons[i].checked){
+                        if(radioButtons[i].value == 1){
+                            totalPuntos++;
+                        }
+                    }
+                }
+
+                for(i=1;i<=10;i++){
+                    var pregunta = "p" + i;
+                    var grupo = document.getElementsByName(pregunta);
+                    var aux = 0;
+                    for(x=0;x<grupo.length;x++){
+                        if(grupo[x].checked){
+                            aux++;
+                        }
+                    }
+                    if(aux==0){
+                        totalSinContestar++;
+                    }
+                }
+
+                alert("Tu puntuacion a sido: " + totalPuntos + "/10\nPorcentaje de acierto " + (totalPuntos*100/10) + "%\nTotal sin responder: " + totalSinContestar);
+            }
+        </script>
+
+    </head>
+    <body onload="bienvenida()">
+        <h1>Test dobre Voleibol</h1>
+        <h3>Preguntas por el valor de 1 punto. Total 10 preguntas.</h3>
+        <form id="voleiTest">
+            <p>1 Cuantos jugadores hay simultaneamente en pista?</p>
+            <input type="radio" name="p1" value="0">A. 5 <br>
+            <input type="radio" name="p1" value="1">B. 6 <br>
+            <input type="radio" name="p1" value="0">C. 4 <br>
+
+            <p>2 Cuantos toques puede dar un equipo antes de pasarla al otro campo?</p>
+            <input type="radio" name="p2" value="0">A. 2 <br>
+            <input type="radio" name="p2" value="0">B. 4 <br>
+            <input type="radio" name="p2" value="1">C. 3 <br>
+
+            <p>3 Los jugadores pueden tocar la red que los separa?</p>
+            <input type="radio" name="p3" value="0">A. Si <br>
+            <input type="radio" name="p3" value="1">B. No <br>
+
+            <p>4 Cuanto mide la pista?</p>
+            <input type="radio" name="p4" value="1">A. 18m x 9m <br>
+            <input type="radio" name="p4" value="0">B. 19m x 9m <br>
+            <input type="radio" name="p4" value="0">C. 17m x 8m <br>
+
+            <p>5 Hay un jugador que se cambia por otro durante el partido con <br>una camiseta de otro color. Como se le llama este jugador?</p>
+            <input type="radio" name="p5" value="0">A. Asist <br>
+            <input type="radio" name="p5" value="1">B. Libero <br>
+            <input type="radio" name="p5" value="0">C. Recip <br>
+
+            <p>6 Hay una linea en en cada campo que sirve para marcar una distancia. <br>A cuanta distancia estan estas lkineas de la red?</p>
+            <input type="radio" name="p6" value="1">A. 3m <br>
+            <input type="radio" name="p6" value="0">B. 2.50m <br>
+            <input type="radio" name="p6" value="0">C. 2m <br>
+
+            <p>7 Esta permitido que la pelota gire cuando se hace un toque?</p>
+            <input type="radio" name="p7" value="0">A. No. En ningun caso <br>
+            <input type="radio" name="p7" value="0">B. Si. Solo si la toca el libero <br>
+            <input type="radio" name="p7" value="1">C. Si. Siempre que no se un toque de dedos <br>
+
+            <p>8 El saque se puede hacer desde dentro de la linea de la linia de fondo?</p>
+            <input type="radio" name="p8" value="0">A. Si. Siempre y cuando no se salte al hacer el saque <br>
+            <input type="radio" name="p8" value="0">B. No. Pero si el que saca es el colocador si <br>
+            <input type="radio" name="p8" value="1">C. No. En ningun caso <br>
+
+            <p>9 Cuantos puntos hay que ganar para ganar un set?</p>
+            <input type="radio" name="p9" value="0">A. 20 <br>
+            <input type="radio" name="p9" value="1">B. 25 <br>
+            <input type="radio" name="p9" value="0">C. 30 <br>
+
+            <p>10 Cuantos sets hay que ganar para ganar el partido?</p>
+            <input type="radio" name="p10" value="0">A. 2 <br>
+            <input type="radio" name="p10" value="1">B. 3 <br>
+            <input type="radio" name="p10" value="0">C. 4 <br>
+
+            <br>
+            <div>
+                <input type="reset" value="Resetear Test" class="botones">
+                <input type="button" value="Resultados del Test" class="botones" onclick="resultados()">
+                <input type="button" value="Respuestas correctas" class="botones" onclick="decirCorrectas()">
+            </div>
+        </form>
+    </body>
+</html>

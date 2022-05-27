@@ -27,6 +27,7 @@
 
             function resultados(){
                 var totalPuntos = 0;
+                var totalFallos = 0;
                 var totalSinContestar = 0;
                 var radioButtons = document.getElementsByTagName('input');
                 
@@ -34,6 +35,8 @@
                     if(radioButtons[i].checked){
                         if(radioButtons[i].value == 1){
                             totalPuntos++;
+                        }else{
+                            totalFallos++;
                         }
                     }
                 }
@@ -53,6 +56,11 @@
                 }
 
                 alert("Tu puntuacion a sido: " + totalPuntos + "/10\nPorcentaje de acierto " + (totalPuntos*100/10) + "%\nTotal sin responder: " + totalSinContestar);
+
+                var barraProgreso = document.getElementById("barra_progreso");
+                barraProgreso.setAttribute("value",totalPuntos);
+                document.getElementById("porcentaje").textContent = (totalPuntos*100/10);
+                document.getElementById("puntos").innerHTML = "Aciertos: " + totalPuntos + " <br>Fallos: " + totalFallos + "<br>Sin responder: " + totalSinContestar;
             }
         </script>
 
@@ -60,6 +68,13 @@
     <body onload="bienvenida()">
         <h1>Test dobre Voleibol</h1>
         <h3>Preguntas por el valor de 1 punto. Total 10 preguntas.</h3>
+        <p>
+            Porcentaje de aciertos: <span id="porcentaje">0</span>%
+            <progress id="barra_progreso" value="0" max="10"></progress>
+        </p>
+        <p id="puntos">
+            Aciertos: 0 <br>Fallos: 0 <br>Sin responder: 0
+        </p>
         <form id="voleiTest">
             <p>1 Cuantos jugadores hay simultaneamente en pista?</p>
             <input type="radio" name="p1" value="0">A. 5 <br>

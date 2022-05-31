@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 15 Jose</title>
+
+        <script>
+            function act1(){
+                var parrafo1 = document.createElement("p");
+                var destino = document.getElementById("pParaAct1");
+
+                parrafo1.id = "parrafo1";
+                parrafo1.innerHTML = "Soy un texto y estoy dentro de un elemento div con un alto de 100px y anco de 100px";
+                parrafo1.style.backgroundColor = "orange";
+                parrafo1.style.width = "100px";
+                parrafo1.style.height = "110px";
+
+                destino.parentNode.insertBefore(parrafo1,destino);
+            }
+
+            function act2(){
+                var div1 = document.createElement("div");
+                var destino = document.getElementById("divParaAct2");
+
+                div1.id = "div1";
+                div1.innerHTML = "Nuevo contenedor";
+                div1.style.border = "aqua 10px solid";
+                div1.style.width = "200px";
+                div1.style.height = "50px";
+                div1.style.textAlign = "center";
+
+                destino.parentNode.insertBefore(div1,destino);
+            }
+
+            function act3(){
+                var parrafo2 = document.createElement("p");
+
+                parrafo2.id = "parrafo1";
+                parrafo2.innerHTML = "Esto es un nuevo parrafo agrgado con appendChild()";
+
+                document.getElementById("pParaAct3").appendChild(parrafo2);
+            }
+
+            function act4(){
+                var totalLinks = document.createElement("p");
+                var lorem = document.getElementById("lorem");
+                var linksLorem = lorem.getElementsByTagName("a");
+                var parrafosLorem = lorem.getElementsByTagName("p");
+
+                var totalLinkP3 = 0;
+
+                for(i=0;i<linksLorem.length;i++){
+                    var link = linksLorem[i].href;
+                    if(link == "http://prueba/"){
+                        totalLinkP3++;
+                    }
+                }
+
+                totalLinks.id = "totalLinks";
+                totalLinks.style.border = "black 1px solid";
+                totalLinks.style.padding = "5px";
+                totalLinks.style.backgroundColor = "lightyellow";
+                totalLinks.innerHTML = "Numero de enlaces: " + linksLorem.length + "<br>El penultimo enlace es: " + linksLorem[(linksLorem.length)-2] + "<br>" + totalLinkP3 + " enlace/s apuntan a http://prueba <br>Numero de enlaces en el tercer parrafo = " + parrafosLorem[2].getElementsByTagName("a").length;
+
+                document.getElementById("pParaAct4").appendChild(totalLinks);
+            }
+        </script>
+
+    </head>
+    <body>
+        <button id="btnAct1" onclick="act1()">Mostrar activitat 1</button>
+        <p id="pParaAct1"></p>
+        <hr>
+        <button onclick="act2()">Crear DIV</button>
+        <div id="divParaAct2"></div>
+        <hr>
+        <p id="pParaAct3">Texto existente.</p>
+        <button onclick="act3()">Agregar texto</button>
+        <hr>
+        <button onclick="act4()">Informacion enlaces</button>
+        <p id="pParaAct4"></p>
+        <div id="lorem"><p>Lorem ipsum dolor sit amet, <a href="http://prueba">Este enlace apunta a prueba</a>. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  <a href="http://prueba2">Este enlace apunta a prueba2</a>.Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p><p>Aenean at nisl. Proin consequat auctor diam. <a href="http://prueba3">Este enlace apunta a prueba3</a> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <a href="http://prueba4">Este enlace apunta a prueba4</a>. ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book..</p>Vestibulum aliquet, nulla sit amet imperdiet suscipit, nunc erat laoreet est, a <a href="http://prueba5">Este enlace apunta a prueba5</a>. <p>Quisque eget eros vehiculadiam euismod tristique. Ut dui. Donec pretium. Proin <a href="http://prueba6">Este enlace apunta a prueba6</a>adipiscing ligula. Duis iaculis laoreet turpis. ipsum odio euismod tortor, a vestibulum nisl mi at odio. <a href="http://prueba7">Este enlace apunta a prueba7</a>auctor.</p></div>
+    </body>
+</html>

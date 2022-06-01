@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 16 Jose</title>
+
+        <style>
+            #cajaAct2{
+                border: 1px solid black;
+                width: 200px;
+            }
+
+            .negrita{
+                font-weight: bold;
+            }
+        </style>
+
+        <script>
+            function ponerLI(){
+                var nuevoLi = document.createElement("li");
+                var listaUl = document.getElementById("ulAct1");
+                var listaLi = listaUl.getElementsByTagName("li");
+
+                nuevoLi.innerHTML = "Linia " + (listaLi.length+1);
+
+                listaUl.appendChild(nuevoLi);
+            }
+
+            function reloadPage(){
+                location.reload();
+            }
+
+            function click2(){
+                var division = document.getElementById("cajaAct2");
+                var todosP = division.getElementsByTagName("p");
+
+                for(i=todosP.length-1;i>=0;i--){
+                    var nuevoP = document.createElement("p");
+                    nuevoP.innerHTML = "Has echo click en el 2.";
+                    todosP[i].appendChild(nuevoP);
+                }
+            }
+
+            function click3(){
+                var division = document.getElementById("cajaAct2");
+                var nuevoP = document.createElement("p");
+                var todosP = division.getElementsByTagName("p");
+                
+                nuevoP.innerHTML = "Has echo click en el 3.";
+
+                var despues = todosP[2];
+                var parent = despues.parentNode;
+                parent.insertBefore(nuevoP, despues);
+            }
+
+            function click4(){
+                var division = document.getElementById("cajaAct2");
+                var nuevoP = document.createElement("p");
+                var todosP = division.getElementsByTagName("p");
+                
+                nuevoP.innerHTML = "Has echo click en el 4.";
+
+                var cambio = todosP[0];
+                var padre = cambio.parentNode;
+                padre.replaceChild(nuevoP,cambio);
+            }
+
+            function click5(){
+                var division = document.getElementById("cajaAct2");
+                var todosP = division.getElementsByTagName("p");
+
+                var borrar = todosP[2];
+                var NodoSuperior = borrar.parentNode;
+                NodoSuperior.removeChild(borrar);
+            }
+
+            function click6(){
+                var division = document.getElementById("cajaAct2");
+                var nuevoP = document.createElement("p");
+                var todosP = division.getElementsByTagName("p");
+                
+                nuevoP.innerHTML = todosP[1].innerHTML;
+                alert(nuevoP.innerHTML);
+
+                var borrar = todosP[1];
+                var NodoSuperior = borrar.parentNode;
+                NodoSuperior.removeChild(borrar);
+
+                todosP[todosP.length-1].appendChild(nuevoP);
+            }
+        </script>
+
+    </head>
+    <body>
+        <button onclick="ponerLI()">Añadir elemento</button>
+        <ul id="ulAct1">
+            <li>Linea 1</li>
+            <li>Linea 2</li>
+            <li>Linea 3</li>
+            <li>Linea 4</li>
+            <li>Linea 5</li>
+        </ul>
+        <hr>
+        <h3>Al pulsar en cada una de las siguientes linnias cambiara el texto de dentro de la caja</h3>
+        <div>
+            <p onclick="reloadPage()">1. Volver al estdao principal.</p>
+            <p onclick="click2()">2. Poner nuevo elemento al final de todos los otros con appendChild</p>
+            <p onclick="click3()">3. Poner nuevo elemento delante del degundo haciendo uso de insertBefore</p>
+            <p onclick="click4()">4. Reemplazar el primer elemento de la caja por uno nuevo con replaceChild</p>
+            <p onclick="click5()">5. Elimina el tercer parrafo haciendo uso de parentNode.removeChild</p>
+            <p onclick="click6()">6. Pon el segundo texto en el ultimo sitio con removeChild + appendChild</p>
+        </div>
+        <div id="cajaAct2">
+            <p class="negrita">
+                Primer texto
+            </p>
+            <p class="negrita">
+                Segundo texto
+            </p>
+            <p class="negrita">
+                Tercer  texto
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 17 Jose</title>
+
+        <script>
+            function toMayus(){
+                var txtUsu = prompt("Texto para pasar a majusculas.");
+
+                alert("Tu texto a majusculas es: " + txtUsu.toUpperCase());
+            }
+
+            function txtGuiones(){
+                var txtUsu = prompt("Texto para poner guiones entre las letras.");
+                var txtAux = "";
+
+                for(i=0;i<txtUsu.length;i++){
+                    txtAux += txtUsu.substring(i,i+1) + "-";
+                }
+                alert("Tu texto con guiones es: " + txtAux);
+            }
+
+            function vocales(){
+                var txtUsu = prompt("Texto para contar vocales.");
+                var numV = 0;
+                
+                for(i=0;i<txtUsu.length;i++){
+                    var letra = txtUsu.substring(i,i+1);
+                    switch(letra){
+                        case 'a': case 'e': case 'i': case 'o': case 'o':
+                            numV++;
+                        break;
+                    }
+                }
+                alert("Numero de vocales en tu texto es: " + numV);
+            }
+
+            function entreParentesis(){
+                var txtUsu = prompt("Texto entre ( ).");
+                var txtAux = "";
+
+                var primero = txtUsu.indexOf("(");
+                var segundo = txtUsu.indexOf(")");
+
+                for(i=primero+1;i<segundo;i++){
+                    txtAux += txtUsu.substring(i,i+1);
+                }
+                alert("Tu texto dentro del ( ) es: " + txtAux);
+            }
+
+            function delReves(){
+                var txtUsu = prompt("Texto para ponerlo del reves.");
+                var txtAux = "";
+
+                for(i=txtUsu.length;i>=0;i--){
+                    txtAux += txtUsu.substring(i,i+1);
+                }
+                alert("Tu texto al reves es es: " + txtAux);
+            }
+
+            function encontrar(){
+                var txtUsu = prompt("Texto general.");
+                var txtPalabra = prompt("Palabra a encnontrar dentro del texto.");
+
+                var aux = txtUsu.indexOf(txtPalabra);
+
+                if(aux>=0){
+                    alert("La palabra SI esta dentro del texto.");
+                }else{
+                    alert("La palabra NO esta dentro del texto.");
+                }
+
+                
+            }
+        </script>
+
+    </head>
+    <body>  
+        <button onclick="toMayus()">Click act 1</button><br><br>
+        <button onclick="txtGuiones()">Click act 2</button><br><br>
+        <button onclick="vocales()">Click act 3</button><br><br>
+        <button onclick="entreParentesis()">Click act 4</button><br><br>
+        <button onclick="delReves()">Click act 5</button><br><br>
+        <button onclick="encontrar()">Click act 6</button>
+    </body>
+</html>

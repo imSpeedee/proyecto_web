@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat 18 Jose</title>
+
+        <script>
+            function verifyEmail(){
+                var txtUsu = prompt("Correo electronico.");
+
+                var aux = txtUsu.indexOf("@");
+
+                if(aux>=0){
+                    alert("Correo valido.");
+                }else{
+                    alert("Correo NO valido, debe contener @.");
+                }
+            }
+
+            function masLinias(){
+                var txtUsu = prompt("Texto para separar en linias.");
+                var txtAux = "";
+
+                for(i=0;i<txtUsu.length;i++){
+
+                    if(txtUsu.charAt(i) == " "){
+                        txtAux += "\n";
+                    }else{
+                        txtAux += txtUsu.charAt(i);
+                    }
+                }
+                alert("Tu frase es:\n" + txtAux);
+            }
+
+            function cuantasVocales(){
+                var txtUsu = prompt("Texto para contar vocales.");
+                var numA = 0;
+                var numE = 0;
+                var numI = 0;
+                var numO = 0;
+                var numU = 0;
+                var numV = 0;
+                var numBlanco = 0;
+                var numCons = 0;
+                
+                for(i=0;i<txtUsu.length;i++){
+                    var letra = txtUsu.charAt(i);
+                    switch(letra){
+                        case 'a': case 'a': 
+                            numA++;
+                            numV++;
+                        break;
+                        case 'e': case 'E': 
+                            numE++;
+                            numV++;
+                        break;
+                        case 'i': case 'I': 
+                            numI++;
+                            numV++;
+                        break;
+                        case 'o': case 'O': 
+                            numO++;
+                            numV++;
+                        break;
+                        case 'u':case 'U': 
+                            numU++;
+                            numV++;
+                        break;
+                        case ' ':
+                            numBlanco++;
+                        break;
+                        default:
+                            numCons++;
+                        break;
+                    }
+                }
+                alert("Vocales A: " + numA + "\nVocales E: " + numE + "\nVocales I: " + numI + "\nVocales O: " + numO + "\nVocales U: " + numU + "\n\nTotal vocales: " + numV + "\nTotal consonantes: " + numCons + "\nTotal espacios en blanco: " + numBlanco + "\n\nTexto original: " + txtUsu);
+            }
+        </script>
+
+    </head>
+    <body>
+        <button onclick="verifyEmail()">Click act 1</button><br><br>
+        <button onclick="masLinias()">Click act 2</button><br><br>
+        <button onclick="cuantasVocales()">Click act 3</button>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Repas JS Jose</title>
+
+        <script>
+            function notas(){
+                const alumnos = 5;
+                var mas = 0;
+                var menos = 0;
+
+                for(i=1;i<=alumnos;i++){
+                    var nAux = prompt("Nota del alumno numero" + i);
+                    nAux = Number(nAux);
+                    if(nAux >= 5){
+                        mas++;
+                    }else{
+                        menos++;
+                    }
+                }
+                alert("Total alumnos: " + alumnos + "\nAprobados: " + mas + "\nSuspendidos: " + menos);
+            }
+
+            function area(){
+                var altura = prompt("Altura del rectangulo:");
+                var base = prompt("Base del rectangulo:");
+
+                altura = Number(altura);
+                base = Number(base);
+
+                alert("Area del rectangulo = " + altura*base);
+            }
+
+            function edad(){
+                const alumonsM = 10;
+                const alumonsT = 10;
+                const alumonsN = 15;
+                var mañana = 0;
+                var tarde = 0;
+                var noche = 0;
+                var pequeña = "";
+                var total = 0;
+
+                for(i=1;i<=alumonsM;i++){
+                    var aux = prompt("Edad alumno " + i +" de Mañana: ");
+                    aux = Number(aux);
+                    mañana += aux;
+                    total += aux;
+                }
+                mañana = mañana/alumonsM;
+
+                for(i=1;i<=alumonsT;i++){
+                    var aux = prompt("Edad alumno " + i +" de Tarde: ");
+                    aux = Number(aux);
+                    tarde += aux;
+                    total += aux;
+                }
+                tarde = tarde/alumonsT;
+
+                for(i=1;i<=alumonsN;i++){
+                    var aux = prompt("Edad alumno " + i +" de Noche: ");
+                    aux = Number(aux);
+                    noche += aux;
+                    total += aux;
+                }
+                noche = noche/alumonsN;
+
+                if(mañana<tarde && mañana<noche){
+                    pequeña = "Mañana";
+                }else if(tarde<mañana && tarde<noche){
+                    pequeña = "Tarde";
+                }else{
+                    pequeña = "Noche";
+                }
+
+                alert("Media turno Mañana: " + mañana + "\nMedia turno Tarde: " + tarde + "\nMedia turno Noche: " + noche + "\n\nTurno con la media mas baja: " + pequeña + "\n\nSuma de todos los turnos: " + total);
+            }
+
+            function ingresar(){
+                var Nusu = prompt("Nombre de usuario:");
+                var Cusu = prompt("Contraseña de usuario:");
+
+                if(Cusu.length<10){
+                    alert("La contraseña tiene menos de 10 caracteres.");
+                }else if(Cusu.length>20){
+                    alert("La contraseña tiene mas de 20 caracteres.");
+                }else{}
+            }
+        </script>
+
+    </head>
+    <body>
+        <button onclick="notas()">Notas de alumnos.</button><br><br>
+        <button onclick="area()">Area de un rectangulo.</button><br><br>
+        <button onclick="edad()">Edades de la escuela.</button><br><br>
+        <button onclick="ingresar()">Ingresar credenciales.</button>
+    </body>
+</html>

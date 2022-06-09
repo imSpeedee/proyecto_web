@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Examen JS 2 Jose Ramon</title>
+
+        <script>
+            function mostrar(){
+                var esports = document.getElementsByClassName("esport");
+                var txt = "Esports seleccionats: \n";
+                for(i=0;i<esports.length;i++){
+                    if(esports[i].checked){
+                        txt += esports[i].id + "\n";
+                    }
+                }
+                alert(txt);
+            }
+        </script>
+
+    </head>
+    <body>
+        <input type="checkbox" id="Basquet" class="esport">
+        <label for="Basquet">Basquet</label><br><br>
+
+        <input type="checkbox" id="Handbol" class="esport">
+        <label for="Handbol">Handbol</label><br><br>
+
+        <input type="checkbox" id="Natacio" class="esport">
+        <label for="Natacio">Natacio</label><br><br>
+
+        <input type="checkbox" id="Hockey" class="esport">
+        <label for="Hockey">Hockey</label><br><br>
+
+        <input type="checkbox" id="Beisbol" class="esport">
+        <label for="Beisbol">Beisbol</label><br><br>
+
+        <button onclick="mostrar()">Mostrar espots</button>
+    </body>
+</html>

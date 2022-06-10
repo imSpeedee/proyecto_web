@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Examen JS Jose Ramon</title>
+
+        <script>
+            function notes(){
+                //Inicializar datos parqa luego trabajar con ellos
+                var mas7 = 0;
+                var menos7 = 0;
+
+                //Constante con el numero de notas que queremos pedir al usuario
+                const numNotes = 10;
+
+                //Bucle para podir las notas al usuario
+                for(i=1;i<=numNotes;i++){
+                    var auxNota = prompt("Nota de l'alumne numero " + i);
+                    if(auxNota>=7){
+                        mas7++;
+                    }else{
+                        menos7++;
+                    }
+                }
+
+                //Alertbox para comunicar la cantidad de notas con nota de mas de un 7
+                alert("Notes amb un 7 o mes: " + mas7 + "\nNotas con menos de un 7: " + menos7);
+            }
+        </script>
+
+    </head>
+    <body>
+        <button onclick="notes()">Preguntar notes activitat 1 examen</button>
+    </body>
+</html>

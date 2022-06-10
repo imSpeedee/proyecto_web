@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Examen JS Jose Ramon</title>
+
+        <script>
+            function usuari(){
+                //Le pedimos al usuario la informacion neesaria en este caso nombre y contraseña del mismo
+                var nomUsu = prompt("Nom del teu usuari:");
+                var passUsu = prompt("Contrasenya del teu usuari:");
+
+                //Establecemos el corto y largo maximos que queremos para la contraseña
+                const largoMin = 5;
+                const largoMax = 15;
+
+                //Comprovamos la longitud de la contraseña para ver si es de una longitud adecuada
+                //En el caso de que no se da la longitud que queremos le avisamos al usuario mediante un alertbox
+                if(passUsu.length<largoMin){
+                    alert("La contrasenya te menys de " + largoMin + " caracters.");
+                }else if(passUsu.length>largoMax){
+                    alert("La contrasenya te mes de " + largoMax + " caracters.");
+                }else{}
+            }
+        </script>
+
+    </head>
+    <body>
+        <button onclick="usuari()">Preguntar notes activitat 3 examen</button>
+    </body>
+</html>

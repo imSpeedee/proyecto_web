@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Examen JS Jose Ramon</title>
+
+        <script>
+            function medias(){
+                //Declarqacion de las variables para luego trabajar con ellas
+                var mati = 0;
+                var tarda = 0;
+                var nit = 0;
+
+                //Constantes para la cantidad de edades que queremos preguntar segun el turno
+                const nMati = 5;
+                const nTarda = 6;
+                const nNit =11;
+
+                //Esta variable es para luego ir añadiendo texto segun lo que queramos mostrar al final de la ejecucion
+                var txt = "";
+
+                //A continuacion hay tres bucles uno para cada turno
+                //En cada bucle tenemos la constante con la cantidad de veces que queremos hacer bucle de cada turno
+                //Debajo de cada bucle esta la operacion para calcular la media de cada turno
+                for(i=1;i<=nMati;i++){
+                    var aux = prompt("Edat persona " + i + " torn de Mati: ");
+                    aux = Number(aux);
+                    mati += aux;
+                }
+                mati = mati/nMati;
+                for(i=1;i<=nTarda;i++){
+                    var aux = prompt("Edat persona " + i + " torn de Tarda: ");
+                    aux = Number(aux);
+                    tarda += aux;
+                }
+                tarda = tarda/nTarda;
+                for(i=1;i<=nNit;i++){
+                    var aux = prompt("Edat persona " + i + " torn de Nit: ");
+                    aux = Number(aux);
+                    nit += aux;
+                }
+                nit = nit/nNit;
+
+                //Ahora en la variable de texto estamos incluyendo el texto que saldra por pantalla
+                //Eneste caso estamos informando de la media de edades de cada turno
+                txt += "Mitja torn Mati: " + mati + "\nMitja torn Tarda: " + tarda + "\nMitja torn Nit: " + nit;
+
+                //Aqui hay un if mara saber cual de los turnos tiene la media mas alta
+                //y en es caso incluir la informacion en la variable de texto
+                if(mati>tarda && mati>nit){
+                    txt += "\nEl torn de MATI es el que te la mitja mes gran.";
+                }else if(tarda>mati && tarda>nit){
+                    txt += "\nEl torn de TARDA es el que te la mitja mes gran.";
+                }else{
+                    txt += "\nEl torn de NIT es el que te la mitja mes gran.";
+                }
+
+                //Finalmente mostramos la varible de texto con toda la informacion ya añadida
+                alert(txt);
+            }
+        </script>
+
+    </head>
+    <body>
+        <button onclick="medias()">Preguntar edats activitat 2 examen</button>
+    </body>
+</html>

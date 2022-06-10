@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Enlace con la libreria de Live Validation para validar nuestro formulario -->
+        <script type="text/javascript" src="livevalidation/src/livevalidation_standalone.js"></script>
+        <title>Examen JS Jose Ramon</title>
+
+        <script>
+            
+        </script>
+
+    </head>
+    <body>
+        <form>
+            <label for="nombre-input">Nom i cognoms:</label>
+            <input type="text" id="nombre-input"><br><br>
+
+            <label for="telefon-input">Telefon:</label>
+            <input type="text" id="telefon-input"><br><br>
+
+            <label for="email-input">Correu electronic:</label>
+            <input type="text" id="email-input"><br><br>
+
+            <label for="pass-input">Contrasenya:</label>
+            <input type="text" id="pass-input"><br><br>
+
+            <label for="passConf-input">Confirmar contrasenya:</label>
+            <input type="text" id="passConf-input"><br><br>
+
+            Poblacio:
+            <select name="poblacio" id="poblacio-input">
+                <option value="0">Poblacio...</option>
+                <option value="1">Vilanova del Cami</option>
+                <option value="2">Igualad</option>
+                <option value="3">Odena</option>
+                <option value="4">La Torre de Claramunt</option>
+                <option value="5">La Pobla de Claramunt</option>
+                <option value="6">Capellades</option>
+            </select><br><br>
+
+            <label for="permis-input">Permis de conduir:</label>
+            <input type="checkbox" id="permis-input"><br><br>
+
+            <input type="submit" value="Enviar formulari">
+            <input type="reset" value="Reiniciar">
+        </form>
+
+        <!-- Enlaec a nuestro documento de javascript que contiene los scripts utilizando la libreria añadida arriba
+             La colocamos a bajo para asegurarnos de que esten todas las id del formulario cargadas -->
+        <script type="text/javascript" src="scriptLV.js"></script>
+    </body>
+</html>
